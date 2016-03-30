@@ -1,0 +1,115 @@
+/* reset css start*/
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, main, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video{margin: 0; padding: 0; border: 0; outline: 0; font-size: 100%; vertical-align: baseline; background: transparent;}
+main, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section{display: block;}
+nav, ul{list-style: none; list-style-type: none; outline: none;}
+blockquote, q{quotes: none;}
+blockquote:before, blockquote:after, q:before, q:after{content: ''; content: none;}
+a{margin: 0; padding: 0; font-size: 100%; vertical-align: baseline; background: transparent;}
+ins{background-color: #ff9; color: #000; text-decoration: none;}
+mark{background-color: #ff9; color: #333; padding: 0 4px; color: #666; font-size: 14px;}
+del{text-decoration: line-through;}
+abbr[title], dfn[title]{border-bottom: 1px dotted; cursor: help;}
+table{border-collapse: collapse; border-spacing: 0;}
+hr{display: block; height: 1px; border: 0; border-top: 1px solid #cccccc; margin: 1em 0; padding: 0;}
+input, select{vertical-align: middle; outline: none;}
+/* reset css end*/
+/* add fonts 'Titillium Web' end 'FontAwesome'*/
+@font-face{font-family: 'Titillium Web'; font-style: normal; font-weight: 400; src: local('Titillium Web'), local('TitilliumWeb-Regular'), url(../fonts/TitilliumWeb-Regular.woff) format('woff');}
+@font-face{font-family: 'FontAwesome'; font-style: normal; font-weight: 400; src: local('FontAwesome'), local('fontawesome-webfont'), url(../fonts/fontawesome-webfont.woff) format('woff');}
+/* fonts end*//* common*/
+body{background: #fff; font-size: 12px; font-family: "Titillium Web", "FontAwesome", Helvetica, Tahoma, Arial, "Microsoft YaHei", "微软雅黑", sans-serif; color: #444; position: relative; line-height: 120%;}
+a{color: #0076B3; text-decoration: none; transition: all .2s ease-in-out;}
+a:hover{color: #06f;}
+.red{color: #f00;}
+.darkorange{color: darkorange;}
+.f60{color: #f60;}
+.f60:hover{color: #f00;}
+.wrap{width: 980px; margin: 0 auto; position: relative;}
+.white{background: #fff;}
+.normal{font-size: 12px; color: #666; font-weight: normal;}
+.right{float: right;}
+.txt{border: 1px solid #ccc; line-height: 22px; color: #666; padding: 3px 5px; width: 172px;}
+.txt:hover, .txt:focus{box-shadow: 0 0 3px rgba(0, 0, 0, 0.1); border: 1px solid #999; background: #f9f9f9; color: #333;}
+.muted{color: #999;}
+.circle{border-radius: 12px; font-style: normal; font-size: 12px; background: #0090DC; color: #fff; display: inline-block; width: 24px; height: 24px; line-height: 24px; text-align: center; transition: all .2s ease-in-out;}
+.circle:hover{background: #f30;}
+.pagi{background: #fff; line-height: 24px; margin: 8px 0; font-size: 12px; padding: 0 0 8px;}
+.pagi a{text-decoration: none; border: 1px solid #E0E0E0; padding: 0 4px; color: #666;}
+.pagi a:hover{background: #f0f0f0;}
+.pagi a, .pagi span{display: inline-block; margin-right: 5px; padding: 0 8px;}
+.pagi .disabled{text-decoration: none; border: 1px solid #E0E0E0; background: #fafafa; padding: 0 4px; color: #666;}
+.pagi .split{display: none;}
+.pagi .current{text-decoration: none; border: 1px solid #e0e0e0; background: #f0f0f0; padding: 0 8px; color: #666;}
+.pagi .right-span{border: 1px solid #E0E0E0; background: #f9f9f9; padding: 0 8px; color: #666;}
+.pagi .active.prev, .pagi .active.next{color: #999; background: #fff;}
+h2.title{line-height: 36px; background: #f9f9f9; padding: 0 8px; font-weight: normal;}
+h2.title .name{font-weight: normal; font-size: 14px;}
+h2.title .more{float: right;}
+/* btn*/
+.btn{display: inline-block; *display: inline; *zoom: 1; padding: 6px 12px 4px; margin-bottom: 0; font-size: 12px; line-height: 20px; text-align: center; vertical-align: middle; cursor: pointer; border: 0; border-radius: 0;}
+.btn[type="submit"]{height: 30px;}
+.btn:hover, .btn:focus{text-decoration: none}
+.btn:focus{outline: thin dotted #333; outline: 5px auto -webkit-focus-ring-color; outline-offset: -2px}
+.btn.active, .btn:active{outline: 0}
+.btn.disabled, .btn[disabled]{cursor: default; opacity: 0.65; filter: alpha(opacity=65)}
+.btn-large{padding: 11px 19px; font-size: 15px}
+.btn-large [class^="icon-"], .btn-large [class*=" icon-"]{margin-top: 4px}
+.btn-mini{padding: 2px 10px; font-size: 12px}
+.btn-mini [class^="icon-"], .btn-mini [class*=" icon-"]{margin-top: 4px}
+.btn-block{display: block; width: 100%; padding-left: 0; padding-right: 0; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box}
+.btn-block + .btn-block{margin-top: 5px}
+input[type="submit"].btn-block, input[type="reset"].btn-block, input[type="button"].btn-block{width: 100%}
+.btn{color: #666; background-color: #eeeeee}
+.btn:hover, .btn:focus, .btn:active, .btn.active, .btn.disabled, .btn[disabled]{background-color: #dddddd; color: #444;}
+.btn-primary{color: #ffffff; background-color: #428bca}
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .btn-primary.disabled, .btn-primary[disabled]{color: #ffffff; background-color: #357EBD}
+.btn-warning{color: #ffffff; background-color: #f8a31f}
+.btn-warning:hover, .btn-warning:focus, .btn-warning:active, .btn-warning.active, .btn-warning.disabled, .btn-warning[disabled]{color: #ffffff; background-color: #f88a2a}
+.btn-danger{color: #ffffff; background-color: #d9534f}
+.btn-danger:hover, .btn-danger:focus, .btn-danger:active, .btn-danger.active, .btn-danger.disabled, .btn-danger[disabled]{color: #ffffff; background-color: #e51400}
+.btn-success{color: #ffffff; background-color: #5cb85c}
+.btn-success:hover, .btn-success:focus, .btn-success:active, .btn-success.active, .btn-success.disabled, .btn-success[disabled]{color: #ffffff; background-color: #4CAE4C}
+.btn-info{color: #ffffff; background-color: #00aba9}
+.btn-info:hover, .btn-info:focus, .btn-info:active, .btn-info.active, .btn-info.disabled, .btn-info[disabled]{color: #ffffff; background-color: #007877}
+.btn-inverse{color: #ffffff; background-color: #484848}
+.btn-inverse:hover, .btn-inverse:focus, .btn-inverse:active, .btn-inverse.active, .btn-inverse.disabled, .btn-inverse[disabled]{color: #ffffff; background-color: #333333}
+.clear:after{/* 给浮动元素的父级元素加上class='clear'*/ content: ""; display: block; height: 0; clear: both;}
+.clear{clear: both; zoom: 1; /* 在IE6/7中,利用zoom:1触发haslayout属性*/}
+/* ajax Status*/
+#ajaxStatus{position: fixed; z-index: 99999999999999999; left: 50%; top: 50%; height: 50px; text-align: center; display: none; width: 500px; margin: -25px 0 0 -250px;}
+#ajaxStatus #ajaxTip{color: #999; border-radius: 5px; display: inline-block; line-height: 180%; padding: 8px 16px 8px 30px; box-shadow: 0 0 20px #cEE5E3;}
+#ajaxStatus .wait{background: #FFF url(/assets/admin/images/loading.gif) 8px center no-repeat; border: 1px solid #A8E45A;}
+#ajaxStatus .err{background: #FFF url(/assets/admin/images/status.png) 8px 12px no-repeat; border: 1px solid #EB7C67;}
+#ajaxStatus .ok{background: #FFF url(/assets/admin/images/status.png) 8px -20px no-repeat; border: 1px solid #98C46A;}
+/* ----------------弹出层 start --------------*/
+.wh1{width: 10%;}
+.wh2{width: 20%;}
+.wh3{width: 30%;}
+.wh4{width: 40%;}
+.wh5{width: 50%;}
+.wh6{width: 60%;}
+.wh7{width: 70%;}
+.wh8{width: 80%;}
+.wh9{width: 90%;}
+.wh10{width: 100%;}
+#popupShadow{position: fixed; left: 0px; top: 0px; background-color: #000; filter: alpha(opacity=50); -moz-opacity: 0.5; opacity: 0.5; display: none; width: 100%; height: 100%; z-index: 10000;}
+#popupModal{position: fixed; width: 800px; height: auto; left: 50%; margin-left: -400px; top: 100px; display: none; z-index: 10001; text-align: center; background: white; border: 2px solid #FFFFFF; border-radius: 10px; box-shadow: 0 1px 0 white inset; padding: 40px 0px;}
+#popupModal h1{font-size: 20px; margin-bottom: 30px;}
+#popupModal select, #popupModal input{border: none; height: 34px; line-height: 34px; vertical-align: middle; margin-left: 5px;}
+#popupModal .popupBody{width: 100%; height: auto; overflow: hidden; margin: 0 auto;}
+#popupModal .popupBody p{line-height: 40px;}
+
+#popupModal .popupBody .popupRow{position: relative; line-height: 40px; margin: auto; margin-bottom: 20px; width: auto; height: auto; width: 500px; text-align: left;}
+#popupModal .borderBlock{position: relative; height: 40px; border: 1px solid #999999; clear: both; line-height: 40px; display: inline-block; margin: auto; width: 400px;}
+#popupModal label.name{float: left; text-align: left; text-indent: 20px; margin-top: 3px; font-size: 13px; height: 34px; width: 100px; line-height: 34px; border-right: 1px solid #999999;}
+#popupModal label.tip{display: none;}
+#popupModal .popupClose{position: absolute; bottom: -35px; right: 0; cursor: pointer;}
+#popupModal .popupClose:hover{}
+/*----------------弹出层 end--------------*/
+img{max-width: 100%;}
+a img:hover{opacity: 0.7}
+.empty{padding: 20px; font-size: 16px; border: 1px solid #eee; margin-top: 10px;}
+
+/*live 800 去掉对话框*/
+#InviteWindow{width: 0 !important; height: 0 !important; overflow: hidden;}
+.lim_float_icon{width: 0 !important; height: 0 !important;overflow: hidden}
