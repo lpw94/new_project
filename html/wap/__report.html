@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>举报帖子</title>
+    <meta name="robots" content="all"/>
+    <!-- Mobile Devices Support @begin -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta content="application/xhtml+xml;charset=UTF-8" http-equiv="Content-Type">
+    <meta content="telephone=yes, address=yes" name="format-detection">
+    <!-- apple devices -->
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="white"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+    <!-- Mobile Devices Support @end -->
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="ESTT Team">
+    <link rel="stylesheet" href="../../assets/wap/css/iconfont.css"/>
+    <link rel="stylesheet" href="../../assets/wap/css/base.css"/>
+    <link rel="stylesheet" href="../../assets/wap/css/content.css"/>
+    <script src="../../assets/wap/js/sea.js"></script>
+    <script src="../../assets/wap/js/jquery/jquery.min.js"></script>
+    <script>
+        seajs.config({
+            base: '/assets/wap/js',
+            charset: 'utf-8',
+            timeout: 10000
+        });
+    </script>
+    <style>
+        .re-content{
+            padding-top: 20px;
+            font-size: 16px;
+        }
+        .re-content p{
+            line-height: 20px;
+        }
+        .re-content p .remask{
+            color: #f47f58;
+        }
+        .re-content .posts{
+            margin-top: 15px;
+            padding: 10px;
+            color: #505050;
+            background-color: #f7f7f7;
+            border: 1px solid #ccc;
+        }
+        .report_reason{
+            margin-top: 20px;
+        }
+        .reason .reason_list{
+            padding-top: 10px;
+            width: 100%;
+        }
+        .reason .reason_list li{
+            position: relative;
+            float: left;
+            width: 50%;
+            height: 30px;
+            text-align: left;
+            padding-left: 25px;
+            line-height: 30px;
+        }
+        .reason .reason_list li .radio{
+            position: absolute;
+            left: 0;
+            top: 6px;
+            display: block;
+            width: 20px;
+            height: 20px;
+            border: 1px solid #ccc;
+            border-radius: 50%;
+            overflow: hidden;
+            color: #fff;
+            text-align: center;
+            line-height: 20px;
+            font-size: 20px;
+        }
+        .reason .reason_list li .check{
+            border: none;
+            background-color: #f47f58;
+        }
+
+    </style>
+</head>
+<body>
+<section id="main">
+    <header>
+        <div class="pd_LR_15">
+            <a class="btn_cancel" href="javascript:;">取消</a><a class="btn_sure" href="javascript:;">举报</a>
+        </div>
+    </header>
+    <div class="h50"></div>
+
+        <article class="pd_LR_15 re-content">
+            <p>我要举报<a class="remask" href="javascript:;">张锡德</a>的帖子:</p>
+            <div class="posts">
+                <p>
+                    我想努力的看完那些我在高中就觊觎已久的书，写完自认为前无古人后无来者的一本小说。我想走遍祖国大好河山...
+                </p>
+            </div>
+            <p class="report_reason">
+                举报理由
+            </p>
+            <div class="reason">
+                <ul class="reason_list">
+                    <li><i class="radio iconfont"></i>垃圾营销</li>
+                    <li><i class="radio iconfont"></i>淫秽色情</li>
+                    <li><i class="radio iconfont"></i>虚假信息</li>
+                    <li><i class="radio iconfont"></i>其他原因</li>
+                </ul>
+            </div>
+        </article>
+
+</section><!--#main end-->
+<script>
+    $('document').ready(function(){
+        //初始化main高度，兼容部分页面有底色的情况
+        $('#main').css({'min-height':$(window).height()});
+        $('.reason .reason_list li').on('click',function(){
+            $(this).children("i").addClass("check icon-dagou");
+            $(this).siblings("li").children("i").removeClass("check icon-dagou");
+        })
+    });
+</script>
+</body>
+</html>

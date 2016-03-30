@@ -1,0 +1,713 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8" />
+		<title>服务与定价</title>
+		<link rel="stylesheet" type="text/css" href="../assets/home/css/base.css" />
+		<link rel="stylesheet" type="text/css" href="../assets/home/css/style.css" />
+		<script src="../assets/home/js/jquery/jquery-1.9.1.js" type="text/javascript"></script>
+		<script src="../assets/home/js/jquery/html5shiv.js" type="text/javascript"></script>
+		<script src="../assets/home/js/seajs/sea.js" type="text/javascript"></script>
+		<script type="text/javascript">
+			seajs.config({
+				base: '../assets/home/js',
+				charset: 'utf-8',
+				timeout: 10000
+			})
+		</script>
+	</head>
+
+	<body>
+		<div class="head">
+			<div class="header fixed">
+				<div class="contain">
+					<div class="head-left">
+						<a href="javascript:;">创客港</a>
+					</div>
+					<div class="head-right">
+						<ul class="nav">
+							<li><a href="javascript:;">首页</a></li>
+							<li class="city"><a href="javascript:;">服务中心</a><i></i></li>
+							<li><a href="javascript:;">服务及定价</a></li>
+							<li class="social"><a href="javascript:;">社群</a></li>
+							<!--li><a href="javascript:;">创客港+</a></li-->
+							<li class="login"><a id="login" href="javascript:;">登录</a></li>
+							<li class="register"><a href="javascript:;">注册</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- header end -->
+			<div class="city-drop">
+				<div class="contain">
+					<div class="city-down">
+						<ul>
+							<li><a href="javascript:;">北京</a></li>
+							<li><a href="javascript:;">上海</a></li>
+							<li><a href="javascript:;">广州</a></li>
+							<li><a href="javascript:;">深圳</a></li>
+							<li><a href="javascript:;">香港</a></li>
+							<li><a href="javascript:;">成都</a></li>
+							<li><a href="javascript:;">宁波</a></li>
+							<li><a href="javascript:;">杭州</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- city-drop end -->
+		</div>
+		<!-- head end -->
+		<dl id="loginBox">
+			<div class="close"></div>
+			<dt>账号登录</dt>
+			<dd class="mForm">
+				<div class="items">
+					<div class="bd">
+						<input class="mInput" type="text" name="account_name" value="" placeholder="请输入注册邮箱/手机号码" />
+					</div>
+					<div class="tips">
+						<div class="con"></div>
+					</div>
+				</div>
+				<div class="items">
+					<div class="bd">
+						<input class="mInput" type="password" name="account_psw" value="" placeholder="请输入登陆密码" />
+					</div>
+					<div class="tips">
+						<div class="con"></div>
+					</div>
+				</div>
+				<div class="items">
+					<div class="bd">
+						<a class="submitBtn" href="javascript:;">登陆</a>
+					</div>
+				</div>
+				<div class="items">
+					<div class="bd">
+						<a class="forgetBtn" href="javascript:;">忘记密码</a>
+						<a class="registerBtn" href="javascript:;">注册账号</a>
+					</div>
+				</div>
+			</dd>
+		</dl>
+		<div class="masklayer"></div>
+		<!--loginBox end-->
+		<!--固定栏开始-->
+		<div id="hero">
+			<div class="fixed-bg bg">
+				<div class="head_table">
+					<section class="section_box">
+						<div class="contain">
+							<div class="head_warp fadeInUp">
+								<div class="wid_pric">
+									<div class="desktop-content">
+										<ul class="pric_ul_top">
+											<li class="plan">
+												<div class="plan-details">
+													<p class="title">移动办公位</p>
+													<p class="price">￥400起<span>/月</span></p>
+												</div>
+												<div class="cta">
+													<a class="button cta-button" href="javascript:;">立即下单</a>
+												</div>
+											</li>
+											<li class="plan">
+												<div class="plan-details">
+													<p class="title">固定办公位</p>
+													<p class="price">￥600起<span>/月</span></p>
+												</div>
+												<div class="cta">
+													<a class="button cta-button" href="javascript:;">立即下单</a>
+												</div>
+											</li>
+											<li class="plan">
+												<div class="plan-details">
+													<p class="title">独立办公室</p>
+													<p class="price">面议
+														<!--span>/元</span-->
+													</p>
+												</div>
+												<div class="cta">
+													<a class="button cta-button" href="javascript:;">立即预约</a>
+												</div>
+											</li>
+											<li class="plan">
+												<div class="plan-details">
+													<p class="title">会议室</p>
+													<p class="price">￥50<span>/小时起</span></p>
+												</div>
+												<div class="cta">
+													<a class="button cta-button" href="javascript:;">立即预订</a>
+												</div>
+											</li>
+											<li class="plan">
+												<div class="plan-details">
+													<p class="title">培训室</p>
+													<p class="price">￥600<span>/半天起</span></p>
+												</div>
+												<div class="cta">
+													<a class="button cta-button" href="javascript:;">立即预订</a>
+												</div>
+											</li>
+										</ul>
+										<div class="clear"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+
+					<section class="pricing_table">
+						<div class="contain">
+							<table>
+								<tbody>
+									<tr>
+										<th width="10%">
+											<div class="text">包含服务</div>
+										</th>
+										<td width="18%">
+											<div class="subtext">
+												一旦签约，办公位任意坐
+											</div>
+											<!--a class="smooth learn-more" href="javascript:;">了解更多</a-->
+										</td>
+										<td width="18%">
+											<div class="subtext">
+												一旦签约，就有固定办公位
+											</div>
+											<!--a class="smooth learn-more" href="javascript:;">了解更多</a-->
+										</td>
+										<td width="18%">
+											<div class="subtext">
+												一旦签约，就有固定办公位
+											</div>
+											<!--a class="smooth learn-more" href="javascript:;">了解更多</a-->
+										</td>
+										<td width="18%" rowspan="3">
+											<div class="subtext">
+												1小时起订，步长为半小时，积分支付或现金支付
+											</div>
+											<!--a class="learn-more smooth" href="javascript:;">了解更多</a-->
+										</td>
+										<td width="18%" rowspan="3">
+											<div class="subtext">
+												半天起订，可以选择早上、中午或晚上，积分支付或现金支付
+											</div>
+											<!--a class="learn-more smooth" href="javascript:;">了解更多</a-->
+										</td>
+									</tr>
+									<tr>
+										<th>
+											<div class="text">签约方式</div>
+										</th>
+										<td class="or-container">
+											<div class="text">一月起订，一次性支付或按月支付</div>
+										</td>
+										<td>
+											<div class="text">一个月起订，一次性支付或按月支付</div>
+										</td>
+										<td>
+											<div class="text">一个月起订，一次性支付或按月支付</div>
+										</td>
+									</tr>
+									<tr>
+										<th>
+											<div class="text">入驻送礼</div>
+										</th>
+										<td>
+											<div class="text">现在签约，每月100积分，可用于平台内任意消费</div>
+										</td>
+										<td>
+											<div class="text">现在签约，每月赠送100积分，可用于平台内任意消费</div>
+										</td>
+										<td>
+											<div class="text">现在签约，每月赠送100积分，可用于平台内任意消费</div>
+										</td>
+									</tr>
+									<!--tr>
+								<th>
+									<div class="text">秘书服务</div>
+								</th>
+								<td>
+									<div class="text">￥200起</div>
+								</td>
+								<td class="has-icon">
+									<div class="text">￥200起</div>
+								</td>
+								<td class="has-icon">
+									<div class="text">￥200起</div>
+								</td>
+								<td class="has-icon">
+									<div class="text">￥200起</div>
+								</td>
+							</tr-->
+								</tbody>
+							</table>
+						</div>
+					</section>
+				</div>
+
+			</div>
+
+		</div>
+		<div class="clearfix"></div>
+		</div>
+		<!--固定栏结束-->
+
+		<!--内容开始-->
+		<div id="content">
+			<section>
+				<div class="sticky-nav">
+					<div class="inner">
+						<!--<div class="logo"><a href="javascript:;">Wework</a></div>-->
+
+						<dl class="sub-nav clearfix" id="nav_bar">
+							<dd><a href="#first_box">移动办公位</a></dd>
+							<dd><a href="#secend_box">固定办公位</a></dd>
+							<dd><a href="#third_box">独立办公室</a></dd>
+							<dd><a href="#four_box">收件服务</a></dd>
+							<dd><a href="#five_box">秘书服务</a></dd>
+							<dd><a href="#six_box">通信全包</a></dd>
+						</dl>
+						<!--<div class="cta">
+							<a href="javascript:;" class="button">定位</a>
+						</div>-->
+					</div>
+
+				</div>
+			</section>
+
+			<section id="first_box" class="pricing-section">
+				<div class="warp">
+					<div class="contain fadeInUp">
+						<div class="content-section clearfix">
+							<div class="wid_20 fl">
+								<div class="plan-name">移动办公位</div>
+								<div class="plan-price">
+									<div class="price-inner">
+										<p class="amount">400起</p><span class="month">/月</span></div>
+								</div>
+								<div class="plan-cta cta">
+									<a class="button cta-button" href="javascript:;">立即下单</a>
+								</div>
+							</div>
+
+							<div class="wid_35 pad_l fl">
+								<div class="plan-desc">
+									<p>
+										虚拟办公室（Virtual Office）是起源于欧美地区的一种办公室租用形式，其按需提供办公地址挂靠、行政文书处理、代接接电和商务接待等服务，租户可拥有黄金地段高级写字楼的商务地址，而不用在现场办公，方便树立租户的商业形象，并无需承担租金。创富港作为最早把商务中心模式引入中国地区的连锁企业，以自主研发并获国家软件认证的BITS商务智能电话系统为运作硬件
+									</p>
+								</div>
+								<div class="persona-links">
+									<h3>适用人群</h3>
+									<a href="freelancer" class="persona-link label">自由职业者</a>
+									<a href="startup" class="persona-link label">自由职业者</a>
+									<a href="early-stage" class="persona-link label">自由职业者</a>
+									<a href="service-provider" class="persona-link label">自由职业者</a>
+								</div>
+
+							</div>
+							<div class="wid_35 fl">
+								<ul class="plan-highlights">
+									<li class="plan-highlight chair">
+										<div class="icon"></div>
+										<div class="head_title">共享办公空间</div>
+										<div class="text">却可拥有高档专业企业形象。创富港在全国八大城市，拥有140余个全配套式商务写字楼地址，立即选择，轻松提升企业形象。</div>
+									</li>
+									<li class="plan-highlight mena">
+										<div class="icon"></div>
+										<div class="head_title">接入我们提供的网络系统</div>
+										<div class="text">却可拥有高档专业企业形象。创富港在全国八大城市，拥有140余个全配套式商务写字楼地址，立即选择，轻松提升企业形象。</div>
+									</li>
+									<li class="plan-highlight tag">
+										<div class="icon"></div>
+										<div class="head_title">会员优惠</div>
+										<div class="text">却可拥有高档专业企业形象。创富港在全国八大城市，拥有140余个全配套式商务写字楼地址，立即选择，轻松提升企业形象。</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section id="secend_box" class="pricing-section">
+				<div class="warp">
+					<div class="contain fadeInUp">
+						<div class="content-section clearfix">
+							<div class="wid_20 fl">
+								<div class="plan-name">固定办公位</div>
+								<div class="plan-price">
+									<div class="price-inner">
+										<p class="amount">600起</p><span class="month">/月</span></div>
+								</div>
+								<div class="plan-cta cta">
+									<a class="button cta-button" href="javascript:;">立即下单</a>
+								</div>
+							</div>
+
+							<div class="wid_35 pad_l fl">
+								<div class="plan-desc">
+									<p>
+										虚拟办公室（Virtual Office）是起源于欧美地区的一种办公室租用形式，其按需提供办公地址挂靠、行政文书处理、代接接电和商务接待等服务，租户可拥有黄金地段高级写字楼的商务地址，而不用在现场办公，方便树立租户的商业形象，并无需承担租金。创富港作为最早把商务中心模式引入中国地区的连锁企业，以自主研发并获国家软件认证的BITS商务智能电话系统为运作硬件
+									</p>
+								</div>
+								<div class="persona-links">
+									<h3>适用人群</h3>
+									<a href="freelancer" class="persona-link label">自由职业者</a>
+									<a href="startup" class="persona-link label">自由职业者</a>
+									<a href="early-stage" class="persona-link label">自由职业者</a>
+									<a href="service-provider" class="persona-link label">自由职业者</a>
+								</div>
+
+							</div>
+							<div class="wid_35 fl">
+								<ul class="plan-highlights">
+									<li class="plan-highlight chair">
+										<div class="icon"></div>
+										<div class="head_title">秘书接电</div>
+										<div class="text">却可拥有高档专业企业形象。创富港在全国八大城市，拥有140余个全配套式商务写字楼地址，立即选择，轻松提升企业形象。</div>
+									</li>
+									<li class="plan-highlight mena">
+										<div class="icon"></div>
+										<div class="head_title">接入我们提供的网络系统</div>
+										<div class="text">却可拥有高档专业企业形象。创富港在全国八大城市，拥有140余个全配套式商务写字楼地址，立即选择，轻松提升企业形象。</div>
+									</li>
+									<li class="plan-highlight tag">
+										<div class="icon"></div>
+										<div class="head_title">会员优惠</div>
+										<div class="text">却可拥有高档专业企业形象。创富港在全国八大城市，拥有140余个全配套式商务写字楼地址，立即选择，轻松提升企业形象。</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section id="third_box" class="pricing-section">
+				<div class="warp">
+					<div class="contain fadeInUp">
+						<div class="content-section clearfix">
+							<div class="wid_20 fl">
+								<div class="plan-name">独立办公室</div>
+								<div class="plan-price">
+									<div class="price-inner">
+										<p class="amount">面议</p>
+									</div>
+								</div>
+								<div class="plan-cta cta">
+									<a class="button cta-button" href="javascript:;">立即预约</a>
+
+								</div>
+							</div>
+
+							<div class="wid_35 pad_l fl">
+								<div class="plan-desc">
+									<p>
+										虚拟办公室（Virtual Office）是起源于欧美地区的一种办公室租用形式，其按需提供办公地址挂靠、行政文书处理、代接接电和商务接待等服务，租户可拥有黄金地段高级写字楼的商务地址，而不用在现场办公，方便树立租户的商业形象，并无需承担租金。创富港作为最早把商务中心模式引入中国地区的连锁企业，以自主研发并获国家软件认证的BITS商务智能电话系统为运作硬件
+									</p>
+								</div>
+								<div class="persona-links">
+									<h3>适用人群</h3>
+									<a href="freelancer" class="persona-link label">自由职业者</a>
+									<a href="startup" class="persona-link label">自由职业者</a>
+									<a href="early-stage" class="persona-link label">自由职业者</a>
+									<a href="service-provider" class="persona-link label">自由职业者</a>
+								</div>
+							</div>
+							<div class="wid_35 fl">
+								<ul class="plan-highlights">
+									<li class="plan-highlight chair">
+										<div class="icon"></div>
+										<div class="head_title">共享办公空间</div>
+										<div class="text">却可拥有高档专业企业形象。创富港在全国八大城市，拥有140余个全配套式商务写字楼地址，立即选择，轻松提升企业形象。</div>
+									</li>
+									<li class="plan-highlight mena">
+										<div class="icon"></div>
+										<div class="head_title">接入我们提供的网络系统</div>
+										<div class="text">却可拥有高档专业企业形象。创富港在全国八大城市，拥有140余个全配套式商务写字楼地址，立即选择，轻松提升企业形象。</div>
+									</li>
+									<li class="plan-highlight tag">
+										<div class="icon"></div>
+										<div class="head_title">会员优惠</div>
+										<div class="text">却可拥有高档专业企业形象。创富港在全国八大城市，拥有140余个全配套式商务写字楼地址，立即选择，轻松提升企业形象。</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section id="four_box" class="pricing-section">
+				<div class="warp">
+					<div class="contain fadeInUp">
+						<div class="content-section clearfix">
+							<div class="wid_20 fl">
+								<div class="plan-name">收件服务</div>
+								<div class="plan-price">
+									<div class="price-inner">
+										<p class="amount">180</p><span class="month">/月</span></div>
+								</div>
+								<div class="plan-cta cta">
+									<a class="button cta-button" href="javascript:;">立即下单</a>
+								</div>
+							</div>
+
+							<div class="wid_35 pad_l fl">
+								<div class="plan-desc">
+									<p>
+										虚拟办公室（Virtual Office）是起源于欧美地区的一种办公室租用形式，其按需提供办公地址挂靠、行政文书处理、代接接电和商务接待等服务，租户可拥有黄金地段高级写字楼的商务地址，而不用在现场办公，方便树立租户的商业形象，并无需承担租金。创富港作为最早把商务中心模式引入中国地区的连锁企业，以自主研发并获国家软件认证的BITS商务智能电话系统为运作硬件
+									</p>
+								</div>
+								<div class="persona-links">
+									<h3>适用人群</h3>
+									<a href="freelancer" class="persona-link label">自由职业者</a>
+									<a href="startup" class="persona-link label">自由职业者</a>
+									<a href="early-stage" class="persona-link label">自由职业者</a>
+									<a href="service-provider" class="persona-link label">自由职业者</a>
+								</div>
+							</div>
+							<div class="wid_35 fl">
+								<ul class="plan-highlights">
+									<li class="plan-highlight chair">
+										<div class="icon"></div>
+										<div class="head_title">共享办公空间</div>
+										<div class="text">却可拥有高档专业企业形象。创富港在全国八大城市，拥有140余个全配套式商务写字楼地址，立即选择，轻松提升企业形象。</div>
+									</li>
+									<li class="plan-highlight mena">
+										<div class="icon"></div>
+										<div class="head_title">接入我们提供的网络系统</div>
+										<div class="text">却可拥有高档专业企业形象。创富港在全国八大城市，拥有140余个全配套式商务写字楼地址，立即选择，轻松提升企业形象。</div>
+									</li>
+									<li class="plan-highlight tag">
+										<div class="icon"></div>
+										<div class="head_title">会员优惠</div>
+										<div class="text">却可拥有高档专业企业形象。创富港在全国八大城市，拥有140余个全配套式商务写字楼地址，立即选择，轻松提升企业形象。</div>
+									</li>
+								</ul>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section id="five_box" class="pricing-section">
+				<div class="warp">
+					<div class="contain fadeInUp">
+						<div class="content-section clearfix">
+							<div class="wid_20 fl">
+								<div class="plan-name">秘书服务</div>
+								<div class="plan-price">
+									<div class="price-inner">
+										<p class="amount">280</p><span class="month">/月</span></div>
+								</div>
+								<div class="plan-cta cta">
+									<a class="button cta-button" href="javascript:;">立即下单</a>
+								</div>
+							</div>
+
+							<div class="wid_35 pad_l fl">
+								<div class="plan-desc">
+									<p>
+										虚拟办公室（Virtual Office）是起源于欧美地区的一种办公室租用形式，其按需提供办公地址挂靠、行政文书处理、代接接电和商务接待等服务，租户可拥有黄金地段高级写字楼的商务地址，而不用在现场办公，方便树立租户的商业形象，并无需承担租金。创富港作为最早把商务中心模式引入中国地区的连锁企业，以自主研发并获国家软件认证的BITS商务智能电话系统为运作硬件
+									</p>
+								</div>
+								<div class="persona-links">
+									<h3>适用人群</h3>
+									<a href="freelancer" class="persona-link label">自由职业者</a>
+									<a href="startup" class="persona-link label">自由职业者</a>
+									<a href="early-stage" class="persona-link label">自由职业者</a>
+									<a href="service-provider" class="persona-link label">自由职业者</a>
+								</div>
+							</div>
+							<div class="wid_35 fl">
+								<ul class="plan-highlights">
+									<li class="plan-highlight chair">
+										<div class="icon"></div>
+										<div class="head_title">共享办公空间</div>
+										<div class="text">却可拥有高档专业企业形象。创富港在全国八大城市，拥有140余个全配套式商务写字楼地址，立即选择，轻松提升企业形象。</div>
+									</li>
+									<li class="plan-highlight mena">
+										<div class="icon"></div>
+										<div class="head_title">接入我们提供的网络系统</div>
+										<div class="text">却可拥有高档专业企业形象。创富港在全国八大城市，拥有140余个全配套式商务写字楼地址，立即选择，轻松提升企业形象。</div>
+									</li>
+									<li class="plan-highlight tag">
+										<div class="icon"></div>
+										<div class="head_title">会员优惠</div>
+										<div class="text">却可拥有高档专业企业形象。创富港在全国八大城市，拥有140余个全配套式商务写字楼地址，立即选择，轻松提升企业形象。</div>
+									</li>
+								</ul>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section id="six_box" class="pricing-section">
+				<div class="warp">
+					<div class="contain fadeInUp">
+						<div class="content-section clearfix">
+							<div class="wid_20 fl">
+								<div class="plan-name">通信全包</div>
+								<div class="plan-price">
+									<div class="price-inner">
+										<p class="amount">380</p><span class="month">/月</span></div>
+								</div>
+								<div class="plan-cta cta">
+									<a class="button cta-button" href="javascript:;">立即下单</a>
+								</div>
+							</div>
+
+							<div class="wid_35 pad_l fl">
+								<div class="plan-desc">
+									<p>
+										虚拟办公室（Virtual Office）是起源于欧美地区的一种办公室租用形式，其按需提供办公地址挂靠、行政文书处理、代接接电和商务接待等服务，租户可拥有黄金地段高级写字楼的商务地址，而不用在现场办公，方便树立租户的商业形象，并无需承担租金。创富港作为最早把商务中心模式引入中国地区的连锁企业，以自主研发并获国家软件认证的BITS商务智能电话系统为运作硬件
+									</p>
+								</div>
+								<div class="persona-links">
+									<h3>适用人群</h3>
+									<a href="freelancer" class="persona-link label">自由职业者</a>
+									<a href="startup" class="persona-link label">自由职业者</a>
+									<a href="early-stage" class="persona-link label">自由职业者</a>
+									<a href="service-provider" class="persona-link label">自由职业者</a>
+								</div>
+							</div>
+							<div class="wid_35 fl">
+								<ul class="plan-highlights">
+									<li class="plan-highlight chair">
+										<div class="icon"></div>
+										<div class="head_title">共享办公空间</div>
+										<div class="text">却可拥有高档专业企业形象。创富港在全国八大城市，拥有140余个全配套式商务写字楼地址，立即选择，轻松提升企业形象。</div>
+									</li>
+									<li class="plan-highlight mena">
+										<div class="icon"></div>
+										<div class="head_title">接入我们提供的网络系统</div>
+										<div class="text">却可拥有高档专业企业形象。创富港在全国八大城市，拥有140余个全配套式商务写字楼地址，立即选择，轻松提升企业形象。</div>
+									</li>
+									<li class="plan-highlight tag">
+										<div class="icon"></div>
+										<div class="head_title">会员优惠</div>
+										<div class="text">却可拥有高档专业企业形象。创富港在全国八大城市，拥有140余个全配套式商务写字楼地址，立即选择，轻松提升企业形象。</div>
+									</li>
+								</ul>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!--数字滚动开始-->
+
+			<!--  10-19 原型不要
+				<div id="members-highlight" class="section_box">
+				<section class="content-section inview">
+					<div class="inner animated fadeInUp">
+						<div class="contain">
+							<div class="members_warp">
+							    <div class="counter-wrapper">
+									<span class="hilite">
+										<span class="odometer counter">3,600</span>
+										<span class="black">位</span>
+									</span>
+									<br>已加入我们这个社区
+								</div>
+							</div>
+						</div>
+						<div class="contain">
+							<div class="members_warp">
+								<ul class="member-icons">
+									<li class="reddit">
+										<div class="member-icon"></div>
+									</li>
+									<li class="charity">
+										<div class="member-icon"></div>
+									</li>
+									<li class="instacart">
+										<div class="member-icon"></div>
+									</li>
+									<li class="malalafund">
+										<div class="member-icon"></div>
+									</li>
+									<li class="mixpanel">
+										<div class="member-icon"></div>
+									</li>
+									<li class="bloomberg">
+										<div class="member-icon"></div>
+									</li>
+									<li class="tiggly">
+										<div class="member-icon"></div>
+									</li>
+									<li class="ona">
+										<div class="member-icon"></div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>-->
+
+			<!--数字滚动结束-->
+
+		</div>
+		<!--内容结束-->
+
+		<!--底部开始-->
+		<div class="footer">
+			<div class="contain">
+				<div class="foot-logo">
+					<a href="javascript:;">创客港</a>
+				</div>
+				<div class="foot-left">
+					<ul>
+						<li><a href="javascript:;">关于我们</a></li>
+						<li><a href="javascript:;">商务合作</a></li>
+						<li><a href="javascript:;">加入我们</a></li>
+						<li><a href="javascript:;">隐私政策</a></li>
+						<li><a href="javascript:;">帮助中心</a></li>
+					</ul>
+					<div class="hr"></div>
+					<table class="foot-city">
+						<tr>
+							<td><a href="javascript:;">北京</a></td>
+							<td><a href="javascript:;">上海</a></td>
+							<td><a href="javascript:;">广州</a></td>
+							<td><a href="javascript:;">深圳</a></td>
+						</tr>
+						<tr>
+							<td><a href="javascript:;">香港</a></td>
+							<td><a href="javascript:;">成都</a></td>
+							<td><a href="javascript:;">宁波</a></td>
+							<td><a href="javascript:;">杭州</a></td>
+						</tr>
+					</table>
+					<div class="hr01"></div>
+					<p>深圳市创富港商务股份有限公司版权所有&nbsp;粤ICP备12345678号 &nbsp;服务热线 400-6768-2138 </p>
+				</div>
+				<div class="foot-right">
+					<a href="javascript:;"><img src="../assets/home/images/weixin.png" alt=""></a>
+					<a href="javascript:;"><img src="../assets/home/images/weibo.png" alt=""></a>
+					<a href="javascript:;"><img src="../assets/home/images/phone.png" alt=""></a>
+				</div>
+			</div>
+
+		</div>
+
+		<!--footer end-->
+		<!--底部结束-->
+		<script type="text/javascript">
+			seajs.use('app/app.pricing', function(api) {
+				api.run();
+			})
+			 seajs.use('app/app.head', function(api) {
+				api.head();
+			});
+		</script>
+	</body>
+
+</html>

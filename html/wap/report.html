@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>举报</title>
+    <meta name="robots" content="all"/>
+    <!-- Mobile Devices Support @begin -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta content="application/xhtml+xml;charset=UTF-8" http-equiv="Content-Type">
+    <meta content="telephone=yes, address=yes" name="format-detection">
+    <!-- apple devices -->
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="white"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+    <!-- Mobile Devices Support @end -->
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="ESTT Team">
+    <link rel="stylesheet" href="../../assets/wap/css/iconfont.css"/>
+    <link rel="stylesheet" href="../../assets/wap/css/base.css"/>
+    <link rel="stylesheet" href="../../assets/wap/css/content.css"/>
+    <script src="../../assets/wap/js/sea.js"></script>
+    <script src="../../assets/wap/js/jquery/jquery.min.js"></script>
+    <script>
+        seajs.config({
+            base: '/assets/wap/js',
+            charset: 'utf-8',
+            timeout: 10000
+        });
+    </script>
+</head>
+<body>
+<section id="main">
+    <header>
+        <i class="backBtn iconfont icon-xiangzuo"></i>
+        <i class="rBtn bd">提交</i>
+    </header><div data-Placeholder="header"></div>
+
+    <div class="pd_TB_15">
+        <dl class="mDL01 mb_15">
+            <dt>我要举报<em>毕莎</em>的帖子</dt>
+            <dd class="pd_LR_15">
+                <blockquote>万圣节的一个有趣内容是“Trick or treat”，在这一天...</blockquote>
+            </dd>
+        </dl>
+        <dl class="mDL01">
+            <dt>举报理由</dt>
+            <dd class="pd_LR_15 row mOption">
+                <span><i class="iconfont icon-dagou"></i>垃圾营销<input type="radio" name="sex" value="0" /></span>
+                <span><i class="iconfont icon-dagou"></i>淫秽色情<input type="radio" name="sex" value="1" /></span>
+                <span><i class="iconfont icon-dagou"></i>虚假信息<input type="radio" name="sex" value="2" /></span>
+                <span><i class="iconfont icon-dagou"></i>其他原因<input type="radio" name="sex" value="3" /></span>
+            </dd>
+        </dl>
+    </div>
+</section><!--#main end-->
+<script>
+    $('document').ready(function(){
+        //初始化main高度，兼容部分页面有底色的情况
+        $('#main').css({'min-height':$(window).height()});
+        //单选
+        $('.mOption input[type=radio]').on('change',function(){
+            $(this).parent('span').addClass('on').siblings('span').removeClass('on');
+        });
+
+    });
+</script>
+</body>
+</html>

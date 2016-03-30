@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>需求发布</title>
+    <meta name="robots" content="all"/>
+    <!-- Mobile Devices Support @begin -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta content="application/xhtml+xml;charset=UTF-8" http-equiv="Content-Type">
+    <meta content="telephone=yes, address=yes" name="format-detection">
+    <!-- apple devices -->
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="white"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+    <!-- Mobile Devices Support @end -->
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="ESTT Team">
+    <link rel="stylesheet" href="../../assets/wap/css/iconfont.css"/>
+    <link rel="stylesheet" href="../../assets/wap/css/base.css"/>
+    <link rel="stylesheet" href="../../assets/wap/css/content.css"/>
+    <script src="../../assets/wap/js/sea.js"></script>
+    <script src="../../assets/wap/js/jquery/jquery.min.js"></script>
+    <script>
+        seajs.config({
+            base: '/assets/wap/js',
+            charset: 'utf-8',
+            timeout: 10000
+        });
+    </script>
+</head>
+<body>
+<style>
+    header > .backBtn{font-size: 100%;font-style: normal;}
+    header > .rBtn{font-size: 100%;font-style: normal;  border: 1px solid #fff; height: 30px; line-height: 28px; margin: 10px;border-radius: 5px;width: auto;padding: 0 15px;}
+    .mMenu .items{width: 100%;height: 38px;text-align: left;padding-left: 15px;}
+    .mMenu .items > i{position: absolute;right: 15px;}
+    .mMenu > ul{top: 0}
+    .mMenu > ul > li>i{font-size: 28px;color: #f47857;float: right;display: none;}
+    .publish-detial textarea{height: 200px;;width: 100%;resize: none;padding: 10px 15px;border: none;}
+    .publish-detial textarea:focus{outline: none;}
+    .publish-detial{border-bottom: 1px solid #ddd}
+    .publish-pic{padding: 10px 0 10px 10px;;}
+    .publish-pic > .pub-btn{position: relative;text-align: center; color: #bababa;height: 140px;}
+    .publish-pic >.pub-btn .file{width: 80px;height: 80px;overflow: hidden;  margin: 15px 0 10px -40px;position: absolute;left: 50%;opacity: 0; z-index: 2;}
+    .publish-pic .pub-btn i{font-size: 32px; color: #bababa}
+    .publish-pic >.pub-btn .file-pic{ position: absolute; left: 50%;  margin: 15px 0 10px -40px; border: 1px dashed #bababa;width: 80px; height: 80px; text-align: center; line-height: 80px;}
+    .publish-pic >.pub-btn p{padding-top: 110px;}
+    .publish-pic .pub-img{overflow: hidden;padding: 15px 0;text-align: center;display: none;}
+    .publish-pic .pub-img ul{width: 100%}
+    .publish-pic .pub-img ul li{width: 93px;;border: 1px solid #ddd;float: left;height: 95px;margin-right: 10px;margin-bottom: 10px;position: relative}
+    .publish-pic .pub-img ul li.send-btn{border: none;}
+    .publish-pic .pub-img .pub-btn{position: relative;width: 100%;height: 100%;}
+    .publish-pic .pub-img .pub-btn .file{width: 100%;height: 100%;overflow: hidden;opacity: 0;z-index: 2;position: absolute;left: 0; top: 0;}
+    .publish-pic .pub-img .pub-btn .file-pic{position: absolute;left: 0; top: 0;border: 1px dashed #bababa;width: 100%;height: 100%;text-align: center;line-height: 100px;}
+    .publish-pic .pub-img ul li img{width: 100%;height: 100%;display: block}
+    .publish-pic .pub-img ul li label{position: absolute;right: -8px; top: -8px; background-color:rgba(0,0,0,0.5); border-radius: 50%; }
+    .publish-pic .pub-img ul li label i{color: #fff;font-size: 24px;}
+    .publish-pic .pub-img p{clear: both; color: #999;padding: 10px 0;}
+</style>
+
+<aside id="sidePanel">
+    <div class="bd">
+        免费的在线翻译服务可即时翻译文本和网页。
+    </div><i class="close iconfont icon-xiangzuo"></i>
+</aside><!--#sidePanel end-->
+<div id="maskLayer"></div>
+<section id="main">
+    <header><i class="backBtn">取消</i><input class="rBtn" type="submit" value="发布" /></header><div data-Placeholder="header"></div>
+    <menu class="mMenu">
+        <div class="items">请选择分类<i class="iconfont icon-xiangyou"></i></div>
+        <ul>
+            <li>人才招聘 <i class="iconfont icon-dagou"></i></li>
+            <li>生活饮食 <i class="iconfont icon-dagou"></i></li>
+            <li>娱乐活动 <i class="iconfont icon-dagou"></i></li>
+            <li>交通出行 <i class="iconfont icon-dagou"></i></li>
+            <li>房产出租 <i class="iconfont icon-dagou"></i></li>
+        </ul>
+    </menu>
+    <div data-Placeholder="mMenu"></div>
+    <div class="publish-detial">
+        <textarea placeholder="请输入需求内容"></textarea>
+    </div>
+    <div class="publish-pic">
+        <div class="pub-btn">
+            <input class="file" type="file"/>
+            <div class="file-pic"><i class="iconfont icon-icontitletianjia"></i></div>
+            <p>点击+号按钮添加图片，最多添加9张</p>
+        </div>
+        <div class="pub-img">
+            <ul>
+                <li><img src="../../assets/home/images/pic1.jpg" alt=""><label><i class="iconfont icon-guanbi"></i></label></li>
+                <li><img src="../../assets/home/images/pic1.jpg" alt=""><label><i class="iconfont icon-guanbi"></i></label></li>
+                <li><img src="../../assets/home/images/pic1.jpg" alt=""><label><i class="iconfont icon-guanbi"></i></label></li>
+                <li class="send-btn">
+                    <div class="pub-btn">
+                        <input class="file" type="file"/>
+                        <div class="file-pic"><i class="iconfont icon-icontitletianjia"></i></div>
+                    </div>
+                </li>
+            </ul>
+            <p>已选3张，还剩6张可选</p>
+        </div>
+
+    </div>
+
+
+</section><!--#main end-->
+    <script>
+        $('document').ready(function(){
+            //初始化main高度，兼容部分页面有底色的情况
+            $('#main').css({'min-height':$(window).height()});
+            //侧边栏
+            $('header > .menuBtn').on('click',function(){
+                $('#maskLayer').stop(true,false).fadeIn(function(){
+                    $('#sidePanel').addClass('show');
+                });
+            });
+            $('#sidePanel > .close').on('click',function(){
+                $('#sidePanel').removeClass('show');
+                $('#maskLayer').stop(true,false).fadeOut();
+            });
+            //筛选下拉菜单
+            $('.mMenu > .items').on('click',function(){
+                var _index = $(this).index(),_dom = $(this).parent('.mMenu').find('ul').eq(_index);
+                    $(this).parent('.mMenu').find('ul').hide();
+                    _dom.stop(true,false).slideDown();
+                    $(this).addClass('on');
+                    $(".rBtn").val("确定").addClass("gou")
+
+            });
+            //选择分类
+            $('.mMenu > ul > li').on('click',function(){
+                $(this).siblings("li").find("i").hide();
+                $(this).find("i").show();
+            });
+            $(document).on("click", ".gou", function () {
+                $('.mMenu').find('ul').hide();
+                $(".rBtn").val("发布").removeClass("gou")
+                $('.mMenu > .items').removeClass('on');
+            })
+
+            //选择图片
+            $(".publish-pic > .pub-btn").on('click', function () {
+                $(this).hide();
+                $(".publish-pic > .pub-img").show()
+            })
+            //删除图片
+            $(".pub-img ul li label").on('click',function(){
+                $(this).parent("li").remove();
+            })
+
+        });
+    </script>
+
+</body>
+</html>

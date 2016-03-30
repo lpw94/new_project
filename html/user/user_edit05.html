@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>个人资料编辑-绑定手机</title>
+    <!--[if lt IE 9]>
+    <script src="../../assets/home/js/jquery/html5shiv.js" type="text/javascript"></script>
+    <![endif]-->
+    <script src="../../assets/home/js/jquery/jquery-1.9.1.js" type="text/javascript"></script>
+    <script type="text/javascript" src="../../assets/home/js/seajs/sea.js"></script>
+    <script>
+        seajs.config({
+            base: '../../assets/home/js',
+            charset: 'utf-8',
+            timeout: 10000
+        });
+    </script>
+    <link rel="stylesheet" type="text/css" href="../../assets/home/css/base.css"/>
+    <link rel="stylesheet" type="text/css" href="../../assets/home/css/user.css"/>
+
+</head>
+<body>
+<div class="head">
+    <div class="header fixed">
+        <div class="contain">
+            <div class="head-left">
+                <a href="javascript:;">创客港</a>
+            </div>
+            <div class="head-right">
+                <ul class="nav">
+                    <li><a href="javascript:;">首页</a></li>
+                    <li class="city"><a href="javascript:;">服务中心</a><i></i></li>
+                    <li><a href="javascript:;">服务及定价</a></li>
+                    <li class="social"><a href="javascript:;">社群</a></li>
+                    <!--li><a href="javascript:;">创客港+</a></li-->
+                    <li class="my-msg"><em>41</em></li>
+                    <li class="user-more"></li>
+                </ul>
+            </div>
+            <div class="logined-drop">
+                <ul>
+                    <li>我的帖子</li>
+                    <li>我的帖子</li>
+                    <li>我的帖子</li>
+                    <li>我的帖子</li>
+                </ul>
+            </div><!-- logined-drop end -->
+
+        </div>
+    </div><!-- header end -->
+    <div class="city-drop">
+        <div class="contain">
+            <div class="city-down">
+                <ul>
+                    <li><a href="javascript:;">北京</a></li>
+                    <li><a href="javascript:;">上海</a></li>
+                    <li><a href="javascript:;">广州</a></li>
+                    <li><a href="javascript:;">深圳</a></li>
+                    <li><a href="javascript:;">香港</a></li>
+                    <li><a href="javascript:;">成都</a></li>
+                    <li><a href="javascript:;">宁波</a></li>
+                    <li><a href="javascript:;">杭州</a></li>
+                </ul>
+            </div>
+        </div>
+    </div><!-- city-drop end -->
+</div><!-- head end -->
+<div class="userBg01 pt_80">
+    <div class="columnsUser contain pb_50">
+        <div class="col_left mt_20">
+            <div class="user-box mb_20">
+                <dl class="user-msg">
+                    <dt>
+                        <a href="#">
+                            <img src="../../assets/home/images/tmp/userpic.jpg"/>
+                        </a>
+                    </dt>
+                    <dd>
+                        <p class="user-intro">作家崔成浩</p>
+                        <p class="points">积分：2310</p>
+                    </dd>
+                </dl>
+            </div>
+            <div class="left_list">
+                <ul class="user_list">
+                    <li class="list_items">
+                        <a href="javascript:;">
+                            <div class="list_icon fw"></div>
+                            <div class="list_info">创业服务</div>
+                        </a>
+                    </li>
+                    <li class="list_items">
+                        <a href="javascript:;">
+                            <div class="list_icon gd"></div>
+                            <div class="list_info">更多服务</div>
+                        </a>
+                    </li>
+                    <li class="list_items">
+                        <a href="javascript:;">
+                            <div class="list_icon yd"></div>
+                            <div class="list_info">新的预定</div>
+                        </a>
+                    </li>
+                    <li class="list_items">
+                        <a href="javascript:;">
+                            <div class="list_icon dd"></div>
+                            <div class="list_info">订单管理</div>
+                        </a>
+                    </li>
+                    <li class="list_items">
+                        <a href="javascript:;">
+                            <div class="list_icon zh"></div>
+                            <div class="list_info">账户管理</div>
+                        </a>
+                    </li>
+                    <li class="list_items">
+                        <a href="javascript:;">
+                            <div class="list_icon sc"></div>
+                            <div class="list_info">我的收藏</div>
+                        </a>
+                    </li>
+                    <li class="list_items">
+                        <a href="javascript:;">
+                            <div class="list_icon tx"></div>
+                            <div class="list_info">我的通讯录</div>
+                        </a>
+                    </li>
+                    <li class="list_items">
+                        <a href="javascript:;">
+                            <div class="list_icon sw"></div>
+                            <div class="list_info">事务管理</div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col_main  mt_20">
+            <div class="user_edit">
+                <div class="user_menu">
+                    <p>绑定手机</p>
+                </div>
+                <form class="form bind-form mt_20">
+                <section class="form-area">
+                    <p class="field">
+                        <select name="" class="state-code">
+                            <option value="86">中国大陆[86]</option>
+                            <option value="852">中国香港[852]</option>
+                            <option value="853">中国澳门[853]</option>
+                            <option value="886">中国台湾[886]</option>
+                        </select>
+                        <input type="text" class="txt phone" name="account" value="" maxlength="11" placeholder="请输入11位手机号">
+                    </p>
+                    <p class="field">
+                        <input type="text" class="txt code" name="code" value="" maxlength="4" placeholder="验证码">
+                        <a href="javascript:;" id="sendCodeBtn" class="btn btn-white">点击获取验证码</a>
+                    </p>
+                    <div class="field">
+                        <input type="submit" class="btn btn-full btn-main btn-send mt_20" value="绑定手机">
+                    </div>
+                </section>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

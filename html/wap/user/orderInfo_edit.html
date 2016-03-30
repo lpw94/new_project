@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>订单信息-编辑</title>
+    <meta name="robots" content="all"/>
+    <!-- Mobile Devices Support @begin -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta content="application/xhtml+xml;charset=UTF-8" http-equiv="Content-Type">
+    <meta content="telephone=yes, address=yes" name="format-detection">
+    <!-- apple devices -->
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="white"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+    <!-- Mobile Devices Support @end -->
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="ESTT Team">
+    <link rel="stylesheet" href="../../../assets/wap/css/iconfont.css"/>
+    <link rel="stylesheet" href="../../../assets/wap/css/base.css"/>
+    <link rel="stylesheet" href="../../../assets/wap/css/content.css"/>
+    <script src="../../../assets/wap/js/sea.js"></script>
+    <script src="../../../assets/wap/js/jquery/jquery.min.js"></script>
+    <script>
+        seajs.config({
+            base: '/assets/wap/js',
+            charset: 'utf-8',
+            timeout: 10000
+        });
+    </script>
+</head>
+<body>
+<form action="?" method="post">
+    <section id="main" class="bgColor">
+        <header><i class="backBtn iconfont icon-xiangzuo"></i></header><div data-Placeholder="header"></div>
+
+        <dl class="mDL06" data-type="addr">
+            <dt>地址<i class="addBtn iconfont icon-tianjia"></i></dt>
+            <dd>
+                <menu class="mblock border_TB mMenu02">
+                    <div class="row items">
+                        <a href="javascript:;">地址一<div class="con">深圳市宝安区宝体</div><span></span></a>
+                    </div>
+                </menu>
+            </dd>
+        </dl>
+
+        <dl class="mDL06" data-type="linkman">
+            <dt>联系人<i class="addBtn iconfont icon-tianjia"></i></dt>
+            <dd>
+                <menu class="mblock border_TB mMenu02">
+                    <div class="row items">
+                        <a href="javascript:;">联系人一<div class="con">毕莎&nbsp;&nbsp;15912346589</div><span></span></a>
+                    </div>
+                    <div class="row items">
+                        <a href="javascript:;">联系人二<div class="con">毕莎&nbsp;&nbsp;15912346589</div><span></span></a>
+                    </div>
+                </menu>
+            </dd>
+        </dl>
+
+        <dl class="mDL06">
+            <dt>服务时间</dt>
+            <dd>
+                <menu class="mblock border_TB mMenu02">
+                    <div class="row items">
+                        <a href="javascript:;">起始时间<div class="con"><input type="text" value="1356" /></div><span></span></a>
+                    </div>
+                    <div class="row items">
+                        <a href="javascript:;">截止时间<div class="con"><input type="text" value="1356" /></div><span></span></a>
+                    </div>
+                    <div class="row items">
+                        <a href="javascript:;">合同期长<div class="con">2天</div></a>
+                    </div>
+                </menu>
+            </dd>
+        </dl>
+
+        <dl class="mDL06">
+            <dt>发票信息</dt>
+            <dd class="mblock border_TB">
+                <ul class="mMulti">
+                    <li><i class="iconfont icon-dagou"></i>Web开发<input type="checkbox" name="service" value="Web" /></li>
+                </ul>
+                <menu class="mMenu02">
+                    <div class="row items">
+                        <a href="javascript:;">发票抬头<div class="con">十二里互联网科技有限公司</div><span></span></a>
+                    </div>
+                    <div class="row items">
+                        <a href="javascript:;">领取方式<div class="con">到中心自取</div><span></span></a>
+                    </div>
+                    <div class="row items">
+                        <a href="javascript:;">邮寄地址<div class="con">广东省深圳市宝安区新湖路华美</div><span></span></a>
+                    </div>
+                    <div class="row items">
+                        <a href="javascript:;">联系人<div class="con">毕莎</div><span></span></a>
+                    </div>
+                    <div class="row items">
+                        <a href="javascript:;">联系电话<div class="con">15913256889</div><span></span></a>
+                    </div>
+                </menu>
+            </dd>
+        </dl>
+        <div class="pd_15">
+            <p>套餐费：180*1=180元</p>
+            <p>服务备用金：200元</p>
+            <p>合计：<span class="color_Main">¥380</span></p>
+        </div>
+        <a class="btn" href="javascript:;">提交订单</a>
+    </section><!--#main end-->
+    <!--遮罩层-->
+    <section id="mPOP" class="mPOP">
+        <div class="pd_15">
+            <div class="mInput mb_10" data-type="addr" data-in="input">
+                <input type="text" name="" placeholder="请填写详细地址" />
+            </div>
+            <div class="mTextarea2 mb_10" data-type="companyAbout" data-in="textarea">
+                <textarea placeholder="请输入公司简介"></textarea>
+            </div>
+            <div class="mSelect mb_10" data-type="city" data-in="select" data-in="select">
+                <select>
+                    <option selected="true" disabled="true">点击选择城市</option>
+                    <option>深圳</option>
+                    <option>北京</option>
+                    <option>广州</option>
+                </select>
+            </div>
+            <div class="mSelect mb_10" data-type="center" data-in="select">
+                <select>
+                    <option selected="true" disabled="true">点击选择中心</option>
+                    <option>华美居</option>
+                    <option>华商大厦</option>
+                </select>
+            </div>
+            <ul class="mMulti" data-type="service" data-in="checkbox">
+                <li><i class="iconfont icon-dagou"></i>Web开发<input type="checkbox" name="service" value="Web" /></li>
+                <li><i class="iconfont icon-dagou"></i>PHP建设<input type="checkbox" name="service" value="PHP" /></li>
+                <li><i class="iconfont icon-dagou"></i>UI设计<input type="checkbox" name="service" value="UI" /></li>
+            </ul>
+
+            <br>
+            <a class="btn" href="javascript:;">确认</a>
+        </div>
+    </section>
+</form>
+<script>
+    $('document').ready(function(){
+        //初始化main高度，兼容部分页面有底色的情况
+        $('#main').css({'min-height':$(window).height()});
+        //多选
+        $('ul.mMulti').delegate('li','click',function(e){
+            if( $(this).hasClass('checked') ){
+                $(this).removeClass('checked');
+                $(this).find('input[type=checkbox]').attr('checked',false);
+            }else{
+                $(this).addClass('checked');
+                $(this).find('input[type=checkbox]').attr('checked',true);
+            }
+            e.stopPropagation();
+        });
+        //添加
+        $('dl.mDL06 > dt .addBtn').on('click',function(e){
+            var _type = $(this).parents('dl').attr('data-type');
+            var _dom = $('#mPOP').find('[data-type='+_type+']').eq(0);
+            $('#main').hide();
+            $('#mPOP').show();
+            $('#mPOP .btn').attr('data-btnType',_type);
+            _dom.show().siblings('[data-type]').hide();
+            e.stopPropagation();
+        });
+        //编辑
+    });
+</script>
+</body>
+</html>

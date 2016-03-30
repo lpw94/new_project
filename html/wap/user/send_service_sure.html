@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>收件服务订单确认</title>
+    <meta name="robots" content="all"/>
+    <!-- Mobile Devices Support @begin -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta content="application/xhtml+xml;charset=UTF-8" http-equiv="Content-Type">
+    <meta content="telephone=yes, address=yes" name="format-detection">
+    <!-- apple devices -->
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="white"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+    <!-- Mobile Devices Support @end -->
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="ESTT Team">
+    <link rel="stylesheet" href="../../../assets/wap/css/iconfont.css"/>
+    <link rel="stylesheet" href="../../../assets/wap/css/base.css"/>
+    <link rel="stylesheet" href="../../../assets/wap/css/content.css"/>
+    <script src="../../../assets/wap/js/sea.js"></script>
+    <script src="../../../assets/wap/js/jquery/jquery.min.js"></script>
+    <script>
+        seajs.config({
+            base: '/assets/wap/js',
+            charset: 'utf-8',
+            timeout: 10000
+        });
+    </script>
+    <style>
+        .fr{
+            float: right;
+        }
+        .fl{
+            float: left;
+        }
+        .brd_t{
+            border-top: 1px solid #eee;
+        }
+        em{
+            font-style: normal;
+        }
+        .menu_list{
+            width: 100%;
+            clear: both;
+            height: auto;
+        }
+        p .remask{
+            color: #f47f58;
+        }
+        .order_tip{
+            position: relative;
+            padding: 20px 15px 20px 35px;
+        }
+        .order_tip .warning{
+            display: block;
+            width: 18px;
+            height: 18px;
+            line-height: 18px;
+            text-align: center;
+            font-size: 18px;
+            color: #f47f58;
+            position: absolute;
+            top: 22px;
+            left: 15px;
+        }
+        .menu_list li{
+            width: 100%;
+            background-color: #fff;
+            padding: 20px 0;
+            border-bottom: 1px solid #eee;
+        }
+        .menu_list li p{
+            width: 100%;
+            padding: 0 15px;
+            font-size: 16px;
+            line-height: 20px;
+            text-align: left;
+            position: relative;
+        }
+        .price{
+            font-style: normal;
+            color: #f47f58;
+        }
+        .menu_list li p::after{
+            content: ''; display: block; clear: both; height: 0;
+        }
+        .menu_list li p .left_span{
+            display: block;
+            width: 80px;
+            color: #999;
+        }
+        .menu_list li .pay_tip{
+            font-size: 14px;
+            color: #999;
+        }
+        .menu_list li p .span_msg{
+            color: #333;
+            width: 60%;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+        .menu_list li p .arrow_right{
+            display: block;
+            position: absolute;
+            right: 15px;
+            top: 0px;
+            width: 18px;
+            height: 24px;
+            font-size: 16px;
+            color: #999;
+            line-height: 20px;
+        }
+        .mMenu02 > .items > a{
+            position: relative;
+        }
+        .mMenu02 .items a .check-box{
+            display: block;
+            position: absolute;
+            right: 15px;
+            top: 15px;
+            font-size: 18px;
+            color: #fff;
+            width: 18px;
+            height: 18px;
+            line-height: 18px;
+            border: 1px solid #eee;
+        }
+        .check{
+            border: none;
+            background:#f47f58;
+        }
+
+        .count{
+            padding: 0 20px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        .count p{
+            font-size: 14px;
+            line-height: 24px;
+        }
+        .count p i{
+            font-style: normal;
+            color: #f47f58;
+        }
+        .total_bar{
+            padding-left: 15px;
+            height: 50px;
+            line-height: 50px;
+            background-color: #f7f7f7;
+            font-size: 16px;
+            text-align: left;
+        }
+        .total_bar .pay_box{
+            width: 100px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<section id="main" class="user_center_bg">
+    <header><a class="backBtn iconfont icon-xiangzuo" href="javascript:;"></a></header><div data-Placeholder="header"></div>
+
+    <div class="mblock border_TB mb_10">
+        <menu class="mMenu02">
+            <div class="row items">
+                <p class="order_tip">
+                    <i class="warning iconfont icon-jinggao"></i>
+                    <span>请阅读<a class="remask" href="javascript:;">《合同》</a>。确认支付代表你已同意上述合同</span>
+                </p>
+            </div>
+            <div class="row items"><a href="javascript:;"><em class="fl">已选服务</em><em class="fr">收件服务</em></a></div>
+            <div class="row items"><a href="javascript:;"><em class="fl">套餐费</em><em class="fr">180*1=180元</em></a></div>
+            <div class="row items"><a href="javascript:;"><em class="fl">服务备用金</em><em class="fr">200元</em></a></div>
+            <div class="row items"><a href="javascript:;"><em class="fr">合计: <i class="price">380元</i></em></a></div>
+
+        </menu>
+    </div>
+
+    <div class="mblock border_TB">
+        <menu class="mMenu02">
+            <ul class="menu_list">
+                <li>
+                    <p><span class="fl">付款周期</span> <span class="fr mr_20">一次性支付</span><em class="arrow_right iconfont icon-xiangyou"></em></p>
+                    <p class="pay_tip">按月支付需绑定信用卡，一次性支付可获折扣优惠</p>
+                </li>
+            </ul>
+            <div class="row items"><a href="javascript:;"><em class="fl">可用专用积分(30分)抵<em class="price">30元</em></em><i class="check-box iconfont"></i></a></div>
+            <div class="row items"><a href="javascript:;"><em class="fl">可用专用积分(100分)抵<em class="price">100元</em></em><i class="check-box iconfont"></i></a></div>
+            <div class="row items"><a href="javascript:;"><em class="fl">支付方式</em><span>支付宝</span></a></div>
+
+
+        </menu>
+    </div>
+
+
+    <div class="total_bar">
+        共需支付:<em class="price">￥280</em>
+        <div class="fr pay_box">
+            <a class="btn" href="javascript:;">立即支付</a>
+        </div>
+    </div>
+
+
+
+
+
+</section><!--#main end-->
+<script>
+    $('document').ready(function(){
+        //初始化main高度，兼容部分页面有底色的情况
+        $('#main').css({'min-height':$(window).height()});
+        $('.mMenu02 .items a').on("click",function(){
+            var _this = $(this).children("i");
+            if(_this.hasClass("check icon-dagou")){
+                _this.removeClass("check icon-dagou");
+            }else{
+                _this.addClass("check icon-dagou");
+                _this.parent("a").parent("div").siblings("div").children("a").children("i").removeClass("check icon-dagou");
+            }
+        })
+
+    });
+</script>
+</body>
+</html>

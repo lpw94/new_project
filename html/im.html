@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>webim</title>
+    <!--[if lt IE 9]>
+    <script src="../assets/home/js/jquery/html5shiv.js" type="text/javascript"></script>
+    <![endif]-->
+    <script src="../assets/home/js/jquery/jquery-1.9.1.js" type="text/javascript"></script>
+    <script src="../assets/home/js/jquery/cookies.min.js" type="text/javascript"></script>
+    <!--script-- src="../home/assets/js/tools/json2.js" type="text/javascript"></script-->
+    <script src="../assets/home/js/tools/reconnecting-websocket.js" type="text/javascript"></script>
+
+    <script type="text/javascript" src="../assets/home/js/seajs/sea.js"></script>
+    <script>
+        window.imTest = true;
+        seajs.config({
+            base: '../assets/home/js',
+            charset: 'utf-8',
+            timeout: 10000
+        });
+    </script>
+    <link rel="stylesheet" type="text/css" href="../assets/home/css/base.css"/>
+    <link rel="stylesheet" type="text/css" href="../assets/home/css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="../assets/home/css/webIM.css"/>
+</head>
+<body>
+
+<div id="action">
+    <a id="link" href="javascript:;">连接</a>
+    <a id="wslogin" href="javascript:;">登录</a>
+    <a id="close" href="javascript:;">断开</a>
+    <a id="send" href="javascript:;">发送</a>
+    &amp;<br><br><br>
+    登录ID<input id="loginID" type="text" value="119" />
+    <br><br><br>
+    <a id="getResent" href="javascript:;">获取最近聊天对象</a>
+    <a id="getOnline" href="javascript:;">获取在线列表</a>
+    <a id="getContactGroup" href="javascript:;">获取好友分组</a>
+    <a id="getContactMember" href="javascript:;">获取单组好友</a>
+    <a id="getGroup" href="javascript:;">获取我的群组</a>
+    <a id="getGroupMember" href="javascript:;">获取群组成员</a>
+    <a id="addGroup" href="javascript:;">添加群聊</a>
+    <br><br><br>
+    <a id="pullMessage" href="javascript:;">获取最近消息</a>
+    <a id="getHistory" href="javascript:;">获取历史消息</a>
+    <a id="Data" href="javascript:;">输出数据对象</a>
+    <a id="getMemberData" href="javascript:;">获取某ID的数据对象</a>
+    <br><br>
+    发送给ID<input id="toID" type="text" value="" /><br><br>
+    <textarea></textarea>
+    <br><br><br><br><br><br>
+    <input id="uploadImages" type="file" />
+
+    <div style="height:1000px; background: #f1f1f1;"></div>
+    测试发送后是否导致页面滚动
+</div><br>
+<!--p>
+    传输指令	使用情况	作用	备注
+    login	 发起/接收	 登陆webim
+    online	 主动通知	 有人上线了	 自己上线时会推送给你的好友说你上线了
+    offline	 发送/接收/主动通知	 自动、主动离线	 自动离线（如10分钟内无活动），手动下线
+    getResent	 发送/接收	 获取最近聊天对象	 最近聊天过的列表
+    getOnline	 发送/接收	 获取在线列表
+    getContactGroup	 发送/接收	 获取好友分组
+    getContactMember	 发送/接收	 获取单组好友
+    getGroup	 发送/接收	 获取我的群组
+    getGroupMember	 发送/接收	 获取群组成员
+    pullMessage	 发送/接收	 拉取消息	 获取历史消息
+    newMessage	 主动通知	 收到新消息
+    sendMessage	 发送/接收	 发送消息
+    sendImg	 发送	 发送图片	 通过sendMessage返回
+    sendFile	 发送	 发送文件	 通过sendMessage返回
+</p-->
+<script>
+    $(document).ready(function(){
+        $('#Data').on('click',function(){
+            console.log(IM.Data);
+        });
+        $('#close').on('click',function(){
+            IM.ws.close();
+        });
+        $('#link').on('click',function(){
+            IM.init();
+        });
+        $('#wslogin').on('click',function(){
+            var _uid = $('#loginID').val();
+            var _JSON = {
+                'cmd':'login',
+                'data':{'uid':_uid}
+            };
+            //console.log()
+            IM.ws.send(JSON.stringify(_JSON));
+        });
+        $('#send').on('click',function(){
+            var _to = $('#toID').val();
+            var _val = $('#action textarea').val();
+            //{"cmd":"sendMessage",data:{"gid":,'from':,to:, "content":""}}
+            var _JSON = {
+                'cmd':'sendMessage',
+                'data':{
+                    //'gid':'4',
+                    'to':_to,
+                    'content':_val
+                }
+            };
+            IM.ws.send(JSON.stringify(_JSON));
+        });
+        //最近联系人
+        $('#getResent').on('click',function(){
+            console.log('拉取最近联系人');
+            IM.node.Panel_rc.addClass('on');
+            //{"cmd":"getResent"}
+            var _JSON = {
+                'cmd':'getResent'
+            };
+            IM.ws.send(JSON.stringify(_JSON));
+        });
+
+        $('#getOnline').on('click',function(){
+            var _JSON = {
+                'cmd':'getOnline'
+            };
+            IM.ws.send(JSON.stringify(_JSON));
+        });
+
+        $('#getContactGroup').on('click',function(){
+            var _JSON = {
+                'cmd':'getContactGroup'
+            };
+            IM.ws.send(JSON.stringify(_JSON));
+        });
+
+        $('#getContactMember').on('click',function(){
+            var _JSON = {
+                'cmd':'getContactMember',
+                'data':{
+                    'gid':6
+                }
+            };
+            IM.ws.send(JSON.stringify(_JSON));
+        });
+        $('#getGroup').on('click',function(){
+            var _JSON = {
+                'cmd':'getGroup',
+                'data':{
+                    'gid':1
+                }
+            };
+            IM.ws.send(JSON.stringify(_JSON));
+        });
+        $('#getGroupMember').on('click',function(){
+            var _JSON = {
+                'cmd':'getGroupMember',
+                'data':{
+                    'gid':4
+                }
+            };
+            IM.ws.send(JSON.stringify(_JSON));
+        });
+        $('#pullMessage').on('click',function(){
+            var _JSON = {
+                'cmd':'pullMessage',
+                'data':{
+                    'gid':0,
+                    'to':118,
+                    'page':1,
+                    'limit':10,
+                    'last_id':11
+                }
+            };
+            IM.ws.send(JSON.stringify(_JSON));
+        });
+        $('#getHistory').on('click',function(){
+            var _JSON = {
+                'cmd':'getHistory',
+                'data':{
+                    'gid':0,
+                    'to':4,
+                    'page':null
+                }
+            };
+            IM.ws.send(JSON.stringify(_JSON));
+        });
+
+
+
+        $('#addGroup').on('click',function(){
+            IM.addGroupChat.draw();
+            IM.addGroupChat.event();
+        });
+
+        $('#getMemberData').on('click',function(){
+            var _data = IM.getMemberData(7,1);
+            console.log(_data);
+            //IM.addGroupChat.event();
+        });
+        $('#uploadImages').on('change',function(){
+            //http
+            var _url = 'http://webim.estt.com.cn/api.php';
+            var _ff = $(this).get(0).files[0];
+            var reg = /((png)|(jpg)|(jpeg)|(gif))$/;
+            if( !reg.test(_ff.type) ){
+                alert('请上传正确的图片文件');
+                return false;
+            }
+            if(window.FileReader) {
+                var _file = new FileReader();
+                _file.onloadend = function(e){
+                    //document.getElementById('images').src = e.target.result;
+                    console.log(e.target.result)
+                    var _content = e.target.result;
+                    var _JSON = {
+                        'cmd':'sendImg',
+                        'data':{
+                            'gid':0,
+                            'to':4,
+                            'content':_content,
+                            'len':12222
+                        }
+                    };
+                    IM.ws.send(JSON.stringify(_JSON));
+
+                    /*
+                    $.ajax({
+                        type:'get',
+                        url:_url,
+                        data:e.target.result,
+                        dataType:'json',
+                        success:function(e){
+                            console.log(1)
+                        },
+                        error:function(e){
+                            console.log(2)
+                        }
+                    });
+                    */
+                };
+                _file.readAsDataURL(_ff);
+            }
+            else {
+                console.log("Not supported by your browser!");
+            }
+            /*
+            $.ajax({
+                type:'get',
+                url:_url,
+                data:$(this).val(),
+                dataType:'json',
+                success:function(e){
+                    console.log(1)
+                },
+                error:function(e){
+                    console.log(2)
+                }
+            });
+*/
+        });
+    });
+</script>
+<style>
+    #action{ padding: 30px;}
+    #action a{ margin-right: 20px;}
+</style>
+
+
+<script>
+    seajs.use('app/app.webim',function(api){
+        api.init();
+    });
+</script>
+</body>
+</html>

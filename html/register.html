@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>创客港手机注册</title>
+    <!--[if lt IE 9]>
+    <script src="../assets/home/js/jquery/html5shiv.js" type="text/javascript"></script>
+    <![endif]-->
+    <script src="../assets/home/js/jquery/jquery-1.9.1.js" type="text/javascript"></script>
+    <script type="text/javascript" src="../assets/home/js/seajs/sea.js"></script>
+    <script>
+        seajs.config({
+            base: '../assets/home/js',
+            charset: 'utf-8',
+            timeout: 10000
+        });
+    </script>
+    <link rel="stylesheet" type="text/css" href="../assets/home/css/base.css"/>
+    <link rel="stylesheet" type="text/css" href="../assets/home/css/style.css"/>
+</head>
+<body>
+<div class="head">
+    <div class="header">
+        <div class="contain">
+            <div class="head-left">
+                <a href="#">创客港</a>
+            </div>
+            <div class="head-right">
+                <ul class="nav">
+                    <li><a href="#">首页</a></li>
+                    <li class="city"><a href="javascript:;">服务中心</a><i></i></li>
+                    <li><a href="#">服务及定价</a></li>
+                    <li class="social"><a href="javascript:;">社群</a></li>
+                    <!--li><a href="javascript:;">创客港+</a></li-->
+                    <li class="login"><a id="login" href="#">登录</a></li>
+                    <li class="register"><a href="#">注册</a></li>
+                </ul>
+            </div>
+        </div>
+    </div><!-- header end -->
+    <div class="city-drop">
+        <div class="contain">
+            <div class="city-down">
+                <ul>
+                    <li><a href="javascript:;">北京</a></li>
+                    <li><a href="javascript:;">上海</a></li>
+                    <li><a href="javascript:;">广州</a></li>
+                    <li><a href="javascript:;">深圳</a></li>
+                    <li><a href="javascript:;">香港</a></li>
+                    <li><a href="javascript:;">成都</a></li>
+                    <li><a href="javascript:;">宁波</a></li>
+                    <li><a href="javascript:;">杭州</a></li>
+                </ul>
+            </div>
+        </div>
+    </div><!-- city-drop end -->
+</div><!-- head end -->
+<dl id="loginBox">
+	<div class="close"></div>
+    <dt>账号登录</dt>
+    <dd class="mForm">
+        <div class="items">
+            <div class="bd">
+                <input class="mInput" type="text" name="account_name" value="" placeholder="请输入注册邮箱/手机号码" />
+            </div>
+            <div class="tips"><div class="con"></div></div>
+        </div>
+        <div class="items">
+            <div class="bd">
+                <input class="mInput" type="password" name="account_psw" value="" placeholder="请输入登陆密码" />
+            </div>
+            <div class="tips"><div class="con"></div></div>
+        </div>
+        <div class="items">
+            <div class="bd">
+                <a class="submitBtn" href="javascript:;">登陆</a>
+            </div>
+        </div>
+        <div class="items">
+            <div class="bd">
+                <a class="forgetBtn" href="javascript:;">忘记密码</a>
+                <a class="registerBtn" href="javascript:;">注册账号</a>
+            </div>
+        </div>
+    </dd>
+</dl>
+<div class="masklayer"></div>
+<!--loginBox end-->
+
+<div class="pageRegister">
+    <div class="contain">
+        <div id="registerBox">
+            <div class="bar">
+                <h3>注册</h3>
+                <p class="greet">加入创客之家，创业再也无烦恼...</p>
+            </div>
+
+            <!--
+                        <div class="bar">
+                            <div class="items"><span data-id="phone">手机号码注册</span></div>
+                            <div class="items"><span data-id="email">邮箱注册</span></div>
+                        </div>
+            -->
+            <div class="con">
+                <section class="mForm" data-id="phone">
+                    <div class="items">
+                        <div class="bd">
+                            <span>姓名</span>
+                            <input class="mInput inRequire" name="username" placeholder="4-20位字符" type="text">
+                        </div>
+                        <div class="tips msg"><div class="con"></div></div>
+                    </div>
+                    <div class="items">
+                        <div class="bd">
+                            <span>手机号码</span>
+                            <div class="mInputDrop" data-zone="CN">
+                                <div class="drop">
+                                    <div class="checked">+86</div>
+                                    <ul>
+                                        <li data-zone="CN">+86</li>
+                                        <li data-zone="HK">+00</li>
+                                    </ul>
+                                </div>
+                                <input class="mInput inRequire" name="phone" placeholder="11位手机号码" type="text">
+                            </div>
+                        </div>
+                        <div class="tips msg"><div class="con"></div></div>
+                    </div>
+                    <div class="items">
+                        <div class="bd password-see">
+                            <span>密码</span>
+                            <input class="mInput inRequire" name="psw" placeholder="6-20位字母+数字组合" type="password"><i></i>
+                        </div>
+                        <div class="tips msg"><div class="con"></div></div>
+                    </div>
+<!--
+                    <div class="items">
+                        <div class="bd">
+                            <span>确认密码</span>
+                            <input class="mInput inRequire" name="repsw" placeholder="请输入确认密码" type="password">
+                        </div>
+                        <div class="tips"><div class="con"></div></div>
+                    </div>
+-->
+                    <div class="items">
+                        <div class="bd">
+                            <span>短信验证码</span>
+                            <div class="mInputCode">
+                                <div class="mCode">获取短信验证码</div>
+                                <p><input class="mInput inRequire" name="code" placeholder="4位验证码" type="text"></p>
+                            </div>
+                        </div>
+                        <div class="tips msg"><div class="con"></div></div>
+                    </div>
+                    <div class="items">
+                        <div class="bd xy">
+                            注册即代表你已同意<a href="javascript:;">《创客港许可及服务协议》</a>
+                        </div>
+                    </div>
+                    <div class="items">
+                        <div class="bd action">
+                            <a class="submitBtn register" href="javascript:;">注册</a>
+                        </div>
+                    </div>
+                </section><!-- phone login end -->
+                <div class="con_right_box">
+                    <div class="midle_box">
+                        <p>我不想用手机...</p>
+                        <a href="javascript:;" class="btn_zhuce submitBtn">使用邮箱注册</a>
+                    </div>
+
+                </div>
+
+                <!--
+                                <section class="mForm" data-id="email">
+                                    <div class="items">
+                                        <div class="bd">
+                                            <span>姓名</span>
+                                            <input class="mInput inRequire" name="username" placeholder="请输入姓名" type="text">
+                                        </div>
+                                        <div class="tips msg"><div class="con"></div></div>
+                                    </div>
+                                    <div class="items">
+                                        <div class="bd">
+                                            <span>邮箱地址</span>
+                                            <input class="mInput inRequire" name="email" placeholder="请输入邮箱地址" type="text">
+                                        </div>
+                                        <div class="tips msg"><div class="con"></div></div>
+                                    </div>
+                                    <div class="items">
+                                        <div class="bd">
+                                            <span>密码</span>
+                                            <input class="mInput inRequire" name="psw" placeholder="请输入密码" type="password">
+                                        </div>
+                                        <div class="tips msg"><div class="con"></div></div>
+                                    </div>
+                &lt;!&ndash;
+                                    <div class="items">
+                                        <div class="bd">
+                                            <span>确认密码</span>
+                                            <input class="mInput inRequire" name="repsw" placeholder="请输入确认密码" type="password">
+                                        </div>
+                                        <div class="tips"><div class="con"></div></div>
+                                    </div>
+                &ndash;&gt;
+                                    <div class="items">
+                                        <div class="bd xy">
+                                            <input class="pact" type="checkbox" checked>我已同意<a href="javascript:;">《创客港许可及服务协议》</a>
+                                        </div>
+                                    </div>
+                                    <div class="items">
+                                        <div class="bd action">
+                                            <a class="submitBtn register" href="javascript:;">注册</a>
+                                        </div>
+                                    </div>
+                                </section>&lt;!&ndash; email login end &ndash;&gt;
+                -->
+            </div>
+            <div class="bd delay">
+                    <a href="javascript:;">稍后验证，立即体验~</a>
+            </div>
+
+        </div>
+        <!--#registerBox end-->
+    </div>
+</div><!--pageRegister end-->
+<div class="agr_box">
+    <div class="close"></div>
+    <h5 class="h5_title mb_30">《收件服务协议》</h5>
+    <div class="agr_content">
+        <p>甲、乙双方本着自愿、平等、公平、诚实、信用的原则，经友好协商，根据中华人民共和国有关法律、法规的规定签定本协议，由双方共同遵守。</p>
+        <p>第一条协议范围内，双方的关系确定为合作关系。为拓展市场更好地、更规范地服务消费者，根据公司的规划，甲方根据乙方的申请和对乙方的经营能力的审核，同 意乙方加入___________公司的销售网络。
+            同意乙方在_______省（市、自治区）_________市（地区）_______县 （区）_______地点（商场建筑物）（代理、经销、专卖、批发、零售）专属性经营（_______）品牌________系列产品。</p>
+        <p>第二条订立本协议的目的在于确保甲、乙双方忠实地履行本协议规定的双方的职责和权利。乙方作为单独的企业法人或经营者进行经济活动。因此，他必须遵守对所 有企业法人或经营者共同的法律要求，特别是有关资格的规则以及社会的、财务的商业要求。
+            作为一个企业法人或经营者，乙方应就其活动自负一切风险和从合法经 营中获利。乙方不是甲方的代理人，也不是甲方的雇员和合伙人。乙方不是作为甲方委托代表，乙方无权以甲方的名义签定协议，使甲方在任何方面对第三人承担责 任，或由甲方负担费用，承担任何义务。订立本协议并未授予乙方任何约束甲方或甲方有关企业之权利，甲方对本协议任何条款有最终的解释权。</p>
+        <p>第三条有效期从_______年_____月_____日至_______年_____月_____日，由签约日计。除非本协议提前终止，乙方可在协议有 效期满前三个月向甲方提出延长协议合作的书面请求，经甲方同意，可以续签《__________合作协议书》。</p>
+        第四条甲方为使乙方所辖区域更好运营，开发和提供适销产品，保证产品质量符合标准，合理定价，最大限度保证乙方的供应。在本协议期间，甲方承诺，积极协助 承担市场物流、组织功能乙方按甲方规划进行市场设计和拓展市场网络。甲方承诺在乙方要求下，可为乙方代办货物托运及相应事项，用乙方要求的方式运输到乙方 所指定的地点，其运输、保</p>
+    </div>
+    <input type="button" class="mBtn btn_ok" value="确定"/>
+</div>
+<div class="footer">
+    <div class="contain">
+        <div class="foot-logo">
+            <a href="javascript:;">创客港</a>
+        </div>
+        <div class="foot-left">
+            <ul>
+                <li><a href="javascript:;">关于我们</a></li>
+                <li><a href="javascript:;">商务合作</a></li>
+                <li><a href="javascript:;">加入我们</a></li>
+                <li><a href="javascript:;">隐私政策</a></li>
+                <li><a href="javascript:;">帮助中心</a></li>
+            </ul>
+            <div class="hr"></div>
+            <table class="foot-city">
+                <tr>
+                    <td><a href="javascript:;">北京</a></td>
+                    <td><a href="javascript:;">上海</a></td>
+                    <td><a href="javascript:;">广州</a></td>
+                    <td><a href="javascript:;">深圳</a></td>
+                </tr>
+                <tr>
+                    <td><a href="javascript:;">香港</a></td>
+                    <td><a href="javascript:;">成都</a></td>
+                    <td><a href="javascript:;">宁波</a></td>
+                    <td><a href="javascript:;">杭州</a></td>
+                </tr>
+            </table>
+            <div class="hr01"></div>
+            <p>深圳市创富港商务股份有限公司版权所有&nbsp;&nbsp;&nbsp;&nbsp;粤ICP备12345678号&nbsp;&nbsp;&nbsp;&nbsp;服务热线 400-6768-2138 </p>
+        </div>
+        <div class="foot-right">
+            <a href="javascript:;"><img src="../assets/home/images/weixin.png" alt=""></a>
+            <a href="javascript:;"><img src="../assets/home/images/weibo.png" alt=""></a>
+            <a href="javascript:;"><img src="../assets/home/images/phone.png" alt=""></a>
+        </div>
+    </div>
+</div><!--footer end-->
+
+<script type="text/javascript">
+    seajs.use('app/app.head',function(api){
+        api.head();
+    });
+    seajs.use('app/app.register',function(api){
+        api.init();
+    });
+</script>
+</body>
+</html>

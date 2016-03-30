@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>收件服务订单</title>
+    <meta name="robots" content="all"/>
+    <!-- Mobile Devices Support @begin -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta content="application/xhtml+xml;charset=UTF-8" http-equiv="Content-Type">
+    <meta content="telephone=yes, address=yes" name="format-detection">
+    <!-- apple devices -->
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="white"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+    <!-- Mobile Devices Support @end -->
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="ESTT Team">
+    <link rel="stylesheet" href="../../../assets/wap/css/iconfont.css"/>
+    <link rel="stylesheet" href="../../../assets/wap/css/base.css"/>
+    <link rel="stylesheet" href="../../../assets/wap/css/content.css"/>
+    <script src="../../../assets/wap/js/sea.js"></script>
+    <script src="../../../assets/wap/js/jquery/jquery.min.js"></script>
+    <script>
+        seajs.config({
+            base: '/assets/wap/js',
+            charset: 'utf-8',
+            timeout: 10000
+        });
+    </script>
+    <style>
+        .fr{
+            float: right;
+        }
+        .fl{
+            float: left;
+        }
+        .caption{
+            padding: 0 20px;
+            height: 50px;
+            line-height: 50px;
+            font-size: 50px;
+        }
+        .caption p{
+            position: relative;
+            font-size: 16px;
+            color: #999;
+        }
+        .caption p .add_edit{
+            position: absolute;
+            right: 0;
+            top: 0;
+            font-size: 20px;
+            font-weight: bold;
+            color: #f47f58;
+            font-style: normal;
+        }
+
+        .left_span{
+            display: block;
+            width: 80px;
+            font-style: normal;
+            color: #999;
+        }
+        .span_msg{
+            color: #333;
+            width: 60%;
+            height: 50px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+        .mMenu02 .items{
+            position: relative;
+        }
+        .mMenu02 .items .check-box{
+            display: block;
+            position: absolute;
+            right: 15px;
+            top: 16px;
+            font-size: 18px;
+            color: #fff;
+            width: 18px;
+            height: 18px;
+            line-height: 18px;
+            border: 1px solid #ccc;
+        }
+        .mMenu02 .items .check{
+            border: none;
+            background:#f47f58;
+        }
+
+        .count{
+            padding: 0 20px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        .count p{
+            font-size: 14px;
+            line-height: 24px;
+        }
+        .count p i{
+            font-style: normal;
+            color: #f47f58;
+        }
+    </style>
+</head>
+<body>
+<section id="main" class="user_center_bg">
+    <header><a class="backBtn iconfont icon-xiangzuo" href="javascript:;"></a></header><div data-Placeholder="header"></div>
+
+
+    <div class="caption">
+        <p>地址 <em class="add_edit iconfont icon-icontitletianjia"></em></p>
+    </div>
+    <div class="mblock border_TB">
+        <menu class="mMenu02">
+            <div class="row items"><a href="javascript:;"><em class="left_span fl">地址一</em> <input type="text" class="span_msg fl" value="深圳市南山区科技路1001号"> <span></span></a></div>
+        </menu>
+    </div>
+    <div class="caption">
+        <p>联系人 <em class="add_edit iconfont icon-icontitletianjia"></em></p>
+    </div>
+    <div class="mblock border_TB">
+        <menu class="mMenu02">
+            <div class="row items"><a href="javascript:;"><em class="left_span fl">联系人二</em> <input type="text" class="span_msg fl" value="小明1 13248254874"> <span></span></a></div>
+            <div class="row items"><a href="javascript:;"><em class="left_span fl">联系人二</em> <input type="text" class="span_msg fl" value="小明1 13248254874"> <span></span></a></div>
+        </menu>
+    </div>
+    <div class="caption">
+        <p>服务时间</p>
+    </div>
+    <div class="mblock border_TB">
+        <menu class="mMenu02">
+            <div class="row items"><a href="javascript:;"><em class="left_span fl">起始时间</em> <input type="text" class="span_msg fl" value="2015-09-26"> <span></span></a></div>
+            <div class="row items"><a href="javascript:;"><em class="left_span fl">截止时间</em> <input type="text" class="span_msg fl" value="2015-10-26"> <span></span></a></div>
+            <div class="row items"><a href="javascript:;"><em class="left_span fl">服务时长</em> <input type="text" class="span_msg fl" value="30天"> <span></span></a></div>
+        </menu>
+    </div>
+    <div class="caption">
+        <p>发票信息</p>
+    </div>
+
+    <div class="mblock border_TB">
+        <menu class="mMenu02">
+            <div class="row items"><a href="javascript:;"><em class="left_span fl">需要发票</em> <i class="check-box iconfont"></i></a></div>
+            <div class="row items" style="display: none"><a href="javascript:;"><em class="left_span fl">发票抬头</em> <input type="text" class="span_msg fl" value="十二里互联网科技有限公司"> <span></span></a></div>
+            <div class="row items" style="display: none"><a href="javascript:;"><em class="left_span fl">领取方式</em> <input type="text" class="span_msg fl" value="到中心自取"> <span></span></a></div>
+            <div class="row items" style="display: none"><a href="javascript:;"><em class="left_span fl">邮寄地址</em> <input type="text" class="span_msg fl" value="广东省深圳市宝安区新湖路华美"> <span></span></a></div>
+            <div class="row items" style="display: none"><a href="javascript:;"><em class="left_span fl">联系人</em> <input type="text" class="span_msg fl" value="李明明"> <span></span></a></div>
+            <div class="row items" style="display: none"><a href="javascript:;"><em class="left_span fl">联系电话</em> <input type="text" class="span_msg fl" value="13425558445"> <span></span></a></div>
+
+        </menu>
+    </div>
+
+    <div class="count">
+        <p>套餐费: 180*1 = 180元</p>
+        <p>服务备用金: 200元</p>
+        <p>合计: <i>￥380</i></p>
+    </div>
+    <a class="btn" href="javascript:;">提交订单</a>
+
+
+
+
+
+</section><!--#main end-->
+<script>
+    $('document').ready(function(){
+        //初始化main高度，兼容部分页面有底色的情况
+        $('#main').css({'min-height':$(window).height()});
+        $('.mMenu02 .items i').on("click",function(){
+            var _this = $(this);
+            if(_this.hasClass("check icon-dagou")){
+                _this.removeClass("check icon-dagou");
+                _this.parent("a").parent("div").siblings("div").hide();
+            }else{
+                _this.addClass("check icon-dagou");
+                _this.parent("a").parent("div").siblings("div").show();
+            }
+        })
+
+    });
+</script>
+</body>
+</html>

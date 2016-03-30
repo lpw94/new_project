@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>房间预订</title>
+    <!--[if lt IE 9]>
+    <script src="../../assets/home/js/jquery/html5shiv.js" type="text/javascript"></script>
+    <![endif]-->
+    <script src="../../assets/home/js/jquery/jquery-1.9.1.js" type="text/javascript"></script>
+    <script type="text/javascript" src="../../assets/home/js/seajs/sea.js"></script>
+    <script>
+        seajs.config({
+            base: '../../assets/home/js/app',
+            charset: 'utf-8',
+            timeout: 10000
+        });
+    </script>
+    <link rel="stylesheet" type="text/css" href="../../assets/home/css/user.css"/>
+    <link rel="stylesheet" type="text/css" href="../../assets/home/css/base.css"/>
+    <link rel="stylesheet" type="text/css" href="../../assets/home/css/datepicker.css"/>
+</head>
+<body>
+<!--
+  <div class="head">
+      <div class="headbox">
+          <div class="logo"><a href="#"></a></div>
+          <span><a href="#">Chun xue</a></span>
+      </div>
+  </div>
+-->
+<div class="head">
+    <div class="header fixed">
+        <div class="contain">
+            <div class="head-left">
+                <a href="javascript:;">创客港</a>
+            </div>
+            <div class="head-right">
+                <ul class="nav">
+                    <li><a href="javascript:;">首页</a></li>
+                    <li class="city"><a href="javascript:;">服务中心</a><i></i></li>
+                    <li><a href="javascript:;">服务及定价</a></li>
+                    <li class="social"><a href="javascript:;">社群</a></li>
+                    <!--li><a href="javascript:;">创客港+</a></li-->
+                    <li class="login"><a id="login" href="javascript:;">登录</a></li>
+                    <li class="register"><a href="javascript:;">注册</a></li>
+                </ul>
+            </div>
+        </div>
+    </div><!-- header end -->
+    <div class="city-drop">
+        <div class="contain">
+            <div class="city-down">
+                <ul>
+                    <li><a href="javascript:;">北京</a></li>
+                    <li><a href="javascript:;">上海</a></li>
+                    <li><a href="javascript:;">广州</a></li>
+                    <li><a href="javascript:;">深圳</a></li>
+                    <li><a href="javascript:;">香港</a></li>
+                    <li><a href="javascript:;">成都</a></li>
+                    <li><a href="javascript:;">宁波</a></li>
+                    <li><a href="javascript:;">杭州</a></li>
+                </ul>
+            </div>
+        </div>
+    </div><!-- city-drop end -->
+</div><!-- head end -->
+
+  <div class="nav-box">
+      <div class="contain">
+          <h1 class="nav-left">CONFERENCE ROOM BOOKING</h1>
+          <div class="nav-right">
+              <span><em>2</em><p>REMAINING<br>CREDITS</p></span>
+              <span><em>1</em><p>CREDITS USED <br>THIS MONTH</p></span>
+          </div>
+
+      </div>
+  </div>
+  <div class="page-contain">
+      <div class="contain">
+          <div class="page-left">
+
+              <h2>Reservations</h2>
+              <div class="select-style-time"><input type="checkbox">show only mine</div>
+              <div class="reserve-box">
+                <!--  reserve today-->
+                  <div class="reserve-title">1 reservations for today, <strong>Sep 9, 2015</strong></div>
+                  <div class="reserve-item">
+                      <p class="book-date">Today</p>
+                      <p class="book-time">10:30 AM - 11:00 AM IDT</p>
+                      <p>Dubnov - 00-A</p>
+                      <p>Owner: Chun Xue</p>
+                      <div class="close-select">
+                          <i class="close">×</i>
+                          <span><em class="remove">remove</em>|<em class="back">back</em></span>
+                      </div>
+                  </div>
+                <!--  Upcoming Reservations-->
+                  <div class="reserve-title">Upcoming Reservations</div>
+                  <div class="reserve-item">
+                      <p class="book-date">Today</p>
+                      <p class="book-time">10:30 AM - 11:00 AM IDT</p>
+                      <p>Dubnov - 00-A</p>
+                      <p>Owner: Chun Xue</p>
+                      <div class="close-select">
+                          <i class="close">×</i>
+                          <span><em class="remove">remove</em>|<em class="back">back</em></span>
+                      </div>
+                  </div>
+                  <div class="reserve-item">
+                      <p class="book-date">Fri, Sep 18th 2015</p>
+                      <p class="book-time">10:30 AM - 11:00 AM IDT</p>
+                      <p>Dubnov - 00-A</p>
+                      <p>Owner: Chun Xue</p>
+                      <div class="close-select">
+                          <i class="close">×</i>
+                          <span><em class="remove">remove</em>|<em class="back">back</em></span>
+                      </div>
+
+                  </div>
+
+                  <!--Past Reservations-->
+                  <div class="reserve-title">Past Reservations</div>
+                  <div class="reserve-item past">
+                      <p class="book-date">Today</p>
+                      <p class="book-time">10:30 AM - 11:00 AM IDT</p>
+                      <p>Dubnov - 00-A</p>
+                      <p>Owner: Chun Xue</p>
+                  </div>
+                  <div class="reserve-item past">
+                      <p class="book-date">Today</p>
+                      <p class="book-time">10:30 AM - 11:00 AM IDT</p>
+                      <p>Dubnov - 00-A</p>
+                      <p>Owner: Chun Xue</p>
+                  </div>
+                  <div class="reserve-item past">
+                      <p class="book-date">Today</p>
+                      <p class="book-time">10:30 AM - 11:00 AM IDT</p>
+                      <p>Dubnov - 00-A</p>
+                      <p>Owner: Chun Xue</p>
+                  </div>
+                  <div class="reserve-item past">
+                      <p class="book-date">Today</p>
+                      <p class="book-time">10:30 AM - 11:00 AM IDT</p>
+                      <p>Dubnov - 00-A</p>
+                      <p>Owner: Chun Xue</p>
+                  </div>
+              </div>
+
+          </div>
+          <div class="page-right">
+              <input type="text" name="date-time" id="date-time" class="time-msg" value="" disabled="disabled"/>
+              <p class="timer">Peak hours are 11:00AM - 4:00PM</p>
+              <div class="select-style"><input type="checkbox">Set as default?</div>
+              <select class="pick-city">
+                  <option value="Select Location">Select Location</option>
+                  <optgroup label="Austin">
+                      <option value="0">Congress</option>
+                      <option value="1">Berkeley</option>
+                  </optgroup>
+                  <optgroup label="Austin">
+                      <option value="2">Congress</option>
+                      <option value="3">Berkeley</option>
+                  </optgroup>
+                  <optgroup label="Austin">
+                      <option value="4">Congress</option>
+                      <option value="5">Berkeley</option>
+                      <option value="6">Berkeley</option>
+                  </optgroup>
+              </select>
+              <div class="select-box">
+                  <div class="select-date">
+                      <ul>
+                          <li class="date-over">8AM</li>
+                          <li>9AM</li>
+                          <li>10AM</li>
+                          <li>11AM</li>
+                          <li>12AM</li>
+                          <li>1PM</li>
+                          <li>2PM</li>
+                          <li>3PM</li>
+                          <li>4PM</li>
+                          <li>5PM</li>
+                          <li>6PM</li>
+                          <li>7PM</li>
+                          <li class="date-over">8PM</li>
+                      </ul>
+                  </div>
+                  <div class="time-box">
+                      <div class="room-pic">
+                          <img src="../../assets/home/images/tmp/room1.jpg" alt="">
+                      </div>
+                      <ul id="r0" class="room-time">
+                          <li data-type="0" class="time-over"></li>
+                          <li data-type="1" class="time-over"></li>
+                          <li data-type="2"><div class="booking">+</div> </li>
+                          <li data-type="3"><div class="booking">+</div></li>
+                          <li data-type="4"><div class="book-success">CFG created by: Chun Xue</div></li>
+                          <li data-type="5"></li>
+                          <li data-type="6"></li>
+                          <li data-type="7"></li>
+                          <li data-type="8"></li>
+                          <li data-type="9"></li>
+                          <li data-type="10"><div class="book-success">CFG created by: Chun Xue</div></li>
+                          <li data-type="11"></li>
+                          <li data-type="12"></li>
+                          <li data-type="13"></li>
+                          <li data-type="14"><div class="booked">CFG created by: Chun</div></li>
+                          <li data-type="15"></li>
+                          <li data-type="16"></li>
+                          <li data-type="17"></li>
+                          <li data-type="18"></li>
+                          <li data-type="19"></li>
+                          <li data-type="20"></li>
+                          <li data-type="21"></li>
+                          <li data-type="22"></li>
+                          <li data-type="23"></li>
+                          <li data-type="24" class="time-over"></li>
+                          <li data-type="25" class="time-over"></li>
+                      </ul>
+                  </div>
+                  <div class="room-name"><b>00-A</b>·0th floor·5 seats</div>
+              </div>
+              <div class="select-box">
+                  <div class="select-date">
+                      <ul>
+                          <li>8AM</li>
+                          <li>9AM</li>
+                          <li>10AM</li>
+                          <li>11AM</li>
+                          <li>12AM</li>
+                          <li>1PM</li>
+                          <li>2PM</li>
+                          <li>3PM</li>
+                          <li>4PM</li>
+                          <li>5PM</li>
+                          <li>6PM</li>
+                          <li>7PM</li>
+                          <li>8PM</li>
+                      </ul>
+                  </div>
+                  <div class="time-box">
+                      <div class="room-pic">
+                          <img src="../../assets/home/images/tmp/room1.jpg" alt="">
+                      </div>
+                      <ul id="r1" class="room-time">
+                          <li></li>
+                          <li></li>
+                          <li></li>
+                          <li></li>
+                          <li></li>
+                          <li></li>
+                          <li></li>
+                          <li></li>
+                          <li></li>
+                          <li></li>
+                          <li></li>
+                          <li></li>
+                          <li></li>
+                          <li></li>
+                          <li></li>
+                          <li></li>
+                          <li></li>
+                          <li></li>
+                          <li></li>
+                          <li></li>
+                          <li></li>
+                          <li></li>
+                          <li></li>
+                          <li></li>
+                          <li></li>
+                          <li></li>
+                      </ul>
+                  </div>
+                  <div class="room-name"><b>00-A</b>·0th floor·5 seats</div>
+                  
+                  <h2>你选择的时间段</h2>
+                  <p id="log"></p>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div class="booking-box book-box-pre">
+      <div class="relative-box">
+          <div class="book-top">
+              <span><em>2</em><p>REMAINING<br>CREDITS</p></span>
+              <span><em>1</em><p>CREDITS USED <br>THIS MONTH</p></span>
+          </div>
+          <p class="book-day">Peak hours are 11:00AM - 4:00PM</p>
+          <div class="book-detial">
+              <div style="overflow: hidden">
+                  <span class="company">
+                      Duration<br>
+                      <select>
+                          <option value="0">30 minutes</option>
+                          <option value="0">1 hours</option>
+                          <option value="0">.5 hours</option>
+                      </select>
+                  </span>
+                  <span class="company">
+                      Company<br>
+                      <select>
+                          <option value="0">CGF</option>
+                      </select>
+                  </span>
+              </div>
+              <div class="room-card">
+                  <div class="card-left">
+                      <img src="../../assets/home/images/tmp/room1.jpg" alt="">
+                  </div>
+                  <div class="card-right">
+                      <p> <b>00-A</b> <em>1</em> credit/hr·<em>2</em> credits/hr</p>
+                      <p>No TV, Whiteboard, Markers, Polycom,</p>
+                      <p>Crestron air media for wireless display, HDMI cables in room</p>
+                  </div>
+                  <i class="num">0</i>
+                  <i class="seat">5 seats</i>
+              </div>
+              <textarea placeholder="Meeting note..."></textarea>
+              <p class="notice">glass walls, not private, Conversation Room</p>
+              <p class="detial-time">Sep 9, 2015 - 3:30 PM to 4:00 PM</p>
+              <p class="detial-cost">Reservation cost: <i>1 credits</i></p>
+              <a href="#" class="btn submit">Confirm</a>
+              <a href="#" class="btn cancel">cancel</a>
+              <i class="down">×</i>
+          </div>
+      </div>
+  </div>
+  <div class="booking-box book-submit">
+      <div class="photo"></div>
+      <div class="content">
+      <h1>BOOKING CONFIRMED</h1>
+      <p>Check in procedure for Commons Members (or if this is not your home location): Please bring a valid photo ID and check-in at WeWork reception upon arriving at the building. If you have guests joining you, you must register them prior to your reservation.</p>
+        <div class="address">
+            <p>Dubnov - 00-A (0th floor</p>
+            <p>7 Dubnov</p>
+            <p>Tel Aviv, 6473207</p>
+            <p>Sep 9, 2015</p>
+            <p>2:30 PM to 3:00 PM</p>
+        </div>
+      </div>
+      <span class="btn regist">Register Guests for this reservation</span>
+      <span class="btn done">done</span>
+  </div>
+  <div class="booking-box cancel-book">
+      <div class="relative-box">
+          <h1 class="cancel-title">RESERVATION DETAILS</h1>
+          <table class="book-msg">
+              <tr>
+                  <td class="book-pro"> Company</td>
+                  <td>CFG</td>
+              </tr>
+              <tr>
+                  <td class="book-pro"> By</td>
+                  <td>Chun Xue</td>
+              </tr>
+              <tr>
+                  <td class="book-pro"> Room</td>
+                  <td>00-A (Dubnov)</td>
+              </tr>
+              <tr>
+                  <td class="book-pro"> Date</td>
+                  <td>Sep 9, 2015</td>
+              </tr>
+              <tr>
+                  <td class="book-pro">Time</td>
+                  <td>10:30 AM to 11:00 AM (IDT)</td>
+              </tr>
+              <tr>
+                  <td></td>
+                  <td><a href="#">Compose an email with these reservation details.</a></td>
+              </tr>
+          </table>
+          <div class="cancel-bottom">
+              <a href="javascript:;" class="cancel-btn">Cancel Reservation</a>
+              <p class="cancel-tip">Past reservations cannot be modified.</p>
+          </div>
+          <i class="out">×</i>
+      </div>
+  </div>
+<div class="bar"></div>
+<script>
+    seajs.use('user/app.room',function(api){
+       api.room();
+    })
+</script>
+<script type="text/javascript">
+			var selectecdlog = [];
+			var resultLen = 0;
+			var resultBegin = 0;
+			var backColor = ['red', 'green', 'blue', 'yellow']; // assume 3 rows 1 -red 2 - green 3 - blue
+			var resultColor = 0;
+			$(".room-time li").mousedown(function() {
+				selectecdlog = [];
+				//重置背景颜色设置对应ul下li背景颜色值  区数组里面的
+				resultColor = backColor[3];
+				//alert($(this).parent().attr('id').substr(1))
+				//开始li背景是白色
+				$('.room-time li').css('background-color', 'white');
+				// ID for tr tag
+				//alert($(this).parent().attr('id'));
+				//get the column No.
+				//alert($(this).index()+1);
+				
+				$(this).css('background-color', resultColor);//点击当前的li颜色改变
+				selectecdlog.push($(this).attr('id'));      //当前id返回到数组里
+				//alert($(this).attr('id'));
+				$(".room-time li").mouseup(onMouseUp);
+				$(".room-time li").mouseover(onMouseOver);
+			})
+		
+			function onMouseUp() {
+				/* Act on the event */
+				//获取选择元素个数
+				var len = resultLen = Math.abs(parseInt(selectecdlog[0].substr(selectecdlog[0].indexOf('c') + 1)) - parseInt($(this).attr('id').substr(($(this).attr('id').indexOf('c')) + 1))) + 1;
+				//alert(len);
+				
+				//点击元素索引位置
+				var begin = resultBegin = parseInt(selectecdlog[0].substr(selectecdlog[0].indexOf('c') + 1)) > parseInt($(this).attr('id').substr(($(this).attr('id').indexOf('c')) + 1)) ? parseInt($(this).attr('id').substr(($(this).attr('id').indexOf('c')) + 1)) : parseInt(selectecdlog[0].substr(selectecdlog[0].indexOf('c') + 1));
+				//alert(begin);
+				
+				
+				for (var i = 0; i < resultLen; i++) {
+					selectecdlog.push(selectecdlog[0].substr(0, 2) + "c" + (resultBegin + i));
+				}
+				//删除第一个重复数组元素  
+				selectecdlog.shift();
+				//alert(selectecdlog)
+				$('#log').text(selectecdlog.toString());
+				$(".room-time li").unbind('mouseover', onMouseOver);
+				$(".room-time li").unbind('mouseup', onMouseUp);
+			}
+		
+			function onMouseOver(argument) {
+					var len = resultLen = Math.abs(parseInt(selectecdlog[0].substr(selectecdlog[0].indexOf('c') + 1)) - parseInt($(this).attr('id').substr(($(this).attr('id').indexOf('c')) + 1))) + 1;
+					var begin = resultBegin = parseInt(selectecdlog[0].substr(selectecdlog[0].indexOf('c') + 1)) > parseInt($(this).attr('id').substr(($(this).attr('id').indexOf('c')) + 1)) ? parseInt($(this).attr('id').substr(($(this).attr('id').indexOf('c')) + 1)) : parseInt(selectecdlog[0].substr(selectecdlog[0].indexOf('c') + 1));
+					$('.room-time li').css('background-color', 'white');
+					for (var i = 0; i < len; i++) {
+						$('#' + selectecdlog[0].substr(0, 2) + "c" + (begin + i)).css('background-color', resultColor);
+					}
+					//alert( $(this).attr('id').substr(($(this).attr('id').indexOf('c'))+1));
+					//$('#'+liId).css('background-color', 'red');
+				}
+				// set id attr for each li
+			$(".room-time li").each(function(index, val) {
+				/* iterate through array or object */
+				$(this).attr('id', $(this).parent().attr('id') + "c" + ($(this).index() + 1))
+			});
+			//combine cells
+			/*
+			function combine(argument) {
+				// body...
+				for (var m in selectecdlog) {
+					if (m == 0) {
+						$('#' + selectecdlog[m]).attr('colspan', resultLen);
+						$('#' + selectecdlog[m]).css('width', resultLen * 50 + "px");
+						//$('#'+selectecdlog[m]).css('background-color', 'bule');
+					} else {
+						$('#' + selectecdlog[m]).addClass('hidden');
+					}
+				}
+				//alert($("#log").html())
+				//alert(resultLen)
+			}
+			*/
+</script>
+</body>
+</html>

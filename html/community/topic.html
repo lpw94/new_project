@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>创客港-帖子列表</title>
+    <!--[if lt IE 9]>
+    <script src="../../assets/home/js/jquery/html5shiv.js" type="text/javascript"></script>
+    <![endif]-->
+    <script src="../../assets/home/js/jquery/jquery-1.9.1.js" type="text/javascript"></script>
+    <script type="text/javascript" src="../../assets/home/js/seajs/sea.js"></script>
+    <script>
+        seajs.config({
+            base: '../../assets/home/js',
+            charset: 'utf-8',
+            timeout: 10000
+        });
+    </script>
+    <link rel="stylesheet" type="text/css" href="../../assets/home/css/base.css"/>
+    <link rel="stylesheet" type="text/css" href="../../assets/home/css/community.css"/>
+</head>
+<body>
+<div class="head">
+    <div class="header fixed">
+        <div class="contain">
+            <div class="head-left">
+                <a href="javascript:;">创客港</a>
+            </div>
+            <div class="mSearch">
+                <input type="text" name="search" placeholder="搜索话题、需求、服务、活动、会员和公司"/>
+                <a class="search-btn" href="javascript:;"></a><!--标签可随意更换，只保留类名-->
+            </div>
+            <div class="head-right">
+                <ul class="nav">
+                    <li class="login"><a id="login" href="javascript:;">登录</a></li>
+                    <li class="register"><a href="javascript:;">注册</a></li>
+                </ul>
+            </div>
+
+        </div>
+        <!-- header end -->
+    </div><!-- head end -->
+</div><!-- head end -->
+<dl id="loginBox">
+    <div class="close"></div>
+    <dt>账号登录</dt>
+    <dd class="mForm">
+        <div class="items">
+            <div class="bd">
+                <input class="mInput" type="text" name="account_name" value="" placeholder="请输入注册邮箱/手机号码" />
+            </div>
+            <div class="tips"><div class="con"></div></div>
+        </div>
+        <div class="items">
+            <div class="bd">
+                <input class="mInput" type="password" name="account_psw" value="" placeholder="请输入登陆密码" />
+            </div>
+            <div class="tips"><div class="con"></div></div>
+        </div>
+        <div class="items">
+            <div class="bd">
+                <a class="submitBtn" href="javascript:;">登陆</a>
+            </div>
+        </div>
+        <div class="items">
+            <div class="bd">
+                <a class="forgetBtn" href="javascript:;">忘记密码</a>
+                <a class="registerBtn" href="javascript:;">注册账号</a>
+            </div>
+        </div>
+    </dd>
+</dl>
+<div class="masklayer"></div>
+<!--loginBox end-->
+<div class="mDirectoryMenu">
+    <div class="contain">
+        <ul>
+            <li class="current"><a href="javascript:;">共创圈</a></li>
+            <li><a href="javascript:;">创客</a></li>
+            <li><a href="javascript:;">圈子</a></li>
+            <li><a href="javascript:;">公司</a></li>
+            <li><a href="javascript:;">服务</a></li>
+            <li><a href="javascript:;">需求</a></li>
+            <li><a href="javascript:;">活动</a></li>
+        </ul>
+    </div>
+</div><!--mDirectoryMenu end-->
+<div class="communityBg">
+<div class="columnsCommunity contain pt_80 pb_50">
+	<div id="gotop">
+	</div>
+        <div class="ck-load">
+            <p>显示10条更新</p>
+        </div>
+        <div class="col_left">
+            <div class="mfilters mb_20">
+                <div class="texting">
+		            <h2>分类选择</h2>
+		        </div>
+                <div class="mMultiples  mulit-single">
+                    <div class="choiceCon choiced">全部</div>
+                    <ul class="choice-box">
+                        <li>全部</li>
+                        <li>我关注的</li>
+                        <li>我发布的</li>
+                        <li>我联系人的</li>
+                    </ul>
+                </div>
+            </div>
+        </div><!--col_left end-->
+        <div class="col_center">
+            <div class="topic-send">
+                <textarea name="topic-send" class="send-box"></textarea>
+                <div class="send-left">
+                    <div class="send-select">
+                        <input type="file" class="file"/>
+                        <em>图片</em>
+                    </div>
+
+                    <div class="img-select">
+                        <i class="off"></i>
+                        <p>共4张，还能上传5张</p>
+                        <ul>
+                            <li><img src="../../assets/home/images/topic.png" alt=""><i>×</i></li>
+                            <li><img src="../../assets/home/images/topic.png" alt=""><i>×</i></li>
+                            <li><img src="../../assets/home/images/topic.png" alt=""><i>×</i></li>
+                            <li><img src="../../assets/home/images/topic.png" alt=""><i>×</i></li>
+                            <li class="add-more"><input type="file" class="file"/></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="send-right">
+                    <a href="javascript:;" class="send-btn mBtn">发布</a>
+                </div>
+            </div>
+            <div class="topic-item">
+                <div class="titem-top">
+                    <span><a href="javascript:;"><img src="../../assets/home/images/member-1.png" alt=""></a></span>
+                    <div class="name-msg">
+                        <p class="name"><a href="javascript:;">张德喜</a><i class="more"></i></p>
+                        <p class="company"><i>web前端开发</i><i>ui设计</i><em>今天15:00</em></p>
+                         <div class="more-drop">
+                            <ul>
+                               <li class="report">举报</li>
+                            </ul>
+                         </div>
+                    </div>
+                </div>
+                <div class="titem-detial">
+                    <p>我想努力的看完那些我在高中就觊觎已久的书，写完自认为前无古人后无来者的一本小说。我想走遍祖国大好河山，阅尽天下美景。我想尽最大努力考过CPA，毕业能拿到傲人的offer。我想把英语学得淋漓尽致，见到歪果仁可以毫不怵地说一口流利的英语，我甚至想连带再学一门其他外语，说出去都觉得特牛逼的样子。</p>
+                    <div class="pic-list">
+                        <ul>
+                            <li><a href="javascript:;"><img src="../../assets/home/images/topic.png" alt=""></a></li>
+                            <li><a href="javascript:;"><img src="../../assets/home/images/topic.png" alt=""></a></li>
+                            <li><a href="javascript:;"><img src="../../assets/home/images/topic.png" alt=""></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="discuss-box">
+                    <ul class="guide-btns">
+                        <li class="comment-num">100</li>
+                        <li class="zan">100<i>＋1</i></li>
+                        <li class="collect">100</li>
+                    </ul>
+                </div>
+                <div class="comment-box">
+                    <ul>
+                        <li>
+                            <div class="commenter">
+                                <span><a href="javascript:;"><img src="../../assets/home/images/member-1.png" alt=""></a></span>
+                                <p><a href="#">张德喜</a></p>
+                                <p class="company">web前端开发<em>今天15:00</em></p>
+                            </div>
+                            <p class="com-detial">赛道上有一个伟大的名字，曼塞尔。他狂野，暴躁，激进又有独特的魅力</p>
+                            <div class="com-reply">
+                                <label class="reply-btn">回复</label>
+                            </div>
+                            <div class="comment-part reply-box">
+                                <div class="com-input"><input type="text" placeholder="请输入回复内容"></div>
+                                <div class="com-publish mBtn">发布</div>
+                            </div>
+
+                        </li>
+                        <li>
+                            <div class="commenter">
+                                <span><a href="javascript:;"><img src="../../assets/home/images/member-1.png" alt=""></a></span>
+                                <p><a href="#">张德喜</a></p>
+                                <p class="company">web前端开发<em>今天15:00</em></p>
+                            </div>
+                            <p class="com-detial">回复：<a href="javascript:;">@张德喜</a>赛道上有一个伟大的名字，曼塞尔。他狂野，暴躁，激进又有独特的魅力</p>
+                            <div class="com-reply">
+                                <label class="reply-btn">回复</label>
+                            </div>
+                            <div class="comment-part reply-box">
+                                <div class="com-input"><input type="text" placeholder="请输入回复内容"></div>
+                                <div class="com-publish mBtn">发布</div>
+                            </div>
+
+                        </li>
+                    </ul>
+                    <p class="loading-more">查看更多评论>></p>
+                </div>
+                <div class="comment-part">
+                    <span><img src="../../assets/home/images/member-1.png" alt=""></span>
+                    <div class="com-input"><input type="text" placeholder="请输入评论"></div>
+                    <div class="com-publish mBtn">发布</div>
+                </div>
+            </div><!--topic-item end-->
+            <div class="topic-item">
+                    <div class="titem-top">
+                        <span><a href="javascript:;"><img src="../../assets/home/images/member-1.png" alt=""></a></span>
+                        <div class="name-msg">
+                            <p class="name"><a href="javascript:;">张德喜</a><i class="more"></i></p>
+                            <p class="company"><i>web前端开发</i><em>今天15:00</em></p>
+                            <div class="more-drop">
+                                <ul>
+                                    <li class="report">举报</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="titem-detial">
+                        <p>我想努力的看完那些我在高中就觊觎已久的书，写完自认为前无古人后无来者的一本小说。我想走遍祖国大好河山，阅尽天下美景。我想尽最大努力考过CPA，毕业能拿到傲人的offer。我想把英语学得淋漓尽致，见到歪果仁可以毫不怵地说一口流利的英语，我甚至想连带再学一门其他外语，说出去都觉得特牛逼的样子。</p>
+                        <div class="pic-list">
+                            <ul>
+                                <li><a href="javascript:;"><img src="../../assets/home/images/topic.png" alt=""></a></li>
+                                <li><a href="javascript:;"><img src="../../assets/home/images/topic.png" alt=""></a></li>
+                                <li><a href="javascript:;"><img src="../../assets/home/images/topic.png" alt=""></a></li>
+                                <li><a href="javascript:;"><img src="../../assets/home/images/topic.png" alt=""></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="discuss-box">
+                        <ul class="guide-btns">
+                            <li class="comment-num">100</li>
+                            <li class="zan">100<i>＋1</i></li>
+                            <li class="collect">100</li>
+                        </ul>
+                    </div>
+                <div class="comment-box">
+                    <ul>
+                        <li>
+                            <div class="commenter">
+                                <span><a href="javascript:;"><img src="../../assets/home/images/member-1.png" alt=""></a></span>
+                                <p><a href="#">张德喜</a></p>
+                                <p class="company">web前端开发<em>今天15:00</em></p>
+                            </div>
+                            <p class="com-detial">赛道上有一个伟大的名字，曼塞尔。他狂野，暴躁，激进又有独特的魅力</p>
+                            <div class="com-reply">
+                                <label class="reply-btn">回复</label>
+                            </div>
+                            <div class="comment-part reply-box">
+                                <div class="com-input"><input type="text" placeholder="请输入回复内容"></div>
+                                <div class="com-publish mBtn">发布</div>
+                            </div>
+
+                        </li>
+                        <li>
+                            <div class="commenter">
+                                <span><a href="javascript:;"><img src="../../assets/home/images/member-1.png" alt=""></a></span>
+                                <p><a href="#">张德喜</a></p>
+                                <p class="company">web前端开发<em>今天15:00</em></p>
+                            </div>
+                            <p class="com-detial">回复：<a href="javascript:;">@张德喜</a>赛道上有一个伟大的名字，曼塞尔。他狂野，暴躁，激进又有独特的魅力</p>
+                            <div class="com-reply">
+                                <label class="reply-btn">回复</label>
+                            </div>
+                            <div class="comment-part reply-box">
+                                <div class="com-input"><input type="text" placeholder="请输入回复内容"></div>
+                                <div class="com-publish mBtn">发布</div>
+                            </div>
+
+                        </li>
+                    </ul>
+                    <p class="loading-more">查看更多评论>></p>
+                </div>
+                    <div class="comment-part">
+                        <span><img src="../../assets/home/images/member-1.png" alt=""></span>
+                        <div class="com-input"><input type="text" placeholder="请输入评论"></div>
+                        <div class="com-publish mBtn">发布</div>
+
+                    </div>
+                </div><!--topic-item end-->
+            <div class="topic-item">
+                <div class="titem-top">
+                    <span><a href="javascript:;"><img src="../../assets/home/images/member-1.png" alt=""></a></span>
+                    <div class="name-msg">
+                        <p class="name"><a href="javascript:;">张德喜</a><i class="more"></i></p>
+                        <p class="company"><i>web前端开发</i><em>今天15:00</em></p>
+                        <div class="more-drop">
+                            <ul>
+                                <li class="report">举报</li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="titem-detial">
+                    <p>我想努力的看完那些我在高中就觊觎已久的书，写完自认为前无古人后无来者的一本小说。我想走遍祖国大好河山，阅尽天下美景。我想尽最大努力考过CPA，毕业能拿到傲人的offer。我想把英语学得淋漓尽致，见到歪果仁可以毫不怵地说一口流利的英语，我甚至想连带再学一门其他外语，说出去都觉得特牛逼的样子。</p>
+                    <div class="pic-list">
+                        <ul>
+                            <li><a href="javascript:;"><img src="../../assets/home/images/topic.png" alt=""></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="discuss-box">
+                    <ul class="guide-btns">
+                        <li class="comment-num">100</li>
+                        <li class="zan">100<i>＋1</i></li>
+                        <li class="collect">100</li>
+                    </ul>
+                </div>
+                <div class="comment-box">
+                    <ul>
+                        <li>
+                            <div class="commenter">
+                                <span><a href="javascript:;"><img src="../../assets/home/images/member-1.png" alt=""></a></span>
+                                <p><a href="#">张德喜</a></p>
+                                <p class="company">web前端开发<em>今天15:00</em></p>
+                            </div>
+                            <p class="com-detial">赛道上有一个伟大的名字，曼塞尔。他狂野，暴躁，激进又有独特的魅力</p>
+                            <div class="com-reply">
+                                <label class="reply-btn">回复</label>
+                            </div>
+                            <div class="comment-part reply-box">
+                                <div class="com-input"><input type="text" placeholder="请输入回复内容"></div>
+                                <div class="com-publish mBtn">发布</div>
+                            </div>
+
+                        </li>
+                        <li>
+                            <div class="commenter">
+                                <span><a href="javascript:;"><img src="../../assets/home/images/member-1.png" alt=""></a></span>
+                                <p><a href="#">张德喜</a></p>
+                                <p class="company">web前端开发<em>今天15:00</em></p>
+                            </div>
+                            <p class="com-detial">回复：<a href="javascript:;">@张德喜</a>赛道上有一个伟大的名字，曼塞尔。他狂野，暴躁，激进又有独特的魅力</p>
+                            <div class="com-reply">
+                                <label class="reply-btn">回复</label>
+                            </div>
+                            <div class="comment-part reply-box">
+                                <div class="com-input"><input type="text" placeholder="请输入回复内容"></div>
+                                <div class="com-publish mBtn">发布</div>
+                            </div>
+
+                        </li>
+                    </ul>
+                    <p class="loading-more">查看更多评论>></p>
+                </div>
+                <div class="comment-part">
+                    <span><img src="../../assets/home/images/member-1.png" alt=""></span>
+                    <div class="com-input"><input type="text" placeholder="请输入评论"></div>
+                    <div class="com-publish mBtn">发布</div>
+
+                </div>
+            </div><!--topic-item end-->
+        </div>
+        <div class="col_right">
+            <!--div class="hot-topic">
+                <h2>本月达人</h2>
+                <div class="hot-item">
+                    <span><a href="javascript:;"><img src="../../assets/images/member-1.png" alt=""></a></span>
+                    <div class="hot-msg">
+                        <p><a href="javascript:;">作家崔成浩</a></p>
+                    </div>
+                </div>
+                <div class="hot-item">
+                    <span><a href="javascript:;"><img src="../../assets/images/member-1.png" alt=""></a></span>
+                    <div class="hot-msg">
+                        <p><a href="javascript:;">作家崔成浩</a></p>
+                    </div>
+                </div>
+                <div class="hot-item">
+                    <span><a href="javascript:;"><img src="../../assets/images/member-1.png" alt=""></a></span>
+                    <div class="hot-msg">
+                        <p><a href="javascript:;">作家崔成浩</a></p>
+                    </div>
+                </div>
+            </div-->
+            <div class="texting">
+                <h2>本月达人</h2>
+            </div>
+            <div class="hot-topic">
+                <div class="hot-item">
+                    <span><a href="javascript:;"><img src="../../assets/home/images/member-1.png" alt=""></a></span>
+                    <div class="hot-msg">
+                        <p><a href="javascript:;">作家崔成浩</a></p>
+                    </div>
+                </div>
+                <div class="hot-item">
+                    <span><a href="javascript:;"><img src="../../assets/home/images/member-1.png" alt=""></a></span>
+                    <div class="hot-msg">
+                        <p><a href="javascript:;">作家崔成浩</a></p>
+                    </div>
+                </div>
+                <div class="hot-item">
+                    <span><a href="javascript:;"><img src="../../assets/home/images/member-1.png" alt=""></a></span>
+                    <div class="hot-msg">
+                        <p><a href="javascript:;">作家崔成浩</a></p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    <!--举报框-->
+    <div class="push report-box">
+        <div class="relative">
+            <p>我要举报<a href="javascript:;">张德喜</a>发表的话题：</p>
+            <div class="report-detial">
+                <span><a href="javascript:;"><img src="../../assets/home/images/member-1.png" alt=""></a></span>
+                <p>我想努力的看完那些我在高中就觊觎已久的书，写完自认为前无古人后无来者的一本小说。我想走遍祖国大好河山，阅尽天下美景。我想尽最大努力考过CPA...</p>
+            </div>
+            <p>举报理由</p>
+            <div class="select-single select">
+                <div class="select-area">请选择举报理由</div>
+                <ul>
+                    <li>垃圾营销</li>
+                    <li>违法信息</li>
+                    <li>淫秽色情</li>
+                    <li>人身攻击</li>
+                </ul>
+            </div><!--select-single-->
+            <a href="javascript:;" class="submit-btn mBtn">提交</a>
+            <i></i>
+        </div>
+    </div>
+    <div class="push report-success">
+        <div class="relative">
+            <img src="../../assets/home/images/report-success.png" alt="">
+            <p>您已成功举报该话题！感谢您的配合</p>
+            <a href="javascript:;" class="report-success-btn mBtn">确定</a>
+        </div>
+    </div>
+<!--
+    <div class="push shield-box">
+        <div class="relative">
+            <i>×</i>
+            <img src="../../assets/images/shield.png" alt="">
+            <p>是否确认屏蔽该话题？</p>
+            <a href="javascript:;" class="shield-btn">确定</a>
+        </div>
+    </div>
+-->
+</div>
+</div>
+<div class="footer">
+    <div class="contain">
+        <div class="foot-logo">
+            <a href="javascript:;">创客港</a>
+        </div>
+        <div class="foot-left">
+            <ul>
+                <li><a href="javascript:;">关于我们</a></li>
+                <li><a href="javascript:;">商务合作</a></li>
+                <li><a href="javascript:;">加入我们</a></li>
+                <li><a href="javascript:;">隐私政策</a></li>
+                <li><a href="javascript:;">帮助中心</a></li>
+            </ul>
+            <div class="hr"></div>
+            <table class="foot-city">
+                <tr>
+                    <td><a href="javascript:;">北京</a></td>
+                    <td><a href="javascript:;">上海</a></td>
+                    <td><a href="javascript:;">广州</a></td>
+                    <td><a href="javascript:;">深圳</a></td>
+                </tr>
+                <tr>
+                    <td><a href="javascript:;">香港</a></td>
+                    <td><a href="javascript:;">成都</a></td>
+                    <td><a href="javascript:;">宁波</a></td>
+                    <td><a href="javascript:;">杭州</a></td>
+                </tr>
+            </table>
+            <div class="hr01"></div>
+            <p>深圳市创富港商务股份有限公司版权所有&nbsp;&nbsp;&nbsp;&nbsp;粤ICP备12345678号&nbsp;&nbsp;&nbsp;&nbsp;服务热线 400-6768-2138 </p>
+        </div>
+        <div class="foot-right">
+            <a href="javascript:;"><img src="../../assets/home/images/weixin.png" alt=""></a>
+            <a href="javascript:;"><img src="../../assets/home/images/weibo.png" alt=""></a>
+            <a href="javascript:;"><img src="../../assets/home/images/phone.png" alt=""></a>
+        </div>
+    </div>
+</div><!--footer end-->
+<script>
+    seajs.use('app/app.head',function(api){
+        api.head();
+    });
+    seajs.use('app/community/community',function(api){
+        api.model();
+    });
+    seajs.use('app/community/app.topic',function(api){
+        api.topic();
+    });
+    seajs.use('app/community/app.select',function(api){
+        api.select();
+    });
+</script>
+</body>
+</html>

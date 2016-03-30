@@ -1,0 +1,70 @@
+.item-wrap { position: absolute; top: 37px; bottom: 37px; overflow-y: scroll; }
+.item-list { }
+.item-list .item { border-bottom: 1px dotted #E0E0E0; padding: 8px 8px 8px 32px; line-height: 200%; position: relative; }
+.item-list .item .no { position: absolute; left: 5px; top: 50%; margin-top: -10px; border-radius: 100%; width: 20px; height: 20px; line-height: 20px !important; background: #fff; border: 1px solid #d0dbe7; color: #72767e; display: block; text-align: center; font: 12px Arial; }
+.item-list .item .name { line-height: 30px; height: 30px; overflow: hidden; font-size: 14px; color: #000; }
+.item-list .item.active { background: #FEFCEF; border-bottom: 1px solid #DEEFFB; }
+/*.item-list .item:hover .name { color: #3f51b5; }*/
+/*.item-list .item:hover { background: #fff; }*/
+
+.item-list .item .info { color: #666; font-size: 11px; }
+.mapArea .aside { box-sizing: border-box; }
+.pagination { border-top: 1px solid #d0dbe7; position: absolute; bottom: 0; padding-top: 5px; margin-bottom: 5px; width: 200px; overflow: hidden; height: 26px; line-height: 26px; }
+.pagination li:first-child { padding-left: 5px; }
+.aside-detail { display: none; position: absolute; top: 37px; left: -302px; width: 300px; background: #F4FAFE; min-height: 200px; border: 1px solid #DEEFFB; }
+.task-all { position: relative; margin: 8px; border-left: none; }
+.task-all .task { line-height: 36px; height: 36px; position: relative; padding: 0 8px 0 36px; font-size: 12px; }
+.task-all .task a { color: #999; }
+.task-all .task .no { position: absolute; left: 7px; top: 50%; margin-top: -10px; border-radius: 100%; width: 20px; height: 20px; line-height: 20px !important; background: #fff; border: 1px solid #d0dbe7; color: #72767e; display: block; text-align: center; font-size: 8px; font-style: normal; }
+.task-all .task.done .no, .task-all .task.done .badge { background: #5cb85c; border: 1px solid #57ac57; color: #fff; }
+.task-all .task.doing .no, .task-all .task.doing .badge { background: red; border: 1px solid red; color: #fff; }
+.task-all .task.undone.warning .no, .task-all .task.undone.warning .badge { background: #ec971f; border: 1px solid #ec971f; color: #fff; }
+.task-all .task.undone .no, .task-all .task.undone .badge { background: silver; border: 1px solid silver; color: #fff; }
+.task-all .line { position: absolute; top: 16px; bottom: 16px; border-left: 1px solid silver; width: 1px; left: 17px; z-index: 0; }
+.task-all .task .status { padding-left: 8px; }
+.task-all .task.done .status { color: #29871f; }
+.task-all .task.doing .status { color: #f00; }
+.mapArea a { color: #666; }
+.mapArea .map-tool { position: absolute; right: 20px; top: 0; border: 1px solid #cfcfcf; border-top: none; background: #f7f9fa; box-shadow: 0 0 3px rgba(69, 88, 207, 0.30); line-height: 180%; z-index: 999; width: 200px; min-height: 36px; }
+.mapArea .map-tool.search-box { right: 320px; width: 240px; }
+.mapArea .map-tool.stat-box { right: 90px; }
+.mapArea .map-tool .tool-title { font-size: 14px; font-family: 'Microsoft Yahei'; text-align: center; height: 36px; line-height: 36px; margin: 0 30px; }
+.mapArea .map-tool .tool-title .ico { color: #aaa; }
+.mapArea .map-tool .icon-unfold { display: inline-block; }
+.mapArea .map-tool .tool-content { display: none; }
+.mapArea .map-tool.active .tool-title { border-bottom: 1px solid #ccc; }
+.mapArea .map-tool.active .icon-unfold { display: none; }
+.mapArea .map-tool.active .tool-content { display: block; }
+.mapArea .map-tool .tool-content .hide { display: block; height: 30px; line-height: 30px; text-align: center; margin-bottom: 6px; color: #666; }
+.mapArea .map-tool .tool-content .stat-list { margin: 10px 40px 0; }
+.mapArea .map-tool .tool-content .stat-list .stat { line-height: 30px; color: #666; }
+.mapArea .map-tool .tool-content .stat-list .stat.active a { color: #3f51b5; }
+.mapArea .map-tool .tool-content .stat-list .img { display: inline-block; width: 24px; text-align: center; }
+.mapArea .map-tool .tool-content .stat-list .name { display: inline-block; width: 50px; }
+.mapArea .assign-box { display: none; position: absolute; bottom: 0; right: 0; border: 1px solid #cfcfcf; background: #f7f9fa; box-shadow: 0 0 3px rgba(69, 88, 207, 0.30); line-height: 180%; z-index: 999; min-height: 360px; }
+.mapArea .assign-box .box-title { font-size: 14px; color: #000; border-bottom: 1px dotted #E0E0E0; padding: 0 0 8px; }
+.mapArea .assign-box .session-car { width: 120px; float: left; padding: 8px; }
+.mapArea .assign-box .session-order { width: 200px; float: left; border-left: 1px solid #E0E0E0; border-right: 1px solid #E0E0E0; height: 360px; padding: 8px 0; }
+.mapArea .assign-box .session-task { width: 200px; float: left; padding: 8px; }
+.mapArea .assign-box .session-car .driver-list { padding: 10px 0 0; font-size: 14px; }
+.mapArea .assign-box .session-car .driver-list .driver { line-height: 200%; }
+.mapArea .assign-box .session-order .box-title { padding: 0 0 8px 8px; }
+.mapArea .assign-box .session-order .order-list { height: 300px; overflow-y: auto; }
+.mapArea .assign-box .session-order .order-list .order { border-bottom: 1px dashed #ccc; padding: 8px; }
+.mapArea .assign-box .session-order .order-list .order .name { font-size: 14px; color: #444; }
+.mapArea .assign-box .session-order .order-list .order.active, .mapArea .assign-box .session-order .order-list .order:hover { background: #f0f0f0; }
+.mapArea .assign-box .session-task .task-all .group { padding: 8px 0; position: relative; border-bottom: 1px dashed #ccc; }
+.mapArea .assign-box .session-task .task-all .group .task_group, .mapArea .assign-box .session-task .task-all .group .driver_name { position: absolute; width: 30px; height: 60px; right: 8px; top: 50%; margin-top: -30px; line-height: 60px; text-align: center; }
+.mapArea .assign-box .session-task .task-all .group .driver_name { width: 80px; text-align: right; }
+.mapArea .assign-box .session-task .submit-area { margin-top: 20px; text-align: center; }
+.mapArea .assign-box .car-name { line-height: 36px; text-align: center; border-bottom: 1px dotted #ccc; }
+.mapArea .assign-box .closeBtn { color: #666; border: 1px solid #cfcfcf; background: #f7f9fa; box-shadow: 0 0 3px rgba(69, 88, 207, 0.30); width: 30px; height: 30px; line-height: 30px; display: block; text-align: center; position: absolute; left: -32px; top: -1px; }
+.mapArea .assign-box .closeBtn:hover { color: #f00; }
+.infoWindow {
+    line-height: 180%;
+    font-size: 14px;
+}
+.infoWindow b {
+    color: #666;
+    font-weight: normal;
+}

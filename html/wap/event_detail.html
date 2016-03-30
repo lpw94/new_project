@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>活动-详情页</title>
+    <meta name="robots" content="all"/>
+    <!-- Mobile Devices Support @begin -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta content="application/xhtml+xml;charset=UTF-8" http-equiv="Content-Type">
+    <meta content="telephone=yes, address=yes" name="format-detection">
+    <!-- apple devices -->
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="white"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+    <!-- Mobile Devices Support @end -->
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="ESTT Team">
+    <link rel="stylesheet" href="../../assets/wap/css/iconfont.css"/>
+    <link rel="stylesheet" href="../../assets/wap/css/base.css"/>
+    <link rel="stylesheet" href="../../assets/wap/css/content.css"/>
+    <script src="../../assets/wap/js/sea.js"></script>
+    <script src="../../assets/wap/js/jquery/jquery.min.js"></script>
+    <script>
+        seajs.config({
+            base: '/assets/wap/js',
+            charset: 'utf-8',
+            timeout: 10000
+        });
+    </script>
+</head>
+<body>
+<section id="main" class="bgColor">
+    <div id="header">
+        <a class="backPage" href="javascript:;"><i class="iconfont icon-xiangzuo"></i><em></em></a>
+    </div>
+    <div class="eventTop">
+        <div class="img"><a href="javascript:;"><img src="../../assets/wap/tmp/2.jpg" /></a></div>
+        <div class="con">
+            <p class="title"><span>未来已来大数据＋产业大会</span><i class="state">报名中</i></p>
+            <dl class="mDL02">
+                <dt>活动时间</dt><dd>10月31日 10:00 - 10月31日 12:00</dd>
+            </dl>
+            <dl class="mDL02">
+                <dt>活动地点</dt><dd><a class="addr" href="javascript:;">深圳市罗湖区笋岗东路3002号深圳市罗湖区笋岗东路3002号<i class="arrow"></i></a></dd>
+            </dl>
+        </div>
+    </div>
+
+    <div class="mblock border_TB mb_10 pd_TB_15">
+        <dl class="mDL01">
+            <dt>活动详情</dt>
+            <dd class="pd_LR_15">
+                万圣节的一个有趣内容是“Trick or treat”，在这一天，信徒们跋涉于僻壤乡间，挨村挨户乞讨用面粉及葡萄干制成的“灵魂之饼”。据说捐赠糕饼的人家都相信教会僧人的祈祷，期待由此得到上帝的佑护，让死去的亲人早日进入天堂。
+                在小朋友心中，准备万圣节是永远不嫌早的，童心未泯的设计师们亦是如此，等待10月的最后一天，一起狂欢吧！
+            </dd>
+        </dl>
+    </div>
+
+    <div class="mblock border_TB">
+        <div class="mTab clear">
+            <span class="items on" data-type="comment">评论<small>(40)</small></span>
+            <span class="items" data-type="joined">已报名<small>(40)</small></span>
+        </div>
+        <div class="mTabCon">
+            <ul class="mComment" data-type="comment">
+                <li>
+                    <span class="time">30分钟前</span>
+                    <div class="row">
+                        <span class="avatar"><img src="" /></span>
+                        <p class="name">毕莎</p>
+                        <p class="job">前端开发工程师</p>
+                    </div>
+                    <div class="row con">
+                        赛道上有一个伟大的名字，曼塞尔。他狂野，暴躁，激进又有独特的魅力。
+                    </div>
+                </li>
+                <li>
+                    <span class="time">30分钟前</span>
+                    <div class="row">
+                        <span class="avatar"><img src="" /></span>
+                        <p class="name">毕莎</p>
+                        <p class="job">前端开发工程师</p>
+                    </div>
+                    <div class="row con">
+                        回复：<span>@毕莎</span>：赛道上有一个伟大的名字，曼塞尔。他狂野，暴躁，激进又有独特的魅力。
+                    </div>
+                </li>
+            </ul>
+            <ul class="mUser" data-type="joined">
+                <li>
+                    <a href="javascript:;"><span class="avatar"><img src="" /></span>毕莎</a>
+                </li>
+                <li>
+                    <a href="javascript:;"><span class="avatar"><img src="" /></span>毕莎</a>
+                </li>
+                <li>
+                    <a href="javascript:;"><span class="avatar"><img src="" /></span>毕莎</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <section id="HandelPanel">
+        <div class="btnPanel">
+            <i class="comm iconfont icon-pinglun"></i>
+            <i class="collect iconfont icon-collect"></i>
+            <i class="collect iconfont icon-collect collected"></i>
+            <a class="btn toDo" href="javascript:;">报名</a>
+        </div>
+        <div class="postPanel">
+            <p><input type="text" placeholder="请输入您的评论" /></p>
+            <span class="btn postBtn">发布</span>
+        </div>
+    </section>
+    <div data-Placeholder="HandelPanel"></div>
+</section><!--#main end-->
+<script>
+    $('document').ready(function(){
+        //初始化main高度，兼容部分页面有底色的情况
+        $('#main').css({'min-height':$(window).height()});
+
+        //初始化
+        $('.mTab').find('.items').eq(0).addClass('on');
+        $('.mTabCon').find('ul').eq(0).show();
+        //切换
+        $('.mTab').delegate('.items','click',function(){
+            var _type = $(this).attr('data-type');
+            $(this).addClass('on').siblings('.on').removeClass('on');
+            var _dom = $(this).parent('.mTab').next('.mTabCon').find('[data-type='+_type+']').eq(0);
+            _dom.show().siblings('[data-type]').hide();
+        });
+        //评论
+        $('#HandelPanel .btnPanel i.comm').on('click',function(){
+            $('#HandelPanel .postPanel').show();
+        });
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>我的收藏</title>
+    <meta name="robots" content="all"/>
+    <!-- Mobile Devices Support @begin -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta content="application/xhtml+xml;charset=UTF-8" http-equiv="Content-Type">
+    <meta content="telephone=yes, address=yes" name="format-detection">
+    <!-- apple devices -->
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="white"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+    <!-- Mobile Devices Support @end -->
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="ESTT Team">
+    <link rel="stylesheet" href="../../../assets/wap/css/iconfont.css"/>
+    <link rel="stylesheet" href="../../../assets/wap/css/base.css"/>
+    <link rel="stylesheet" href="../../../assets/wap/css/content.css"/>
+    <script src="../../../assets/wap/js/sea.js"></script>
+    <script src="../../../assets/wap/js/jquery/jquery.min.js"></script>
+    <script>
+        seajs.config({
+            base: '/assets/wap/js',
+            charset: 'utf-8',
+            timeout: 10000
+        });
+    </script>
+</head>
+<body>
+<div class="mDialog confirm">
+    <div class="con">是否删除所选的收藏</div>
+    <div class="action">
+        <span class="items" data-type="cancel">取消</span><a class="items" data-type="sure" href="javascript:;">确定</a>
+    </div>
+</div>
+<div id="maskLayer"></div>
+
+<section id="main" class="bgColor">
+    <header><a class="backBtn iconfont icon-xiangzuo" href="javascript:;"></a><a class="rBtn" data-type="edit" href="javascript:;">编辑</a></header><div data-Placeholder="header"></div>
+
+    <div class="mblock mb_10 mCollect">
+        <span class="del iconfont icon-guanbi"></span>
+        <section class="box">
+            <div class="ab">
+                <p><span class="time">今天</span></p>
+                <p><span class="from">来自创客圈</span></p>
+            </div>
+            <div class="user_info">
+                <span class="avatar"><img src="" /></span>
+                <p class="name">轻风木叶</p>
+            </div>
+            <p class="con">
+                怎样高效开发IOS应用？怎样才能减少应用的体量？本期要请到朱朱大神来为您解答，关于上...
+            </p>
+            <p class="sec_con">
+                11.05  14:00-18:00·深圳南山A8音乐大厦一...
+            </p>
+        </section>
+    </div>
+
+    <div class="mblock mb_10 mCollect">
+        <span class="del iconfont icon-guanbi"></span>
+        <section class="box">
+            <div class="ab">
+                <p><span class="time">今天</span></p>
+                <p><span class="from">来自公司</span></p>
+            </div>
+            <div class="user_info">
+                <span class="avatar company"><img src="" /></span>
+                <p class="name">智享时代科技有限公司智享时代科技有限公司</p>
+            </div>
+            <p class="con">
+                怎样高效开发IOS应用？怎样才能减少应用的体量？本期要请到朱朱大神来为您解答，关于上...
+            </p>
+        </section>
+    </div>
+</section><!--#main end-->
+<script>
+    $('document').ready(function(){
+        //初始化main高度，兼容部分页面有底色的情况
+        $('#main').css({'min-height':$(window).height()});
+        //编辑
+        $('header').delegate('.rBtn','click',function(e){
+            var _type = $(this).attr('data-type');
+            switch(_type){
+                case 'edit':
+                    $(this).html('完成').attr('data-type','ok');
+                    $('.mCollect').addClass('edit');
+                    break;
+                case 'ok':
+                    $(this).html('编辑').attr('data-type','edit');
+                    $('.mCollect').removeClass('edit');
+                    break;
+            }
+            e.stopPropagation();
+        });
+        //删除
+        var _dom = null;
+        $('#main').delegate('.m Collect > .del','click',function(e){
+            //$(this).parents('.mCollect').remove();
+            $('.mDialog.confirm').eq(0).show();
+            $('#maskLayer').fadeIn();
+            _dom = $(this).parents('.mCollect');
+            e.stopPropagation();
+        });
+        //对话框
+        $('.mDialog.confirm').delegate('.items','click',function(){
+            var _type = $(this).attr('data-type');
+            switch(_type){
+                case 'cancel':
+                    _dom = null;
+                    break;
+                case 'sure':
+                    _dom.remove();
+                    break;
+                default:
+                    null;
+            }
+            $(this).parents('.mDialog').hide();
+            $('#maskLayer').fadeOut();
+        });
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,466 @@
+/*存放个人中心的所有样式*/
+/* reset css start*/
+
+/*
+/!* 个人中心头部*!/
+.head{ height: 50px;line-height: 50px;background: #252729}
+.head .headbox{width: 1000px;margin: 0 auto;}
+.head .logo a{background: url(../images/logo.png) no-repeat 0 -148px;background-size: 121px  auto;width: 100px;height: 23px; float: left;margin: 13px 0; }
+.head span a{display: block;float: right;color:#fff;font-size: 12px;text-decoration: none;}
+.contain{width: 1000px;margin: 0 auto;overflow: hidden;}
+*/
+
+/*共用*/
+/* 通用 */
+.userBg { background: #f9f9f9; }
+.userBg01 { background: #eaebec }
+.Bg { background: #eaeaea; }
+.pt_80 { padding-top: 66px; }
+.pt_30 { padding-top: 30px; }
+.mt_150 { margin-top: 150px; }
+.mt_100 { margin-top: 100px; }
+.ml_5 { margin-left: 5px; }
+.ml_10 { margin-left: 10px; }
+.mr_5 { margin-right: 5px; }
+.mr_10 { margin-right: 10px; }
+.mr_20 { margin-right: 20px; }
+.mr_30 { margin-right: 30px; }
+.pd_30{padding: 30px;}
+.mt_10{margin-top: 10px}
+/* 通用 分栏排版 */
+.columnsUser > .col_left { width: 160px; float: left; margin-right: 20px; min-height: 60px; }
+.columnsUser > .col_main { width: 820px; float: left; min-height: 50px; }
+.columnsUser > .col_center { width: 500px; float: left; margin-right: 20px; min-height: 50px; }
+.columnsUser > .col_right { width: 300px; float: left; min-height: 50px; }
+.columnsUser > .group_left { width: 240px; float: left; margin-right: 20px; min-height: 60px; }
+.columnsUser > .group_right { width: 740px; float: left; min-height: 50px; }
+/*预订房间页面*/
+.nav-box { background: #fff; padding: 30px 0; margin-top: 80px }
+.nav-box .contain .nav-left { float: left; font-size: 36px; color: #000; font-weight: bolder; }
+.nav-box .contain .nav-right { float: right }
+.nav-box .contain .nav-right span { display: block; float: left; color: #818284; text-align: center; padding-left: 20px; }
+.nav-box .contain .nav-right span:first-child { border-right: 1px solid #f7f7f7; padding-right: 20px; }
+.nav-box .contain .nav-right span em { font-style: normal; font-size: 26px; text-align: center; color: #edae49; line-height: 30px; font-weight: bolder; }
+.nav-box .contain .nav-right span p { font-size: 12px; }
+/*reservation room*/
+.page-contain { padding: 40px 0 80px; background: #f7f7f7 }
+.page-contain .contain .page-left { float: left; width: 220px; border-right: 1px solid #e2e2e2; }
+.page-contain .contain .page-right { float: left; width: 780px; padding-left: 20px; color: #818284 }
+.page-left .date { width: 200px; height: 220px; font-size: 12px }
+.page-left h2 { margin: 30px 0 20px; }
+.page-left .reserve-box { width: 200px; }
+.page-left .reserve-box .reserve-title { font-size: 12px; border-bottom: 1px solid #e2e2e2; color: #252729; margin: 20px 0 10px; padding-bottom: 5px; font-style: normal }
+.page-left .reserve-box .reserve-item { padding: 10px; border-left: 4px solid #edae49; background: #eaeaea; position: relative; font-size: 12px; color: #818284; margin-bottom: 10px; }
+.page-left .reserve-box .past { opacity: 0.5 }
+.page-left .reserve-box .reserve-item .book-date, .page-left .reserve-box .reserve-item .book-time { color: #252729 }
+.page-left .reserve-box .reserve-item .book-time { margin-bottom: 8px; }
+.page-left .reserve-box .reserve-item .close-select { position: absolute; top: 8px; right: 10px; cursor: pointer; }
+.page-left .reserve-box .reserve-item .close-select i { width: 15px; height: 15px; font-style: normal; font-weight: bolder; opacity: 0.5; color: #252729; }
+.page-left .reserve-box .reserve-item .close-select i:hover { opacity: 1 }
+.page-left .reserve-box .reserve-item .close-select span { display: none; }
+.page-left .reserve-box .reserve-item .close-select span em { font-style: normal; color: #252729; padding: 0 2px }
+.page-left .reserve-box .reserve-item .close-select span .back { color: #edae49 }
+.page-left .reserve-box .reserve-item .close-select span em:hover { text-decoration: underline }
+.page-left .select-style-time { font-size: 12px; cursor: pointer; color: #818284; }
+.page-right .time-msg { border: none; background: none; font-size: 16px; font-weight: bold; }
+.page-right .timer { font-size: 12px; color: #818284; line-height: 24px; margin-bottom: 20px; }
+.page-right .select-style { font-size: 12px; cursor: pointer }
+.page-right select { width: 210px; height: 30px; border: 1px solid #ddd }
+.page-right select:focus { border: 1px solid skyblue }
+.page-right .select-box { margin-top: 30px; }
+.page-right .select-box .select-date { margin-left: 105px; overflow: hidden }
+.page-right .select-box .select-date ul li { width: 50px; float: left; line-height: 24px; text-indent: 5px; color: #8e8f91; font-size: 12px; }
+.page-right .select-box .select-date ul .date-over { opacity: 0.5 }
+.page-right .select-box .time-box { border-top: 1px solid #ddd; overflow: hidden; }
+.page-right .select-box .time-box .room-pic { width: 105px; height: 100px; overflow: hidden; float: left }
+.page-right .select-box .time-box .room-pic img { width: 105px; height: 100px; }
+.page-right .select-box .time-box .room-time { float: left; }
+.page-right .select-box .time-box .room-time li { float: left; width: 25px; height: 100px; border-right: 1px solid #ddd; }
+.page-right .select-box .time-box .room-time li .booking { width: 25px; text-align: center; padding: 40px 0; background: #eee; display: none; cursor: pointer; }
+.page-right .select-box .time-box .room-time li .book-success { background-color: #edae49; color: #a66d10; display: block; width: 25px; overflow: hidden; font-size: 12px; height: 100px; padding: 5px 2px; cursor: pointer }
+.page-right .select-box .time-box .room-time li .booked { background-color: #e2e2e2; color: #818284; border: 1px solid #ccc; display: block; width: 25px; overflow: hidden; font-size: 12px; height: 100px; padding: 5px 2px; cursor: pointer; }
+.page-right .select-box .time-box .room-time .time-over { background: #eee; opacity: 0.5 }
+.page-right .select-box .room-name { width: 100%; background: #818284; color: #fff; line-height: 30px; padding-left: 10px; font-size: 12px; }
+.page-right .select-box .room-name b { font-size: 14px; }
+.booking-box { width: 560px; height: 520px; position: fixed; top: -130%; left: 50%; margin-left: -280px; background: #f7f7f7; z-index: 1; }
+.booking-box .relative-box { position: relative; overflow: hidden }
+.booking-box .relative-box .book-top { text-align: center; padding: 10px 155px; overflow: hidden; }
+.booking-box .relative-box .book-top span { display: block; float: left; color: #818284; text-align: center; padding-left: 20px; }
+.booking-box .relative-box .book-top span:first-child { border-right: 1px solid #ddd; padding-right: 20px; }
+.booking-box .relative-box .book-top span em { font-style: normal; font-size: 26px; text-align: center; color: #edae49; line-height: 30px; font-weight: bolder; }
+.booking-box .relative-box .book-top span p { font-size: 12px; }
+.booking-box .relative-box .book-day { width: 100%; height: 30px; background: #edae49; color: #f7f7f7; text-align: center; line-height: 30px; font-size: 12px }
+.booking-box .relative-box .book-detial { padding: 10px 30px; }
+.booking-box .relative-box .book-detial .company { float: left; margin-right: 15px; color: #818284; font-size: 14px; }
+.booking-box .relative-box .book-detial .company select { height: 30px; border: 1px solid #ddd; margin-top: 10px; }
+.booking-box .relative-box .book-detial .room-card { position: relative; overflow: hidden; width: 100%; background: #fff; margin-top: 10px; }
+.booking-box .relative-box .book-detial .room-card .card-left { width: 100px; float: left; height: 100%; overflow: hidden }
+.booking-box .relative-box .book-detial .room-card .card-left img { width: 100px; height: 100px; }
+.booking-box .relative-box .book-detial .room-card .card-right { float: left; padding: 10px; color: #818284; font-size: 12px; }
+.booking-box .relative-box .book-detial .room-card .card-right p { line-height: 18px; }
+.booking-box .relative-box .book-detial .room-card .card-right p b { font-size: 16px; color: #000; font-weight: bold }
+.booking-box .relative-box .book-detial .room-card .card-right p em { font-style: normal; color: #edae49 }
+.booking-box .relative-box .book-detial .room-card i { font-size: 14px; padding: 5px; background: #fff; font-style: normal; }
+.booking-box .relative-box .book-detial .room-card .num { position: absolute; left: 0; top: 0 }
+.booking-box .relative-box .book-detial .room-card .seat { background: #000; color: #f7f7f7; position: absolute; right: 8px; top: 8px; }
+.booking-box .relative-box .book-detial textarea { width: 98%; height: 43px; border: 2px solid #818284; margin-top: 15px; padding-left: 5px; }
+.booking-box .relative-box .book-detial .notice { color: #c09853; padding: 8px 0px 8px 14px; width: 97%; background: #fcf8e3; border: 1px solid #fbeed5; margin-top: 10px; font-size: 12px }
+.booking-box .relative-box .book-detial .detial-time { font-size: 14px; margin-top: 10px; color: #818284 }
+.booking-box .relative-box .book-detial .detial-cost { color: #818284; font-size: 12px; line-height: 16px; }
+.booking-box .relative-box .book-detial .detial-cost i { font-style: normal; color: #edae49 }
+.booking-box .relative-box .book-detial .cancel { background: #000; opacity: 0.8; }
+.booking-box .relative-box .book-detial .cancel:hover { opacity: 1; }
+.booking-box .relative-box .book-detial .down { width: 20px; height: 20px; display: block; position: absolute; right: 5px; top: 5px; font-size: 18px; font-weight: bolder; font-style: normal; color: #fff; text-shadow: 0 1px 0 rgba(0, 0, 0, 0.35); cursor: pointer }
+.book-submit { padding: 30px 55px; text-align: center; }
+.book-submit .photo { background: url(../images/logo.png) no-repeat 0 -111px; background-size: 121px auto; width: 100px; height: 90px; margin: 0 auto }
+.book-submit .content { max-width: 350px; margin: 0 auto; color: #818284; font-size: 13px; line-height: 20px; }
+.book-submit .content h1 { font-size: 38px; margin: 15px 0; color: #000; font-weight: bolder; }
+.book-submit .content .address { margin-top: 20px; margin-bottom: 40px }
+.book-submit .regist { width: auto; padding: 0 62px; cursor: pointer }
+.book-submit .done { background: #000; opacity: 0.8; cursor: pointer }
+.book-submit .done:hover { opacity: 1 }
+.book-submit .regist:hover { opacity: 0.8 }
+.cancel-book { height: auto; }
+.cancel-book .relative-box .cancel-title { padding: 10px; font-size: 22px; border-bottom: 1px solid #ddd; }
+.cancel-book .relative-box .book-msg { width: 95%; margin: 10px 20px; line-height: 36px; font-size: 12px; color: #818284; }
+.cancel-book .relative-box .book-msg .book-pro { text-align: right; color: #252729 }
+.cancel-book .relative-box .book-msg tr td { text-indent: 20px; }
+.cancel-book .relative-box .book-msg tr td a { color: #08c; text-decoration: none; }
+.cancel-book .relative-box .book-msg tr td a:hover { color: #5FD0E5; text-decoration: none; }
+.cancel-book .relative-box .cancel-bottom { text-align: right; width: 98%; background: #f5f5f5; border-top: 1px solid #ddd; padding: 20px 7px; font-size: 12px }
+.cancel-book .relative-box .cancel-bottom .cancel-btn { background: #d7413b; color: #f7f7f7; font-size: 14px; padding: 15px; margin-right: 20px; text-decoration: none; }
+.cancel-book .relative-box .cancel-bottom .cancel-btn:hover { opacity: 0.8 }
+.cancel-book .relative-box .cancel-bottom .cancel-tip { display: none; }
+.cancel-book .relative-box .out { width: 20px; height: 20px; display: block; position: absolute; right: 5px; top: 5px; font-size: 18px; font-weight: bolder; font-style: normal; color: #fff; text-shadow: 0 1px 0 rgba(0, 0, 0, 0.35); cursor: pointer }
+/*会议室预订页面*/
+.date { width: 240px; height: 260px; font-size: 12px; }
+.reserve-list h2 { font-size: 16px; line-height: 24px; }
+.reserve-item { padding: 10px 20px; background: #fff; border: 1px solid #ddd; border-left: 2px solid #f47857; position: relative; color: #999; font-size: 14px; }
+.reserve-item .book-time { color: #505050; margin-bottom: 10px; font-size: 12px; }
+.reserve-item p { line-height: 24px; }
+.reserve-item .close-select { position: absolute; top: -20px; right: 8px; cursor: pointer; }
+.reserve-item .close-select i { width: 15px; height: 15px; display: block; background: url(../images/close.png) no-repeat 0 0; margin-top: 10px; }
+.reserve-item .close-select i:hover { opacity: 1 }
+.reserve-item .close-select span { display: none; }
+.reserve-item .close-select span em { font-style: normal; color: #252729; padding: 0 2px }
+.reserve-item .close-select span .back { color: #edae49 }
+.reserve-item .close-select span em:hover { text-decoration: underline }
+.time-tip .time-msg { border: none; background: transparent; font-size: 20px; font-weight: bold; margin-bottom: 5px; }
+.time-tip .time-msg:hover { border: none; }
+.addr-select select { height: 25px; border: 1px solid #ddd; margin-right: 10px; -webkit-appearance: none; background: url('../images/arrow_down2.png') no-repeat 95% 9px #fff; width: 100px; }
+.addr-select p { line-height: 36px; font-size: 14px; }
+.addr-select p span { display: inline-block; width: 100px; }
+.addr-select .select-single { width: 160px; margin: -29px 0 0 103px; }
+.addr-select .select-single .select-area { height: 25px; line-height: 25px; padding: 0 10px; background-position: 95% 11px }
+.addr-select .select-single ul { top: 25px; }
+.room-book { margin-bottom: 30px; font-size: 14px; }
+.room-book .room-pic { float: left; width: 155px; height: 215px; overflow: hidden }
+.room-book .room-pic img { width: 100%; height: 100%; }
+.room-book .room-right { overflow: hidden; width: 546px; float: left; }
+.room-book .room-right .time-box { border-top: 1px solid #ddd }
+.room-book .room-right .time-box li { float: left; width: 168px; border-right: 1px solid #ddd; text-align: center; line-height: 30px; font-weight: bold; background: #fafafa; cursor: pointer }
+.room-book .room-right .time-box li.afternoon { width: 210px; }
+.room-book .room-right .clock li { width: 42px; text-indent: 10px; float: left; line-height: 24px; background: #fafafa; cursor: default; font-size: 12px; }
+.room-book .room-right .clock li.bor { border-right: 1px solid #ddd }
+.room-book .room-right .time-reserve { -moz-user-select: none; -webkit-user-select: none }
+.room-book .room-right .time-reserve li { float: left; width: 21px; height: 160px; border-right: 1px solid #ddd; border-top: 1px solid #ddd; cursor: pointer; background: #fff; }
+.room-book .room-right .time-reserve li:nth-child(2n-1) { border-right: 1px dashed #ddd }
+.room-book .room-right .time-reserve li.bor-no { border-right: none; }
+.room-book .room-right .time-reserve li:hover { background: #f5dad3; color: #fff; }
+.room-book .room-right .time-reserve li.gray { background: #fafafa; cursor: default }
+.room-book .room-right .time-reserve li.gray:hover { background: #fafafa; }
+.room-book .room-right .time-reserve li.selected { background: #FCE1E1; border-right-color: #fff; color: #fff }
+.room-book .room-right .time-reserve li.booked { background: #f47857; color: #fff }
+.room-book .yd-btn { border: 1px solid #ddd; border-left: none; border-bottom: none; width: 39px; height: 215px; float: left; text-align: center; padding: 100px 0; background: #aaa; color: #fff; cursor: pointer }
+.room-right .time-reserve li i { display: none; font-style: normal; width: 15px; height: 15px; border: 1px solid #fff; text-align: center; line-height: 12px; color: #fff; margin: 70px 3px; }
+.room-book .room-name { line-height: 40px; color: #fff; background: #87888a; padding: 0 10px; clear: both }
+.room-book .room-name p span { float: right }
+.room-book .room-name p em { font-style: normal; font-weight: bold; margin-right: 15px; }
+.reservation-box { display: none; width: 700px; height: 715px; background: #fff; z-index: 100; position: fixed; left: 50%; top: 50%; margin-left: -350px; margin-top: -355px; padding: 20px }
+.reservation-box .close { display: block; width: 30px; height: 30px; position: absolute; right: 10px; top: 10px; cursor: pointer; background: url(../images/close.png) no-repeat 10px 10px; }
+.reservation-box .book-top span { display: block; float: left; width: 100px; text-align: center; margin: 10px 0 }
+.reservation-box .book-top span:first-child { border-right: 1px solid #ddd; margin-left: 230px; }
+.reservation-box .book-top span em { font-size: 20px; color: #f47857; font-weight: bold; font-style: normal }
+.reservation-box .book-top .book-tip { clear: both; text-align: center; background: url(../images/book-tip.png) no-repeat 275px 4px; line-height: 26px; text-indent: 40px; }
+.reservation-box h2 { font-size: 18px; font-weight: bold; margin-bottom: 10px; }
+.reservation-box .book-time { display: inline-block; border: 1px solid #ddd; line-height: 30px; padding: 0 5px }
+.reservation-box .room-msg { background: #fafafa; border: 1px solid #ddd; overflow: hidden }
+.reservation-box .room-msg .room-img { width: 220px; height: 160px; float: left; overflow: hidden }
+.reservation-box .room-msg .room-img img { width: 100%; height: 100%; display: block }
+.reservation-box .room-msg .room-detail { margin-left: 220px; padding: 15px 20px; }
+.reservation-box .room-msg .room-detail p em { font-style: normal; font-weight: bold; font-size: 30px; color: #f47857 }
+.reservation-box .room-msg .room-detail p { line-height: 24px; }
+.reservation-box .room-msg .room-detail p.room-deco { margin-top: 20px; }
+.book-cost { padding: 20px 0; border-bottom: 1px solid #ddd }
+.book-cost p { line-height: 24px; }
+.book-cost p span { width: 110px; display: inline-block; }
+.book-cost p em { font-style: normal; color: #f47857; font-weight: bold }
+.reservation-box .book-bottom { padding: 35px 145px 0; overflow: hidden; }
+.reservation-box .book-bottom a { margin-left: 15px; height: 35px; line-height: 35px; color: #fff; width: 160px; float: left }
+.reservation-box .book-bottom a.cancel { background: #666b75 }
+/*培训室预订*/
+.train-book .room-pic { height: 180px; }
+.train-book .room-right .time-reserve li { height: 180px; width: 182px; padding: 75px 0; text-align: center; position: relative }
+.train-book .room-right .time-reserve li i { position: absolute; left: 44%; top: 63%; margin: 0; width: 30px; height: 30px; font-size: 30px; line-height: 25px; }
+.train-book .yd-btn { height: 180px; padding: 80px 0; }
+/*移动办公卡位预订*/
+.office-book .room-pic { width: 740px; height: 300px; }
+.office-box .book-top .book-tip { background-position: 219px 4px; }
+.office-box .date-num { font-style: normal; color: #f47857; margin-left: 10px; }
+.office-box .book-time { width: 80px; }
+/*办公室预订*/
+.main { padding: 40px 0 80px; background: #f7f7f7; }
+.main .main-left { width: 220px; float: left; padding-right: 20px; border-right: 1px solid #ddd; }
+.main .main-left .date { width: 200px; height: 220px; font-size: 12px; }
+.main .main-left h2 { margin: 30px 0 20px; }
+.main .main-left .reser-num { font-size: 12px; color: #818284 }
+.main .main-left .mleft-box { margin: 30px 0 20px; }
+.main .main-left .mleft-box a { text-decoration: none; color: #7AB9DE; font-size: 12px; }
+.main .main-left .mleft-box a:hover { color: #1abc9c; text-decoration: underline; }
+.main .main-left .mleft-box .mleft-item { width: 200px; padding: 20px; margin-top: 15px; text-align: center; background: #fff; display: none; }
+.main .main-left .mleft-box .mleft-item h3 { line-height: 24px; }
+.main .main-left .mleft-box .mleft-item p { font-size: 12px; }
+.main .main-right { width: 780px; float: left; padding-left: 20px; }
+.main .main-right .time-msg { border: none; background: none; font-size: 16px; font-weight: bold; }
+.main .main-right .select select { border: 1px solid #ddd; margin: 20px 0 40px; width: 205px; height: 35px; color: #818284 }
+.main .main-right .mright-item { width: 245px; margin-right: 12px; background: #fff; float: left; margin-bottom: 20px; }
+.main .main-right .mright-item:nth-child(3n+2) { margin-right: 0; }
+.main .main-right .mright-item .item-top { height: 120px; width: 100%; }
+.main .main-right .mright-item .item-top img { height: 120px; width: 245px; }
+.main .main-right .mright-item .item-middle { text-align: center; margin: 20px 0; font-size: 12px; line-height: 18px; }
+.main .main-right .mright-item .item-middle .m1 { display: block; min-height: 60px; }
+.main .main-right .mright-item .item-middle h2 { font-size: 18px; line-height: 30px; }
+.main .main-right .mright-item .item-middle .m2 { display: block; min-height: 38px; }
+.main .main-right .mright-item .item-middle .m2 p strong { font-size: 14px; font-style: normal; }
+.main .main-right .mright-item .item-middle .m3 { display: block }
+.main .main-right .mright-item .item-middle .m3 i { display: block; width: 30px; height: 30px; border-radius: 50%; background: #000; color: #f7f7f7; font-size: 16px; text-align: center; line-height: 30px; font-style: normal; position: relative; left: 50%; margin-left: -15px; font-weight: bolder; }
+.main .main-right .mright-item .item-bottom { width: 100%; height: 45px; }
+.main .main-right .mright-item .item-bottom a { background: #f47857; color: #f7f7f7; text-align: center; line-height: 45px; text-decoration: none; width: 100%; height: 100%; display: block; opacity: 0.8 }
+.main .main-right .mright-item .item-bottom a:hover { opacity: 1; }
+/*办公室预订弹框*/
+.workspace-book { width: 560px; height: 570px; position: fixed; left: 50%; top: 50%; margin-left: -280px; margin-top: -285px; background: #fff; z-index: 2; display: none; }
+.workspace-book .space-relative { position: relative; overflow: hidden; }
+.workspace-book .space-relative .space-top { position: relative; left: 29%; overflow: hidden; padding: 10px }
+.workspace-book .space-relative .space-top span { display: block; float: left; color: #818284; text-align: center; padding-left: 20px; }
+.workspace-book .space-relative .space-top span:first-child { border-right: 1px solid #f7f7f7; padding-right: 20px; }
+.workspace-book .space-relative .space-top span em { font-style: normal; font-size: 26px; text-align: center; color: #edae49; line-height: 30px; font-weight: bolder; }
+.workspace-book .space-relative .space-top span p { font-size: 12px; }
+.workspace-book .space-relative .space-middle { background: #fafafa; text-align: center; padding: 20px; overflow: hidden }
+.workspace-book .space-relative .space-middle h2 { font-size: 18px; font-weight: bolder }
+.workspace-book .space-relative .space-middle img { width: 300px; height: 200px; margin: 20px 0 }
+.workspace-book .space-relative .space-middle .book-time { font-size: 16px; margin-bottom: 10px; }
+.workspace-book .space-relative .space-middle p { line-height: 20px; font-size: 12px; }
+.workspace-book .space-relative .space-middle a { display: block; height: 50px; line-height: 50px; color: #fff; background: #f47857; text-decoration: none; float: left; padding: 0 25px; margin-top: 25px }
+.workspace-book .space-relative .space-middle a:hover { opacity: 0.8 }
+.workspace-book .space-relative .space-middle .cancel { margin-left: 10px; background: #000; }
+.workspace-book .space-relative .space-middle .comfir { margin-left: 120px; }
+.workspace-book .space-relative .space-middle .close { width: 20px; height: 20px; display: block; position: absolute; right: 5px; top: 5px; font-size: 18px; font-weight: bolder; font-style: normal; color: #fff; text-shadow: 0 1px 0 rgba(0, 0, 0, 0.35); cursor: pointer; }
+/*首页*/
+.user-box { padding: 20px; background-color: #FFFFFF; border: 1px solid #ddd; }
+.user-box .user-msg { width: 100%; position: relative; }
+.user-box .user-msg dt { width: 100%; }
+.user-box .user-msg dt a { display: block; width: 100%; }
+.user-box .user-msg dt a img { width: 100%; height: 100%; border-radius: 50%; border: 1px solid #eee; }
+.user-box .user-msg.user-avatar .cover { position: absolute; left: 0; top: 0; width: 100%; height: 118px; line-height: 118px; border-radius: 50%; text-align: center; background: #000; opacity: .5; display: none; }
+.user-box .user-msg.user-avatar .cover a { width: 100%; height: 100%; line-height: 100%; display: block; color: #fff; }
+.user-box .user-msg.user-avatar .cover a .icon { height: 116px; line-height: 116px; font-size: 30px; }
+.user-box .user-msg.user-avatar .cover a:hover { color: #fff; }
+.user-box .user-msg dd { text-align: center; }
+.user-box .user-msg dd .user-intro { display: inline-block; margin-top: 10px; border-top: 3px solid #333; color: #333; font-size: 16px; line-height: 30px; }
+.user-box .user-msg dd .points { font-size: 14px; color: #505050; line-height: 20px; }
+.left_list .user_list .list_items { width: 100%; height: 35px; background-color: #FFF; overflow: hidden; margin-bottom: 5px; }
+.left_list .user_list .list_items.active a .list_info{ color: #f47857; }
+.left_list .user_list .list_items .list_icon { float: left; width: 40px; height: 35px; background: #F47857 url(../images/list_icon.png) no-repeat; }
+.left_list .user_list .list_items .fw { background-position: 9px 6px; }
+.left_list .user_list .list_items .gd { background-position: 9px -32px; }
+.left_list .user_list .list_items .yd { background-position: 9px -72px; }
+.left_list .user_list .list_items .dd { background-position: 9px -112px; }
+.left_list .user_list .list_items .zh { background-position: 9px -152px; }
+.left_list .user_list .list_items .sc { background-position: 9px -196px; }
+.left_list .user_list .list_items .tx { background-position: 9px -236px; }
+.left_list .user_list .list_items .sw { background-position: 9px -278px; }
+.left_list .user_list .list_items .list_info { margin-left: 40px; text-indent: 30px; font-size: 14px; line-height: 35px; height: 35px; color: #505050; }
+.nav_bar { text-align: center; background-color: #fff; margin-bottom: 20px; border: 1px solid #00AC00; overflow: hidden; }
+.nav_bar .nav_list { width: 100%; margin-left: 3px; }
+.nav_bar .nav_list .nav_items { float: left; width: 25%; height: 140px; border-right: 1px solid #00AC00; }
+.nav_bar .nav_list .nav_items .nav_icons { height: 100px; background: #fff url(../images/nav_bar.png) no-repeat; }
+.nav_bar .nav_list .nav_items .bgs { background-position: 14px center; }
+.nav_bar .nav_list .nav_items .hys { background-position: -109px center; }
+.nav_bar .nav_list .nav_items .pxs { background-position: -234px center; }
+.nav_bar .nav_list .nav_items .yy { background-position: -360px center; }
+.nav_bar .nav_list .nav_items p { font-size: 16px; color: #505050; }
+.suggest_box { border: 1px solid #ddd; background-color: #fff; margin-bottom: 20px; padding: 0; }
+.suggest_box .sugg_title { text-align: center; font-size: 16px; font-weight: bold; height: 40px; line-height: 40px; margin-bottom: 20px; border-bottom: 1px solid #ddd; }
+.suggest_box .mb-0 { margin-bottom: 0px }
+.suggest_box .activity-show .show-item { border: none; border-bottom: 1px solid #ddd; }
+.suggest_box .business { padding: 0 20px; }
+.suggest_box .business .add_service { padding-bottom: 20px; }
+.suggest_box .business .p_text { color: #999; margin-top: -5px; }
+.suggest_box .business .service_mark { padding: 15px 0; }
+.suggest_box .business .service_mark .service_items { display: block; float: left; padding: 5px 10px; margin-right: 10px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 5px; color: #505050; font-size: 14px; }
+.suggest_box .business .service_mark .service_items p { float: left; }
+.suggest_box .business .service_mark .service_items a { float: right; margin-top: 2px; margin-left: 3px; display: block; width: 15px; height: 15px; background: url(../images/mini.png) center center no-repeat; }
+.suggest_box .business .add_service .service_name { width: 100%; padding: 0 10px; height: 35px; line-height: 35px; margin-bottom: 15px; border: 1px solid #ccc; }
+.suggest_box .business .add_service .btn_add { font-size: 14px; border-radius: 0; }
+.suggest_box .sugg_user { padding: 0 20px; }
+.suggest_box .sugg_user .user-msg { margin: 0 auto; width: 50%; margin-bottom: 20px; }
+.suggest_box .sugg_user .user-msg dt { width: 100%; }
+.suggest_box .sugg_user .user-msg dt a { display: block; width: 100%; }
+.suggest_box .sugg_user .user-msg dt a img { width: 100%; height: 100%; border-radius: 50%; }
+.suggest_box .sugg_user .user-msg dd { text-align: center; }
+.suggest_box .sugg_user .user-msg dd .user-intro { display: inline-block; margin-top: 10px; color: #333; font-size: 16px; line-height: 30px; }
+.suggest_box .sugg_user .user-msg dd .points { font-size: 14px; color: #505050; line-height: 20px; }
+.suggest_box .hot-item:last-child { padding-bottom: 20px; }
+/*收件列表*/
+.agr_box { display: none; width: 800px; height: 600px; position: fixed; z-index: 100; border-radius: 0; background: #fff; left: 50%; top: 50%; margin: -300px 0 0 -400px; padding: 30px; }
+.agr_box > .close { cursor: pointer; position: absolute; top: 15px; right: 10px; z-index: 2; width: 20px; height: 20px; background: url('../images/close.png') no-repeat center center; }
+.agr_box > .h5_title { font-size: 20px; text-align: center; line-height: 30px; }
+.agr_box > .agr_content { margin-bottom: 40px; height: 400px; overflow-y: scroll; }
+.agr_box > .agr_content p { font-size: 14px; color: #333; line-height: 24px }
+.agr_box > .btn_ok { width: 140px; height: 30px; line-height: 30px; border-radius: 0; margin: 0 auto; }
+#post_addr { display: none; }
+.head_bar { background-color: #fff; height: 120px; }
+.head_bar h2 { font-size: 36px; line-height: 120px; font-weight: bold; }
+.head_bar .points { padding-top: 30px; margin-right: -20px; text-align: center; }
+.head_bar .points dl { padding: 10px 20px; position: relative; }
+.head_bar .points dl .bdl { display: block; height: 35px; position: absolute; top: 22%; left: 0px; border-left: 1px solid #ddd; }
+.head_bar .points dl dt { font-size: 20px; font-weight: bold; color: #F47857; }
+.head_bar .points dl dd { font-size: 14px; color: #505050; }
+.check_box { width: 100%; height: 35px; line-height: 35px; padding-left: 20px; margin-top: 20px; background-color: #fff; border: 1px solid #ddd; }
+.check_box a { color: #F47857; }
+.service_box { padding: 20px; border: 1px solid #ddd; background-color: #fff; color: #505050; font-size: 14px; }
+.service_box .h3_title { font-size: 20px; line-height: 24px; font-weight: bold; text-indent: 10px; color: #333333; border-left: 3px solid #F47857; }
+.service_box .h4_title { line-height: 20px; font-size: 16px; font-weight: bold; color: #333333; margin-bottom: 15px; position: relative; }
+.service_box .service_item { padding-top: 20px; padding-bottom: 20px; border-bottom: 1px dashed #ccc; position: relative; }
+.service_box .bd_solid { border-bottom-style: solid; }
+.service_box .service_item .select_area_box { width: 600px; }
+.service_box .service_item .select_area_box .selects { margin-bottom: 15px; padding-right: 20px; display: inline-block; position: relative; }
+.service_box .service_item .select_area_box .selects .select { margin-right: 20px; }
+.service_box .service_item .select_area_box .selects .select .select-area { padding-right: 40px; }
+.service_box .service_item .select_area_box .selects .del_icon { cursor: pointer; display: block; height: 28px; width: 30px; position: absolute; top: 0; right: 0; background: url("../../home/images/del_icon.png") center center no-repeat; }
+.service_box .service_item .select_area_box .selects .del_icon:hover { background: url("../../home/images/del_hover.png") center center no-repeat; }
+.service_box .service_item .select_area_box .selects select { border: 1px solid #ccc; margin-right: 15px; height: 28px; line-height: 28px; color: #999; padding-right: 40px; background: url('../images/arrow_down2.png') no-repeat 92% 11px; }
+.service_box .service_item .add_items { text-align: center; cursor: pointer; position: absolute; width: 80px; height: 24px; line-height: 22px; top: 0; right: 0; color: #F47857; font-size: 12px; font-weight: normal; border: 1px solid #F47857; }
+.service_box .service_item .add_items:hover { background-color: #F47857; color: #fff; }
+.service_box .service_item .contact_list .contact_items .contact { float: left; width: 180px; line-height: 20px; margin-right: 30px; }
+.service_box .service_item .contact_list .contact_items .contact .contact_name { display: inline-block; padding-right: 25px; position: relative; margin-bottom: 10px; height: 20px; line-height: 20px; }
+.service_box .service_item .contact_list .contact_items .contact .contact_name .del_icons { cursor: pointer; display: block; height: 20px; width: 20px; position: absolute; top: 0; right: 0; background: url("../../home/images/del_icon.png") center center no-repeat; }
+.service_box .service_item .contact_list .contact_items .contact .contact_name .del_icons:hover { background: url("../../home/images/del_hover.png") center center no-repeat; }
+.service_box .service_item .contact_list .contact_items .contact input { height: 28px; width: 180px; padding: 0 5px; line-height: 25px; margin-right: 20px; margin-bottom: 10px; border: 1px solid #ddd; }
+.service_box .service_item .time_box table { width: 100%; }
+.service_box .service_item .time_box table tr { height: 35px; }
+.service_box .service_item .time_box input { width: 150px; padding: 0 5px; height: 28px; line-height: 25px; border: 1px solid #ddd; }
+.service_box .service_item .time_box input:focus { border: 1px solid #F47857; }
+.service_box .service_item .time_box .long_time { width: 360px; }
+.service_box .service_item .time_box .long_time #range2 { position: relative; width: 250px; height: 15px; font-size: 0; line-height: 0; background-color: #F47857; border-radius: 12px; }
+.service_box .service_item .time_box .long_time #mea { position: absolute; top: 0; left: 0; width: 15px; height: 15px; border: 1px solid #505050; border-radius: 50%; background-color: #fff; }
+.service_box .service_item .time_box .long_time ul li { float: left; width: 20px; }
+.service_box .service_item .time_box .long_time em { font-style: normal; color: #F47857; padding: 0 2px; }
+.service_box .service_item .time_box .long_time span { margin-left: 15px; }
+/*
+.service_box .service_item .time_box .long_time input{font-size: 14px;font-weight: bold;}
+.service_box .service_item .time_box .long_time input[type=range]:before{content: attr(min); padding-right: 5px;}
+.service_box .service_item .time_box .long_time input[type=range]:after{content: attr(max); padding-left: 5px;}
+.service_box .service_item .time_box .long_time output{display: block;font-size: 5.5em;font-weight: bold;}
+*/
+.service_box .service_item .time_box .long_time .check_icon { position: relative; width: 20px; height: 28px; }
+.service_box .service_item .time_box .long_time .check_icon .check_up { cursor: pointer; position: absolute; top: 0; left: 0; width: 15px; height: 15px; background: url("../../home/images/check_icon.png") 0 -32px no-repeat; }
+.service_box .service_item .time_box .long_time .check_icon .check_up:hover { background-position: 0 0; }
+.service_box .service_item .time_box .long_time .check_icon .check_down { cursor: pointer; position: absolute; bottom: 0; left: 0; width: 15px; height: 15px; background: url("../../home/images/check_icon.png") 0 -45px no-repeat; }
+.service_box .service_item .time_box .long_time .check_icon .check_down:hover { background-position: 0 -13px; }
+.service_box .service_item .invoice_box table { width: 550px; }
+.service_box .service_item .invoice_box table tr { height: 45px; }
+.service_box .service_item .invoice_box input { width: 100%; padding: 0 5px; height: 28px; line-height: 25px; border: 1px solid #ddd; }
+input:disabled, select:disabled { background: #f0f0f0 }
+.service_box .service_item .invoice_box p { margin-left: 20px; }
+.service_box .service_item .invoice_box select { height: 28px; width: 100%; color: #999; border: 1px solid #ddd; }
+.service_box .total_box { padding-top: 20px; }
+.service_box .total_box .total_warp { margin-bottom: 40px; font-size: 14px; line-height: 30px; }
+.service_box .total_box .total_warp dl dt { float: left; width: 100px; text-align: left; margin-right: 10px; }
+.service_box .total_box .total_warp .total_num { font-style: normal; color: #F47857; }
+.service_box .total_box .btn_box { width: 340px; height: 50px; margin: 0 auto; }
+.service_box .total_box .btn_box .mBtn { font-size: 14px; width: 160px; height: 35px; line-height: 35px; color: #fff; border-radius: 0; }
+.service_box .total_box .btn_box .cancel { background-color: #666b75; }
+/*个人资料编辑*/
+.user_edit { background: #fff; border: 1px solid #ddd; min-height: 560px; padding: 25px 30px; overflow: hidden }
+.user_menu ul li { float: left; font-size: 16px; margin-right: 40px; padding-bottom: 15px; }
+.user_menu ul li.active { border-bottom: 1px solid #F47857 }
+.user_menu ul li.active a { color: #F47857 }
+.user_menu { border-bottom: 1px solid #ddd; overflow: hidden; }
+.user_menu p { font-size: 16px; text-align: center; padding-bottom: 15px; }
+.user_infor { }
+.user_infor .label { text-align: left }
+.user_infor input[type=text], .user_infor select { width: 240px; height: 30px; line-height: 30px; }
+.user_infor .btn-send { width: 240px; display: inline-block; }
+.user_edit .bind-box p { font-size: 14px; line-height: 30px; }
+.user_edit .bind-box p span { padding: 0 15px; min-width: 250px; display: inline-block; }
+.user_edit .bind-box p span i { background: url("../../home/images/renzheng.png") 3px 6px no-repeat; font-style: normal; color: #6da974; text-indent: 20px; display: inline-block; margin: 0 10px; font-size: 12px; }
+.user_edit .bind-box p a { color: #F47857; font-size: 12px; }
+.user_edit .bind-form { padding: 0 220px; width: 730px; }
+.user_edit .bind-form input[type=text] { height: 30px; line-height: 30px; }
+.user_edit .bind-form .btn-white { display: inline-block; height: 30px; width: 114px; }
+.user_edit .bind-mail { width: 200px; margin: 20px 290px 0; }
+.user_edit .bind-mail .form-area { display: none; }
+.user_edit .bind-mail input[type=text] { width: 200px; }
+.user_edit .bind-mail p.checked { font-size: 14px; text-indent: 46px; background: url("../../home/images/checked.png") 0 3px no-repeat; }
+.user_edit .about-me .area { position: relative }
+.user_edit .about-me .area span { display: inline-block; width: 80px; text-align: left; font-size: 14px; }
+.user_edit .about-me .area input { width: 240px; height: 30px; line-height: 30px; }
+.user_edit .about-me .area i { background: url("../../home/images/add-fw.png") 0 0 no-repeat; width: 15px; height: 15px; display: block; position: absolute; left: 300px; top: 10px; }
+.user_edit .about-me .exists { margin-left: 84px; border: 1px dashed #ddd; padding: 15px; margin-top: 15px; }
+.user_edit .about-me .exists span { margin-right: 10px; }
+/*活动列表*/
+input.time_y{width: 103px;}
+input.time_h{width: 55px;}
+.user_edit .act_list .act_items{clear: both; padding: 20px 0; border-bottom: 1px dashed #ccc;}
+.user_edit .act_list .act_items .left_picture{float: left; width: 130px; height: 130px; overflow: hidden;}
+.user_edit .act_list .act_items .left_picture img{width: 100%; height: 100%;}
+.user_edit .act_list .act_items .right_content{margin-left: 145px; min-height: 130px;}
+.user_edit .act_list .act_items .right_content .act_name{font-weight: normal; margin-bottom: 10px; font-size: 18px; color: #404040;}
+.user_edit .act_list .act_items .right_content .act_name span{margin-left: 5px; padding: 2px 5px; font-size: 12px; color: #fff;}
+.user_edit .act_list .act_items .right_content .act_name .going{background-color: #f47f58;}
+.user_edit .act_list .act_items .right_content .act_name .end{background-color: #999;}
+.user_edit .act_list .act_items .right_content p{line-height: 24px; font-size: 14px; color: #505050;}
+.user_edit .act_list .act_items .right_content div{height: 24px; padding-left: 20px; font-size: 14px; line-height: 24px; color: #999;}
+.user_edit .act_list .act_items .right_content .act_times{background: url("../images/time_oclock.png") left center no-repeat;}
+.user_edit .act_list .act_items .right_content .act_addr{position: relative; background: url("../images/act_addr.png") left center no-repeat;}
+.user_edit .act_list .act_items .right_content .act_addr .control{position: absolute; top: 0; right: 0; text-align: right; width: 240px; height: 24px; line-height: 24px;}
+.user_edit .act_list .act_items .right_content .act_addr .control a{color: #f47f58;}
+.user_edit .act_box{padding-top: 20px; min-height: 460px;}
+.user_edit .act_box .edit_img{width: 130px; height: 130px; overflow: hidden;}
+.user_edit .act_box .edit_img img{width: 100%; height: 100%;}
+.user_edit .act_box .member li{float: left; margin-left: 1px; margin-right: 15px; width: 94px; margin-bottom: 10px;}
+.user_edit .act_box .member li:nth-child(7n){margin-right: 0;}
+.user_edit .act_box .member li .member_picture{width: 94px; height: 94px; overflow: hidden;}
+.user_edit .act_box .member li .member_picture img{width: 100%; height: 100%;}
+.user_edit .act_box .member li p{width: 100%; text-align: center; height: 24px; font-size: 14px; line-height: 24px;}
+/*公司资料编辑*/
+.user_edit .user_infor textarea { height: 150px; resize: none; width: 240px; }
+.user_edit .about-me .com-fw i { left: 220px; }
+.user_menu p.com-title { text-align: left }
+.user_edit .com-join { width: 175px; height: 225px; margin-right: 19px; margin-bottom: 20px; border: 1px solid #ddd; float: left; background: #fafafa; }
+.user_edit .com-join:nth-child(5n) { margin-right: 0 }
+.user_edit .com-join .join-top { width: 100%; height: 175px; overflow: hidden }
+.user_edit .com-join .join-top img { width: 100%; height: 100%; }
+.user_edit .com-join .join-bottom { padding: 3px 10px; overflow: hidden; height: 47px; display: table; }
+.user_edit .com-join .join-bottom p { width: 120px; display: table-cell; vertical-align: middle; padding-right: 15px; }
+.user_edit .com-join .join-bottom span { display: inline-block; color: #F47857; float: right; margin: 10px 0; cursor: pointer }
+/*圈子资料编辑*/
+.user_menu p.com-title a { float: right; color: #F47857; font-size: 12px; }
+.user_infor .btn-gr { width: 160px; text-align: center; display: inline-block; margin-right: 20px; color: #fff; }
+.user_infor .badge-gray:hover { background: gray }
+.user_infor .sel-file { position: relative; width: 100px; margin-left: 10px; }
+.user_infor .sel-file .file { width: 100%; position: absolute; top: 0; left: 0; opacity: 0; z-index: 2; }
+.user_infor .sel-file em { font-style: normal; color: #F47857; }
+/*需求*/
+.user_edit .act_list .act_items .left_pic{float: left; width: 80px; height: 80px; overflow: hidden;}
+.user_edit .act_list .act_items .left_pic img{width: 100%; height: 100%;}
+.user_edit .act_list .act_items .right_cont{margin-left: 95px; min-height: 80px;}
+.user_edit .act_list .act_items .right_cont .act_name{font-weight: normal; margin-bottom: 10px; font-size: 18px; color: #404040;}
+.user_edit .act_list .act_items .right_cont .act_name span{margin-left: 5px; padding: 2px 5px; font-size: 12px; color: #fff;}
+.user_edit .act_list .act_items .right_cont .act_name .going{background-color: #f47f58;}
+.user_edit .act_list .act_items .right_cont .act_name .zp{background-color: #00AC00;}
+.user_edit .act_list .act_items .right_cont .write{line-height: 24px; font-size: 14px; color: #505050;position: relative;}
+.user_edit .act_list .act_items .right_cont .write .control{position: absolute; bottom: 0; right: 0; text-align: right; width: 80px; height: 24px; line-height: 24px;}
+.user_edit .act_list .act_items .right_cont .write .control a{color: #f47f58;}
+

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>关于我</title>
+    <meta name="robots" content="all"/>
+    <!-- Mobile Devices Support @begin -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta content="application/xhtml+xml;charset=UTF-8" http-equiv="Content-Type">
+    <meta content="telephone=yes, address=yes" name="format-detection">
+    <!-- apple devices -->
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="white"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+    <!-- Mobile Devices Support @end -->
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="ESTT Team">
+    <link rel="stylesheet" href="../../../assets/wap/css/iconfont.css"/>
+    <link rel="stylesheet" href="../../../assets/wap/css/base.css"/>
+    <link rel="stylesheet" href="../../../assets/wap/css/content.css"/>
+    <script src="../../../assets/wap/js/sea.js"></script>
+    <script src="../../../assets/wap/js/jquery/jquery.min.js"></script>
+    <script>
+        seajs.config({
+            base: '/assets/wap/js',
+            charset: 'utf-8',
+            timeout: 10000
+        });
+    </script>
+</head>
+<body>
+<form action="?" method="post">
+    <section id="main">
+        <header><a class="backBtn iconfont icon-xiangzuo" href="javascript:;"></a><input class="rBtn" type="submit" value="完成" /></header><div data-Placeholder="header"></div>
+
+        <div class="pd_LR_10">
+            <dl class="mDL04">
+                <dt>服务</dt>
+                <dd>
+                    <span class="mKey add" data-type="service">添加服务</span>
+                </dd>
+            </dl>
+            <dl class="mDL04">
+                <dt>技能</dt>
+                <dd>
+                    <span class="mKey del">Web开发<input type="checkbox" name="skill" value="Web开发" readonly /></span>
+                    <span class="mKey add" data-type="skill">添加技能</span>
+                    <style>
+
+                    </style>
+                </dd>
+            </dl>
+            <dl class="mDL04">
+                <dt>爱好</dt>
+                <dd>
+                    <span class="mKey del">爬山<input type="checkbox" name="hobby" value="爬山" readonly /></span>
+                    <span class="mKey del">羽毛球<input type="checkbox" name="hobby" value="羽毛球" readonly /></span>
+                    <span class="mKey del">台球<input type="checkbox" name="hobby" value="台球" readonly /></span>
+                    <span class="mKey add" data-type="hobby">添加爱好</span>
+                </dd>
+            </dl>
+        </div>
+    </section><!--#main end-->
+</form>
+<!--遮罩层-->
+<section id="mPOP" class="mPOP">
+    <div class="pd_15">
+        <div class="mInput mb_10"><input type="text" placeholder="" /></div>
+        <br>
+        <a class="btn" href="javascript:;">确认</a>
+    </div>
+</section>
+<script>
+    $('document').ready(function(){
+        //初始化main高度，兼容部分页面有底色的情况
+        $('#main').css({'min-height':$(window).height()});
+        //添加
+        $('.mKey.add').on('click',function(e){
+            var _type = $(this).attr('data-type'),_s='';
+            switch(_type){
+                case 'service':
+                    _s = '服务';
+                    break;
+                case 'skill':
+                    _s = '技能';
+                    break;
+                case 'hobby':
+                    _s = '爱好';
+                    break;
+            }
+            $('#mPOP').find('input[type=text]').eq(0).val('').attr('placeholder','添加'+_s);
+            $('#mPOP .btn').attr('data-btnType',_type);
+            $('#mPOP').show();
+            $('#main').hide();
+            e.stopPropagation();
+        });
+        //完成填写
+        $('#mPOP .btn').on('click',function(e){
+            var _val = $('#mPOP').find('input[type=text]').eq(0).val();
+            var _type = $(this).attr('data-btnType');
+            if(_val){
+                var _node = '<span class="mKey del">'+_val+'<input type="checkbox" name="'+_type+'" value="'+_val+'" readonly /></span>';
+                $('.mKey.add[data-type='+_type+']').before(_node);
+            }
+            $('#main').show();
+            $('#mPOP').hide();
+            e.stopPropagation();
+        });
+        //删除
+        $('dl.mDL04 dd').delegate('.mKey.del','click',function(e){
+            $(this).remove();
+            e.stopPropagation();
+        });
+        //提交
+        $('form').eq(0).submit(function(e){
+            if(!$(this).find('input[type=checkbox]').length){
+                return false;
+            }
+        });
+    });
+</script>
+</body>
+</html>

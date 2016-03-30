@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>会议室预订</title>
+    <!--[if lt IE 9]>
+    <script src="../../assets/home/js/jquery/html5shiv.js" type="text/javascript"></script>
+    <![endif]-->
+    <script src="../../assets/home/js/jquery/jquery-1.9.1.js" type="text/javascript"></script>
+    <script type="text/javascript" src="../../assets/home/js/seajs/sea.js"></script>
+    <script>
+        seajs.config({
+            base: '../../assets/home/js',
+            charset: 'utf-8',
+            timeout: 10000
+        });
+    </script>
+    <link rel="stylesheet" type="text/css" href="../../assets/home/css/base.css"/>
+    <link rel="stylesheet" type="text/css" href="../../assets/home/css/user.css"/>
+    <link rel="stylesheet" type="text/css" href="../../assets/home/css/datepicker.css"/>
+
+</head>
+<body>
+<div class="head">
+    <div class="header fixed">
+        <div class="contain">
+            <div class="head-left">
+                <a href="javascript:;">创客港</a>
+            </div>
+            <div class="head-right">
+                <ul class="nav">
+                    <li><a href="javascript:;">首页</a></li>
+                    <li class="city"><a href="javascript:;">服务中心</a><i></i></li>
+                    <li><a href="javascript:;">服务及定价</a></li>
+                    <li class="social"><a href="javascript:;">社群</a></li>
+                    <!--li><a href="javascript:;">创客港+</a></li-->
+                    <li class="my-msg"><em>41</em></li>
+                    <li class="user-more"></li>
+                </ul>
+            </div>
+            <div class="logined-drop">
+                <ul>
+                    <li>我的帖子</li>
+                    <li>我的帖子</li>
+                    <li>我的帖子</li>
+                    <li>我的帖子</li>
+                </ul>
+            </div><!-- logined-drop end -->
+
+        </div>
+    </div><!-- header end -->
+    <div class="city-drop">
+        <div class="contain">
+            <div class="city-down">
+                <ul>
+                    <li><a href="javascript:;">北京</a></li>
+                    <li><a href="javascript:;">上海</a></li>
+                    <li><a href="javascript:;">广州</a></li>
+                    <li><a href="javascript:;">深圳</a></li>
+                    <li><a href="javascript:;">香港</a></li>
+                    <li><a href="javascript:;">成都</a></li>
+                    <li><a href="javascript:;">宁波</a></li>
+                    <li><a href="javascript:;">杭州</a></li>
+                </ul>
+            </div>
+        </div>
+    </div><!-- city-drop end -->
+</div><!-- head end -->
+<div class="head_bar mt_80">
+    <div class="contain">
+        <h2 class="fl">会议室预订</h2>
+        <div class="fr points">
+            <dl class="fl">
+                <dt>20</dt>
+                <dd>剩余积分</dd>
+            </dl>
+            <dl class="fr">
+                <dt>0</dt>
+                <dd>本月消费</dd>
+                <span class="bdl"></span>
+            </dl>
+            <div class="fr"></div>
+        </div>
+    </div>
+</div>
+<div class="userBg">
+<div class="columnsUser contain pt_30 pb_50">
+    <div class="group_left">
+        <div class="date mb_20">
+            <form name="optionsForm" class="date-picker-options ng-scope ng-pristine ng-valid">
+                <div datepicker="" class="date-picker" id="datepicker">
+                </div>
+            </form>
+        </div>
+        <div class="reserve-list">
+            <h2>预订列表</h2>
+            <div class="reserve-item mt_20">
+                <p class="book-time">2015/9/20  10:30- 11:00</p>
+                <p>车公庙泰然工贸园211栋</p>
+                <p>8楼810</p>
+                <div class="close-select">
+                    <span><em class="remove">取消预订</em>|<em class="back">返回</em></span><br>
+                    <i class="close"></i>
+                </div>
+            </div>
+            <div class="reserve-item mt_20">
+                <p class="book-time">2015/9/20  10:30- 11:00</p>
+                <p>车公庙泰然工贸园211栋</p>
+                <p>8楼810</p>
+                <div class="close-select">
+                    <span><em class="remove">取消预订</em>|<em class="back">返回</em></span><br>
+                    <i class="close"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="group_right">
+        <div class="time-tip">
+            <input type="text" name="date-time" id="date-time" class="time-msg" value="" disabled="disabled"/>
+            <p>预订时间可在订单弹窗内修改</p>
+        </div>
+        <div class="addr-select mt_20 mb_20">
+            <p><span>区域选择</span>
+                <select>
+                    <option value="0">深圳市</option>
+                </select>
+                <select>
+                    <option value="0">宝安区</option>
+                </select>
+                <select>
+                    <option value="0">华美居</option>
+                </select>
+            </p>
+            <p><span>服务中心选择</span>
+            <div class="select-single select">
+                <div class="select-area">请选择服务中心</div>
+                <ul>
+                    <li>泰然工贸园211栋</li>
+                    <li>华美居</li>
+                    <li>泰然工贸园211栋</li>
+                    <li>华美居</li>
+                </ul>
+            </div><!--select-single-->
+            </p>
+        </div>
+        <div class="room-book">
+            <div class="room-pic">
+                <img src="../../assets/home/images/tmp/room1.jpg" alt="">
+            </div>
+            <div class="room-right">
+                <ul class="time-box">
+                    <li data-id="a">上午</li>
+                    <li data-id="b" class="afternoon">下午</li>
+                    <li data-id="c">晚上</li>
+                </ul>
+                <ul class="clock">
+                    <li>9时</li>
+                    <li>10时</li>
+                    <li>11时</li>
+                    <li class="bor">12时</li>
+                    <li>13时</li>
+                    <li>14时</li>
+                    <li>15时</li>
+                    <li>16时</li>
+                    <li class="bor">17时</li>
+                    <li>18时</li>
+                    <li>19时</li>
+                    <li>20时</li>
+                    <li class="bor">21时</li>
+                </ul>
+                <ul class="time-reserve dragged">
+                    <li class="booked" data-id="a"><i>+</i></li>
+                    <li class="booked" data-id="a"><i>+</i></li>
+                    <li data-id="a"><i>+</i></li>
+                    <li data-id="a"><i>+</i></li>
+                    <li data-id="a"><i>+</i></li>
+                    <li data-id="a"><i>+</i></li>
+                    <li data-id="a"><i>+</i></li>
+                    <li data-id="a"><i>+</i></li>
+                    <li class="bor-no gray"></li>
+                    <li class="gray"></li>
+                    <li data-id="b"><i>+</i></li>
+                    <li data-id="b"><i>+</i></li>
+                    <li data-id="b"><i>+</i></li>
+                    <li data-id="b"><i>+</i></li>
+                    <li data-id="b"><i>+</i></li>
+                    <li data-id="b"><i>+</i></li>
+                    <li data-id="b"><i>+</i></li>
+                    <li data-id="b"><i>+</i></li>
+                    <li class="bor-no gray"></li>
+                    <li class="gray"></li>
+                    <li data-id="c"><i>+</i></li>
+                    <li data-id="c"><i>+</i></li>
+                    <li data-id="c"><i>+</i></li>
+                    <li data-id="c"><i>+</i></li>
+                    <li data-id="c"><i>+</i></li>
+                    <li data-id="c"><i>+</i></li>
+
+                </ul>
+            </div>
+            <div class="yd-btn">预订</div>
+            <div class="room-name">
+                <p><em>泰然工贸园211栋</em>8楼8A<span>¥50/小时</span></p>
+            </div>
+            
+        </div>
+        <div class="room-book">
+            <div class="room-pic">
+                <img src="../../assets/home/images/tmp/room1.jpg" alt="">
+            </div>
+            <div class="room-right">
+                <ul class="time-box">
+                    <li data-id="a">上午</li>
+                    <li data-id="b" class="afternoon">下午</li>
+                    <li data-id="c">晚上</li>
+                </ul>
+                <ul class="clock">
+                    <li>9时</li>
+                    <li>10时</li>
+                    <li>11时</li>
+                    <li class="bor">12时</li>
+                    <li>13时</li>
+                    <li>14时</li>
+                    <li>15时</li>
+                    <li>16时</li>
+                    <li class="bor">17时</li>
+                    <li>18时</li>
+                    <li>19时</li>
+                    <li>20时</li>
+                    <li class="bor">21时</li>
+                </ul>
+                <ul class="time-reserve dragged">
+                    <li class="booked" data-id="a"><i>+</i></li>
+                    <li  class="booked" data-id="a"><i>+</i></li>
+                    <li data-id="a"><i>+</i></li>
+                    <li data-id="a"><i>+</i></li>
+                    <li data-id="a"><i>+</i></li>
+                    <li data-id="a"><i>+</i></li>
+                    <li data-id="a"><i>+</i></li>
+                    <li data-id="a"><i>+</i></li>
+                    <li class="bor-no gray"></li>
+                    <li class="gray"></li>
+                    <li data-id="b"><i>+</i></li>
+                    <li data-id="b"><i>+</i></li>
+                    <li data-id="b"><i>+</i></li>
+                    <li data-id="b"><i>+</i></li>
+                    <li data-id="b"><i>+</i></li>
+                    <li data-id="b"><i>+</i></li>
+                    <li data-id="b"><i>+</i></li>
+                    <li data-id="b"><i>+</i></li>
+                    <li class="bor-no gray"></li>
+                    <li class="gray"></li>
+                    <li data-id="c"><i>+</i></li>
+                    <li data-id="c"><i>+</i></li>
+                    <li data-id="c"><i>+</i></li>
+                    <li data-id="c"><i>+</i></li>
+                    <li data-id="c"><i>+</i></li>
+                    <li data-id="c"><i>+</i></li>
+
+                </ul>
+            </div>
+            <div class="yd-btn">预订</div>
+            <div class="room-name">
+                <p><em>泰然工贸园211栋</em>8楼8A<span>¥50/小时</span></p>
+            </div>
+
+        </div>
+    </div>
+    <div class="masklayer"></div>
+    <!--预订弹框-->
+    <div class="reservation-box">
+        <i class="close"></i>
+        <div class="book-top">
+            <span><em>20</em><br>剩余积分</span>
+            <span><em>20</em><br>本月消费</span>
+            <p class="book-tip">会议室1小时起订</p>
+        </div>
+        <h2>场地信息</h2>
+        <div class="book-time">2015/09/29 10:00-12:00</div>
+        <div class="room-msg mt_20">
+            <div class="room-img">
+                <img src="../../assets/home/images/tmp/room1.jpg" alt="">
+            </div>
+            <div class="room-detail">
+                <p><em>¥50</em>/小时</p>
+                <p>车公庙泰然工贸园211栋    8楼8A</p>
+                <p class="room-deco">电源插座、空调、绿植</p>
+            </div>
+        </div>
+        <div class="book-cost">
+            <h2>预订说明</h2>
+            <p>请携带身份证在前台办理使用，预订不可取消。</p>
+        </div>
+        <div class="book-cost">
+            <h2>订单金额</h2>
+            <p><span>订单总金额：</span>¥100</p>
+            <p><span>通用积分抵扣：</span>-¥50</p>
+            <p><span>应付总金额：</span><em>¥50</em></p>
+        </div>
+        <div class="book-bottom">
+            <a href="javascript:;" class="mBtn">确认</a>
+            <a href="javascript:;" class="mBtn cancel">取消</a>
+        </div>
+    </div>
+</div>
+</div>
+<script>
+    seajs.use('app/app.head',function(api){
+        api.head();
+    });
+    seajs.use('app/user/app.user',function(api){
+        api.user();
+    });
+    seajs.use('app/community/app.select',function(api) {
+        api.select();
+    })
+</script>
+</body>
+</html>

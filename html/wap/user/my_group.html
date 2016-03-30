@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>我的圈子</title>
+    <meta name="robots" content="all"/>
+    <!-- Mobile Devices Support @begin -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta content="application/xhtml+xml;charset=UTF-8" http-equiv="Content-Type">
+    <meta content="telephone=yes, address=yes" name="format-detection">
+    <!-- apple devices -->
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="white"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+    <!-- Mobile Devices Support @end -->
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="ESTT Team">
+    <link rel="stylesheet" href="../../../assets/wap/css/iconfont.css"/>
+    <link rel="stylesheet" href="../../../assets/wap/css/base.css"/>
+    <link rel="stylesheet" href="../../../assets/wap/css/content.css"/>
+    <script src="../../../assets/wap/js/sea.js"></script>
+    <script src="../../../assets/wap/js/jquery/jquery.min.js"></script>
+    <script>
+        seajs.config({
+            base: '/assets/wap/js',
+            charset: 'utf-8',
+            timeout: 10000
+        });
+    </script>
+</head>
+<body>
+<aside id="sidePanel">
+    <div class="bd">
+        免费的在线翻译服务可即时翻译文本和网页。
+    </div><i class="close"></i>
+</aside><!--#sidePanel end-->
+<div id="maskLayer"></div>
+<section id="main">
+    <header><a class="backBtn iconfont icon-xiangzuo" href="javascript:;"></a><a class="rBtn" href="javascript:;">创建</a></header><div data-Placeholder="header"></div>
+
+    <div id="dataWrap" class="noMenu">
+        <div id="scroller">
+            <ul class="mImgTxt">
+                <li>
+                    <span class="avatar"><a href="javascript:;"><img src="" /></a></span>
+                    <div class="info">
+                        <p class="name"><a href="javascript:;">前端开发交流</a></p>
+                        <p class="desc grey">HTML5可以更好的促进用户于网站间的互动情况，多媒体网站可利用HT......</p>
+                        <p><i class="iconfont icon-qunliao"></i>123</p>
+                    </div>
+                </li>
+                <li>
+                    <span class="avatar"><a href="javascript:;"><img src="" /></a></span>
+                    <div class="info">
+                        <p class="name"><a href="javascript:;">前端开发交流</a></p>
+                        <p class="desc grey">HTML5可以更好的促进用户于网站间的互动情况，多媒体网站可利用HT......</p>
+                        <p><i class="iconfont icon-qunliao"></i>123</p>
+                    </div>
+                </li>
+                <li>
+                    <span class="avatar"><a href="javascript:;"><img src="" /></a></span>
+                    <div class="info">
+                        <p class="name"><a href="javascript:;">前端开发交流</a></p>
+                        <p class="desc grey">HTML5可以更好的促进用户于网站间的互动情况，多媒体网站可利用HT......</p>
+                        <p><i class="iconfont icon-qunliao"></i>123</p>
+                    </div>
+                </li>
+                <li>
+                    <span class="avatar"><a href="javascript:;"><img src="" /></a></span>
+                    <div class="info">
+                        <p class="name"><a href="javascript:;">前端开发交流</a></p>
+                        <p class="desc grey">HTML5可以更好的促进用户于网站间的互动情况，多媒体网站可利用HT......</p>
+                        <p><i class="iconfont icon-qunliao"></i>123</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section><!--#main end-->
+<script type="text/javascript" src="../../../assets/wap/js/jquery/iscroll.js"></script>
+<script>
+    $('document').ready(function(){
+        //初始化main高度，兼容部分页面有底色的情况
+        $('#main').css({'min-height':$(window).height()});
+        //侧边栏
+        $('header > .menuBtn').on('click',function(){
+            $('#maskLayer').stop(true,false).fadeIn(function(){
+                $('#sidePanel').addClass('show');
+            });
+        });
+        $('#sidePanel > .close').on('click',function(){
+            $('#sidePanel').removeClass('show');
+            $('#maskLayer').stop(true,false).fadeOut();
+        });
+        //筛选下拉菜单
+        $('.mMenu > .items').on('click',function(){
+            var _index = $(this).index(),_dom = $(this).parent('.mMenu').find('ul').eq(_index);
+            if($(this).hasClass('on')){
+                $(this).removeClass('on');
+                _dom.stop(true,false).slideUp();
+            }else{
+                $(this).parent('.mMenu').find('ul').hide();
+                _dom.stop(true,false).slideDown();
+                $(this).addClass('on').siblings('.items').removeClass('on');
+            }
+        });
+
+        var myScroll;
+        myScroll = new IScroll('#dataWrap',{
+            'scrollbars': true,
+            'mouseWheel': true,
+            'interactiveScrollbars': true,
+            'shrinkScrollbars': 'scale',
+            'fadeScrollbars': true
+        });
+        document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+
+    });
+</script>
+</body>
+</html>

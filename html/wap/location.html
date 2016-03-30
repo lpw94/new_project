@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>服务中心-列表页</title>
+    <meta name="robots" content="all"/>
+    <!-- Mobile Devices Support @begin -->
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta content="application/xhtml+xml;charset=UTF-8" http-equiv="Content-Type">
+    <meta content="telephone=yes, address=yes" name="format-detection">
+    <!-- apple devices -->
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="white"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+    <!-- Mobile Devices Support @end -->
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="ESTT Team">
+    <link rel="stylesheet" href="../../assets/wap/css/iconfont.css"/>
+    <link rel="stylesheet" href="../../assets/wap/css/base.css"/>
+    <link rel="stylesheet" href="../../assets/wap/css/content.css"/>
+    <script src="../../assets/wap/js/sea.js"></script>
+    <script src="../../assets/wap/js/jquery/jquery.min.js"></script>
+    <script>
+        seajs.config({
+            base: '/assets/wap/js',
+            charset: 'utf-8',
+            timeout: 10000
+        });
+    </script>
+</head>
+<body>
+<aside id="sidePanel">
+    <div class="bd">
+        免费的在线翻译服务可即时翻译文本和网页。
+    </div><i class="close iconfont icon-xiangzuo"></i>
+</aside><!--#sidePanel end-->
+<div id="maskLayer"></div>
+<section id="main">
+    <header><i class="menuBtn iconfont icon-caidan"></i><a class="searchBtn iconfont icon-fangdajing" href="javascript:;"></a></header><div data-Placeholder="header"></div>
+    <menu class="mMenu">
+        <div class="items">城市<i class="iconfont icon-xiangxia"></i></div>
+        <div class="items">区域<i class="iconfont icon-xiangxia"></i></div>
+        <div class="items">商圈<i class="iconfont icon-xiangxia"></i></div>
+        <ul>
+            <li>北京</li><li>上海</li><li>广州</li><li>深圳</li>
+            <li>香港</li><li>成都</li><li>宁波</li><li>杭州</li>
+        </ul>
+        <ul>
+            <li>南山</li><li>福田</li><li>罗湖</li><li>宝安</li>
+            <li>龙华</li><li>龙岗</li>
+        </ul>
+        <ul>
+            <li>宝安中心</li><li>宝体</li><li>时代城</li>
+        </ul>
+    </menu>
+    <div data-Placeholder="mMenu"></div>
+
+    <div id="dataWrap">
+        <div id="scroller">
+            <ul class="mImgList">
+                <li style="background: url('../../assets/wap/tmp/1.jpg') no-repeat center center;">
+                    <a href="javascript:;">
+                        <span>皇岗商务中心</span>
+                        <div class="mask"></div>
+                    </a>
+                </li>
+                <li style="background: url('../../assets/wap/tmp/1.jpg') no-repeat center center;">
+                    <a href="javascript:;">
+                        <span>皇岗商务中心</span>
+                        <div class="mask"></div>
+                    </a>
+                </li>
+                <li style="background: url('../../assets/wap/tmp/1.jpg') no-repeat center center;">
+                    <a href="javascript:;">
+                        <span>皇岗商务中心</span>
+                        <div class="mask"></div>
+                    </a>
+                </li>
+                <li style="background: url('../../assets/wap/tmp/1.jpg') no-repeat center center;">
+                    <a href="javascript:;">
+                        <span>皇岗商务中心</span>
+                        <div class="mask"></div>
+                    </a>
+                </li>
+                <li style="background: url('../../assets/wap/tmp/1.jpg') no-repeat center center;">
+                    <a href="javascript:;">
+                        <span>皇岗商务中心</span>
+                        <div class="mask"></div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section><!--#main end-->
+<script type="text/javascript" src="../../assets/wap/js/jquery/iscroll.js"></script>
+<script>
+    $('document').ready(function(){
+        //初始化main高度，兼容部分页面有底色的情况
+        $('#main').css({'min-height':$(window).height()});
+        //侧边栏
+        $('header > .menuBtn').on('click',function(){
+            $('#maskLayer').stop(true,false).fadeIn(function(){
+                $('#sidePanel').addClass('show');
+            });
+        });
+        $('#sidePanel > .close').on('click',function(){
+            $('#sidePanel').removeClass('show');
+            $('#maskLayer').stop(true,false).fadeOut();
+        });
+        //筛选下拉菜单
+        $('.mMenu > .items').on('click',function(){
+            var _index = $(this).index(),_dom = $(this).parent('.mMenu').find('ul').eq(_index);
+            if($(this).hasClass('on')){
+                $(this).removeClass('on');
+                _dom.stop(true,false).slideUp();
+            }else{
+                $(this).parent('.mMenu').find('ul').hide();
+                _dom.stop(true,false).slideDown();
+                $(this).addClass('on').siblings('.items').removeClass('on');
+            }
+        });
+
+        var myScroll;
+        myScroll = new IScroll('#dataWrap',{
+            'scrollbars': true,
+            'mouseWheel': true,
+            'interactiveScrollbars': true,
+            'shrinkScrollbars': 'scale',
+            'fadeScrollbars': true
+        });
+        document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+    });
+</script>
+</body>
+</html>

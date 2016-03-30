@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>服务</title>
+    <link rel="stylesheet" type="text/css" href="../../assets/home/css/base.css"/>
+    <link rel="stylesheet" type="text/css" href="../../assets/home/css/community.css"/>
+    <script src="../../assets/home/js/jquery/jquery-1.9.1.js" type="text/javascript"></script>
+    <script type="text/javascript" src="../../assets/home/js/seajs/sea.js"></script>
+    <script>
+        seajs.config({
+            base: '../../assets/home/js',
+            charset: 'utf-8',
+            timeout: 10000
+        });
+    </script>
+
+</head>
+<body>
+<div class="head">
+    <div class="header fixed">
+        <div class="contain">
+            <div class="head-left">
+                <a href="javascript:;">创客港</a>
+            </div>
+            <div class="mSearch">
+                <input type="text" name="search" placeholder="搜索话题、需求、服务、活动、会员和公司"/>
+                <a class="search-btn" href="javascript:;"></a><!--标签可随意更换，只保留类名-->
+            </div>
+            <div class="head-right">
+                <ul class="nav">
+                    <li class="login"><a id="login" href="javascript:;">登录</a></li>
+                    <li class="register"><a href="javascript:;">注册</a></li>
+                </ul>
+            </div>
+
+        </div>
+        <!-- header end -->
+    </div><!-- head end -->
+</div><!-- head end -->
+
+<div class="communityBg">
+    <div class="contain columnsCommunity pt_80 pb_50">
+        <div id="gotop"></div>
+        <div class="ck-load">
+            <p>热门服务</p>
+        </div>
+        <div class="col_left">
+            <div class="s-server">所有服务</div>
+            <ul class="all-server">
+                <li>
+                    <div class="fir-server">互联网</div>
+                    <ul class="sec-server">
+                        <li>php</li>
+                        <li>php</li>
+                        <li>php</li>
+                        <li>php</li>
+                        <li>php</li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="fir-server">教育</div>
+                    <ul class="sec-server">
+                        <li>php</li>
+                        <li>php</li>
+                        <li>php</li>
+                        <li>php</li>
+                        <li>php</li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="fir-server">金融</div>
+                    <ul class="sec-server">
+                        <li>php</li>
+                        <li>php</li>
+                        <li>php</li>
+                        <li>php</li>
+                        <li>php</li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="fir-server">互联网</div>
+                    <ul class="sec-server">
+                        <li>php</li>
+                        <li>php</li>
+                        <li>php</li>
+                        <li>php</li>
+                        <li>php</li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="fir-server">互联网</div>
+                    <ul class="sec-server">
+                        <li>php</li>
+                        <li>php</li>
+                        <li>php</li>
+                        <li>php</li>
+                        <li>php</li>
+                    </ul>
+                </li>
+            </ul>
+        </div><!--col_left end-->
+        <div class="col_main">
+            <div class="some-server">
+                <div class="pic">
+                    <a href="javascript:;"><img src="../../assets/home/images/aa.jpg"/></a>
+                </div>
+                <h3><a href="javascript:;">软件开发</a></h3>
+                <p>共有<em>100</em>家公司提供此服务</p>
+            </div>
+            <div class="some-server">
+                <div class="pic">
+                    <a href="javascript:;"><img src="../../assets/home/images/aa.jpg"/></a>
+                </div>
+                <h3><a href="javascript:;">软件开发</a></h3>
+                <p>共有<em>100</em>家公司提供此服务</p>
+            </div>
+            <div class="some-server">
+                <div class="pic">
+                    <a href="javascript:;"><img src="../../assets/home/images/aa.jpg"/></a>
+                </div>
+                <h3><a href="javascript:;">软件开发</a></h3>
+                <p>共有<em>100</em>家公司提供此服务</p>
+            </div>
+            <div class="some-server">
+                <div class="pic">
+                    <a href="javascript:;"><img src="../../assets/home/images/aa.jpg"/></a>
+                </div>
+                <h3><a href="javascript:;">软件开发</a></h3>
+                <p>共有<em>100</em>家公司提供此服务</p>
+            </div>
+
+        </div>
+    </div>
+</div>
+<script>
+    $(function(){
+        $(".all-server > li").hover(function(){
+            $(this).children(".sec-server").show();
+        },function(){
+            $(this).children(".sec-server").hide();
+        });
+        $(".sec-server").hover(function(){
+            $(this).show();
+            $(this).siblings(".fir-server").addClass("curr");
+        },function(){
+            $(this).hide();
+            $(this).siblings(".fir-server").removeClass("curr");
+        });
+    })
+
+</script>
+
+</body>
+</html>

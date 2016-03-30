@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>手机/邮箱设置</title>
+    <meta name="robots" content="all"/>
+    <!-- Mobile Devices Support @begin -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta content="application/xhtml+xml;charset=UTF-8" http-equiv="Content-Type">
+    <meta content="telephone=yes, address=yes" name="format-detection">
+    <!-- apple devices -->
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="white"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+    <!-- Mobile Devices Support @end -->
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="ESTT Team">
+    <link rel="stylesheet" href="../../../assets/wap/css/iconfont.css"/>
+    <link rel="stylesheet" href="../../../assets/wap/css/base.css"/>
+    <link rel="stylesheet" href="../../../assets/wap/css/content.css"/>
+    <script src="../../../assets/wap/js/sea.js"></script>
+    <script src="../../../assets/wap/js/jquery/jquery.min.js"></script>
+    <script>
+        seajs.config({
+            base: '/assets/wap/js',
+            charset: 'utf-8',
+            timeout: 10000
+        });
+    </script>
+</head>
+<body>
+<form action="?" method="post">
+    <section id="main">
+        <header><a class="backBtn iconfont icon-xiangzuo" href="javascript:;"></a><input class="rBtn" type="submit" value="完成" /></header><div data-Placeholder="header"></div>
+
+        <div class="pd_LR_10 pd_TB_10 edit">
+            <menu class="mMenu02 border_B mb_10">
+                <div class="row items"><a href="javascript:;">更改绑定<span></span></a></div>
+            </menu>
+            <div class="pd_TB_15">
+                <p class="mb_10">是否公开？</p>
+                <p class="row mOption">
+                    <span class="on"><i class="iconfont icon-dagou"></i>公开<input type="radio" name="open" /></span>
+                    <span><i class="iconfont icon-dagou"></i>保密<input type="radio" name="open" /></span>
+                </p>
+            </div>
+        </div>
+    </section><!--#main end-->
+</form>
+<script>
+    $('document').ready(function(){
+        //初始化main高度，兼容部分页面有底色的情况
+        $('#main').css({'min-height':$(window).height()});
+        //单选
+        $('.mOption input[type=radio]').on('change',function(){
+            $(this).parent('span').addClass('on').siblings('span').removeClass('on');
+        });
+    });
+</script>
+</body>
+</html>

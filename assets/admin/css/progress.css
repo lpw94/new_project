@@ -1,0 +1,90 @@
+.page-content{min-width: 1093px;}
+.head-tip{border: 1px solid #ccc; padding: 8px; margin-bottom: 10px;}
+.asideNav{text-align: center; line-height: 36px; font-size: 14px; background: #FBfFfE; border: 1px solid #DEEFFB; font-family: "microsoft yahei";}
+.asideNav li.head{font-family: 'Microsoft Yahei'; font-size: 14px; padding: 0 8px; margin: 0; color: #fff; background: #62a8d1; line-height: 36px;}
+.asideNav ul{margin: 0;}
+.asideNav li{border-bottom: 1px solid #eee;}
+.asideNav li a.nav{display: block;}
+.asideNav li a.nav.active{color: #f00;}
+.asideNav li.save{background: #fff; border-bottom: none; padding: 8px;}
+.save-area{margin: 0 0 20px; padding: 12px; background: #FEFCEF; border: 1px solid #DEEFFB;}
+.field-line{border-top: 1px solid #DEEFFB; padding: 12px 0 0;}
+.tabs a{color: #06f;}
+.tabs a.btn{color: #fff;}
+.tabs a.current{color: #f00;}
+.widget-content{display: none;}
+.widget-content.active{display: block;}
+.left-panel .widget-title{}
+input.time{width: 102px;}
+input.task_reward{width: 60px;}
+.driver-selector{border: 1px solid #ccc; padding: 8px; position: absolute; width: 580px; left: 92px; background: #FBfFfE; top: 37px; box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); display: none; z-index: 1;}
+.driver-selector .driver-item{cursor: pointer; line-height: 36px; width: 50%; float: left;}
+.driver-selector .driver-item a{display: block; border-bottom: 1px solid #eee;}
+.driver-selector .driver-item:nth-child(2n) a{margin-left: 10px;}
+.driver-selector .driver-item:nth-child(2n+1) a{margin-right: 10px;}
+.driver-selector .driver-item:hover{/*background: #FEFCEF;*/}
+.driver-selector .icon{margin-right: 8px;}
+.item.ok{}
+.checked-status{}
+.checked-status .icon-check{display: none;}
+.checked-status.checked-ok .icon-check{display: inline-block;}
+.checked-status.checked-ok .icon-close{display: none;}
+.param-status .ok{display: none;}
+.param-status.param-ok .ok{display: inline-block;}
+.param-status.param-ok .fail{display: none;}
+.task-param{position: relative;}
+/* = STEPS CONTAINER
+----------------------------*/
+.wizard-steps{margin: 20px 10px 20px 10px; padding: 0; position: relative; clear: both; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-weight: bold; height: 32px;}
+.wizard-steps div{position: relative;}
+/* = STEP NUMBERS
+----------------------------*/
+.wizard-steps span{display: block; float: left; font-size: 10px; text-align: center; width: 15px; margin: 6px 5px 0 2px; line-height: 15px; color: #ccc; background: #FFF; border: 2px solid #CCC; -webkit-border-radius: 10px; -moz-border-radius: 10px; border-radius: 10px;}
+/* = DEFAULT STEPS
+----------------------------*/
+.wizard-steps a{position: relative; font-weight: normal; display: block; width: 22%; height: 32px; line-height: 32px; margin-right: 18px; padding: 0 10px 0 3px; float: left; font-size: 12px; color: #666; background: #F0EEE3; text-decoration: none; text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.8);}
+.wizard-steps a:before{width: 0; height: 0; border-top: 12px solid #F0EEE3; border-bottom: 12px solid #F0EEE3; border-left: 12px solid transparent; position: absolute; content: ""; top: 4px; left: -12px;}
+.wizard-steps a:after{width: 0; height: 0; border-top: 12px solid transparent; border-bottom: 12px solid transparent; border-left: 12px solid #F0EEE3; position: absolute; content: ""; top: 4px; right: -12px;}
+/* = COMPLETED STEPS
+----------------------------*/
+.wizard-steps .completed-step a{color: #4f9e48; background: #DEEFFB;}
+.wizard-steps .completed-step a:before{border-top: 12px solid #DEEFFB; border-bottom: 12px solid #DEEFFB;}
+.wizard-steps .completed-step a:after{border-left: 12px solid #DEEFFB;}
+.wizard-steps .completed-step span{border: 2px solid #88D292; color: #88D292; text-shadow: none;}
+/* = ACTIVE STEPS
+----------------------------*/
+.wizard-steps .active-step a{color: #fff; background: #88D292; text-shadow: 1px 1px 1px rgb(51, 140, 40);}
+.wizard-steps .active-step a:before{border-top: 12px solid #88D292; border-bottom: 12px solid #88D292;}
+.wizard-steps .active-step a:after{border-left: 12px solid #88D292;}
+.wizard-steps .active-step span{color: #88D292; box-shadow: 0 0 2px rgba(38, 161, 0, 0.8); text-shadow: none; border: 2px solid #DEEFFB;}
+/* = HOVER STATES
+----------------------------*/
+.wizard-steps .completed-step:hover a, .wizard-steps .active-step:hover a{color: #fff; background: #88D292; text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);}
+.wizard-steps .completed-step:hover span, .wizard-steps .active-step:hover span{color: #88D292;}
+.wizard-steps .completed-step:hover a:before, .wizard-steps .active-step:hover a:before{border-top: 12px solid #88D292; border-bottom: 12px solid #88D292;}
+.wizard-steps .completed-step:hover a:after, .wizard-steps .active-step:hover a:after{border-left: 12px solid #88D292;}
+input.address{width: 320px;}
+/* customer choose box */
+.customer-wrap{position: relative;}
+.box-customer{position: absolute; display: none; background: #FBfFfE; overflow: hidden; padding: 8px 8px 70px 8px; border: 1px solid #ccc; width: 580px; left: -1px; bottom: -1px; box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); z-index: 1;}
+.box-customer .box-foot{position: absolute; bottom: 1px; left: 1px; padding: 8px; width: 100%; background: #fff; border-top: 1px solid #ccc;}
+.box-widget{display: none;}
+.box-widget .tab-pane{display: none;}
+.box-widget .tab-pane.active{display: block;}
+.box-widget .item{cursor: pointer; line-height: 36px; width: 50%; float: left;}
+.box-widget .item a{display: block; border-bottom: 1px solid #eee; color: #666;}
+.box-widget .item:nth-child(2n) a{margin-left: 10px;}
+.box-widget .item:nth-child(2n+1) a{margin-right: 10px;}
+.box-widget .item:hover{/*background: #FEFCEF;*/}
+.box-widget .icon{margin-right: 8px;}
+.box-widget .show-tip{border: 1px solid #DEEFFB; font-family: 'Microsoft Yahei'; background: #FEFCEF; line-height: 28px; padding: 0 8px;}
+.box-widget .noData{border-bottom: 1px solid #eee;}
+.addr-wrap{position: absolute; display: none; background: #FBfFfE; padding: 8px 8px 70px 8px; border: 1px solid #ccc; width: 580px; left: -1px; bottom: -1px; box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); z-index: 1;}
+.box-address .box-foot{position: absolute; bottom: 0; left: 0; padding: 8px; width: 580px; background: #fff; border-top: 1px solid #ccc;}
+.box-address #addrFormWrap{}
+.box-address #addrFormWrap #mapWrap{position: absolute; background: #fff; right: -376px; top: -58px; left: 588px; bottom: -71px; border: 1px solid #ccc; z-index: 999; box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);}
+.task_modal .split-label{padding-left: 8px;}
+.task_modal .addr-split{position: relative; line-height: 60px; height: 60px; border-bottom: 1px solid #eee;}
+.addr-split .addr-wrap .box-foot{padding-left: 5px;}
+.addr-split .addr-wrap .box-foot .field{line-height: 34px;}
+.addr-split .box-address #addrFormWrap #mapWrap{left: -389px; right: 588px;}

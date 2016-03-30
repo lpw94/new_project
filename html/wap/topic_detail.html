@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>共创圈-详情页</title>
+    <meta name="robots" content="all"/>
+    <!-- Mobile Devices Support @begin -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta content="application/xhtml+xml;charset=UTF-8" http-equiv="Content-Type">
+    <meta content="telephone=yes, address=yes" name="format-detection">
+    <!-- apple devices -->
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="white"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+    <!-- Mobile Devices Support @end -->
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="ESTT Team">
+    <link rel="stylesheet" href="../../assets/wap/css/iconfont.css"/>
+    <link rel="stylesheet" href="../../assets/wap/css/base.css"/>
+    <link rel="stylesheet" href="../../assets/wap/css/content.css"/>
+    <script src="../../assets/wap/js/sea.js"></script>
+    <script src="../../assets/wap/js/jquery/jquery.min.js"></script>
+    <script>
+        seajs.config({
+            base: '/assets/wap/js',
+            charset: 'utf-8',
+            timeout: 10000
+        });
+    </script>
+</head>
+<body>
+<section id="main">
+    <header><i class="backBtn iconfont icon-xiangzuo"></i></header><div data-Placeholder="header"></div>
+
+    <div class="mblock mPost">
+        <div class="ab">
+            <p><span class="time">5小时前</span></p>
+        </div>
+        <div class="row">
+            <span class="avatar"><img src="" /></span>
+            <p class="name">毕莎</p>
+            <p class="job">前端开发工程师</p>
+        </div>
+        <div class="row con">
+            本公司因项目需求，现急需一名高级PHP开发工程师，有意者请致电：13623659865
+            <section class="photos">
+                <ul class="img01">
+                    <li><img src="../../assets/home/images/pic1.jpg" alt=""></li>
+                </ul>
+            </section>
+        </div>
+    </div>
+    <!---->
+    <div class="mTab clear">
+        <span class="items on" data-type="comment">评论<small>(40)</small></span>
+        <span class="items" data-type="zan">赞<small>(40)</small></span>
+    </div>
+    <div class="mTabCon">
+        <ul class="mComment" data-type="comment">
+            <li>
+                <span class="time">30分钟前</span>
+                <div class="row">
+                    <span class="avatar"><img src="" /></span>
+                    <p class="name">毕莎</p>
+                    <p class="job">前端开发工程师</p>
+                </div>
+                <div class="row con">
+                    赛道上有一个伟大的名字，曼塞尔。他狂野，暴躁，激进又有独特的魅力。
+                </div>
+            </li>
+            <li>
+                <span class="time">30分钟前</span>
+                <div class="row">
+                    <span class="avatar"><img src="" /></span>
+                    <p class="name">毕莎</p>
+                    <p class="job">前端开发工程师</p>
+                </div>
+                <div class="row con">
+                    回复：<span>@毕莎</span>：赛道上有一个伟大的名字，曼塞尔。他狂野，暴躁，激进又有独特的魅力。
+                </div>
+            </li>
+        </ul>
+        <ul class="mUser" data-type="zan">
+            <li>
+                <a href="javascript:;"><span class="avatar"><img src="" /></span>毕莎</a>
+            </li>
+            <li>
+                <a href="javascript:;"><span class="avatar"><img src="" /></span>毕莎</a>
+            </li>
+            <li>
+                <a href="javascript:;"><span class="avatar"><img src="" /></span>毕莎</a>
+            </li>
+        </ul>
+    </div>
+
+    <section id="HandelPanel">
+        <div class="btnPanel">
+            <i class="comm iconfont icon-pinglun"></i>
+            <i class="zan iconfont icon-zan"></i>
+            <a class="btn toDo" href="javascript:;">关注</a>
+        </div>
+        <div class="postPanel">
+            <p><input type="text" placeholder="请输入您的评论" /></p>
+            <span class="btn postBtn">发布</span>
+        </div>
+    </section>
+    <div data-Placeholder="HandelPanel"></div>
+</section><!--#main end-->
+<script>
+    $('document').ready(function(){
+        //初始化main高度，兼容部分页面有底色的情况
+        $('#main').css({'min-height':$(window).height()});
+        //初始化
+        $('.mTab').find('.items').eq(0).addClass('on');
+        $('.mTabCon').find('ul').eq(0).show();
+        //切换
+        $('.mTab').delegate('.items','click',function(){
+            var _type = $(this).attr('data-type');
+            $(this).addClass('on').siblings('.on').removeClass('on');
+            var _dom = $(this).parent('.mTab').next('.mTabCon').find('[data-type='+_type+']').eq(0);
+            _dom.show().siblings('[data-type]').hide();
+        });
+        //评论
+        $('#HandelPanel .btnPanel i.comm').on('click',function(){
+            $('#HandelPanel .postPanel').show();
+        });
+    });
+</script>
+</body>
+</html>

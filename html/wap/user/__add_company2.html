@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>公司-详情页</title>
+    <meta name="robots" content="all"/>
+    <!-- Mobile Devices Support @begin -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta content="application/xhtml+xml;charset=UTF-8" http-equiv="Content-Type">
+    <meta content="telephone=yes, address=yes" name="format-detection">
+    <!-- apple devices -->
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="white"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+    <!-- Mobile Devices Support @end -->
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="ESTT Team">
+    <link rel="stylesheet" href="../../../assets/wap/css/iconfont.css"/>
+    <link rel="stylesheet" href="../../../assets/wap/css/base.css"/>
+    <link rel="stylesheet" href="../../../assets/wap/css/content.css"/>
+    <script src="../../../assets/wap/js/sea.js"></script>
+    <script src="../../../assets/wap/js/jquery/jquery.min.js"></script>
+    <script>
+        seajs.config({
+            base: '/assets/wap/js',
+            charset: 'utf-8',
+            timeout: 10000
+        });
+    </script>
+</head>
+<body>
+<form action="?" method="post">
+    <section id="main" class="bgColor">
+        <div id="header">
+            <a class="backPage" href="javascript:;"><i class="iconfont icon-xiangzuo"></i><em></em></a>
+            <input class="rBtn" type="submit" value="确定" />
+        </div>
+
+        <div class="companyTop mb_10">
+            <div class="bg" style="background:#f1f1f1 url('http://g.hiphotos.baidu.com/image/w%3D310/sign=772e37e5b4fd5266a72b3a159b199799/b8014a90f603738d5f92372cb11bb051f919ece0.jpg') no-repeat; background-size:cover; background-position:center center;"></div>
+            <span class="avatar"><img src="" /></span>
+            <div class="con"></div>
+        </div>
+
+        <div class="mblock pd_LR_10 mb_10 edit">
+            <div class="mInput mFormRow">
+                <span>名称</span><div class="box"><input type="text" placeholder="公司名称" /></div>
+            </div>
+            <div class="mTextarea mFormRow">
+                <span>简介</span><div class="box"><textarea type="text" placeholder="添加公司简介"></textarea></div>
+            </div>
+            <div class="mSelect mFormRow">
+                <span>城市</span>
+                <div class="box">
+                    <select>
+                        <option selected="true" disabled="true">选择城市</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                    </select>
+                </div>
+            </div>
+            <div class="mSelect mFormRow">
+                <span>中心</span>
+                <div class="box">
+                    <select>
+                        <option selected="true" disabled="true">选择中心</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                    </select>
+                </div>
+            </div>
+            <div class="mInput mFormRow">
+                <span>详细地址</span><div class="box"><input type="text" placeholder="请填写详细地址" /></div>
+            </div>
+        </div>
+
+        <div class="mblock pd_LR_10 mb_10">
+            <div class="mMultiselect mFormRow">
+                <span>服务</span><div class="box"><p class="con" data-mpop="addServ">添加公司的服务</p></div>
+            </div>
+        </div>
+
+        <div class="mblock pd_LR_10 edit">
+            <div class="mInput mFormRow">
+                <span>电话</span><div class="box"><input type="text" placeholder="公司电话" /></div>
+            </div>
+            <div class="mInput mFormRow">
+                <span>邮箱</span><div class="box"><input type="text" placeholder="公司邮箱" /></div>
+            </div>
+            <div class="mInput mFormRow">
+                <span>微信</span><div class="box"><input type="text" placeholder="公司微信公众号" /></div>
+            </div>
+            <div class="mInput mFormRow">
+                <span>微博</span><div class="box"><input type="text" placeholder="公司博客" /></div>
+            </div>
+            <div class="mInput mFormRow">
+                <span>网站</span><div class="box"><input type="text" placeholder="公司网站" /></div>
+            </div>
+        </div>
+    </section><!--#main end-->
+</form>
+<section id="addServ" class="mPOP">
+    <div class="pd_LR_15 pd_TB_10">
+        <ul class="mMulti">
+            <li><i class="iconfont icon-dagou"></i>Web开发</li>
+            <li><i class="iconfont icon-dagou"></i>PHP建设</li>
+            <li><i class="iconfont icon-dagou"></i>UI设计</li>
+        </ul>
+        <br>
+        <a class="btn" href="javascript:;">确认</a>
+    </div>
+</section>
+
+<script>
+    $('document').ready(function(){
+        //初始化main高度，兼容部分页面有底色的情况
+        $('#main').css({'min-height':$(window).height()});
+        //添加服务
+        $('.mMultiselect .con').on('click',function(e){
+            var _domID = $('#'+$(this).attr('data-mpop'));
+            _domID.show();
+            e.stopPropagation();
+        });
+        $('ul.mMulti').delegate('li','click',function(e){
+            if( $(this).hasClass('checked') ){
+                $(this).removeClass('checked');
+            }else{
+                $(this).addClass('checked');
+            }
+            e.stopPropagation();
+        });
+        $('#addServ .btn').on('click',function(e){
+            var _count = $('#addServ ul.mMulti li.checked').length;
+            if(_count){
+                $('.mMultiselect .con[data-mpop=addServ]').html('已添加'+_count+'个服务');
+            }else{
+                $('.mMultiselect .con[data-mpop=addServ]').html('添加公司的服务');
+            }
+            $('#addServ').hide();
+            e.stopPropagation();
+        });
+
+    });
+</script>
+</body>
+</html>

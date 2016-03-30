@@ -1,0 +1,98 @@
+* { margin: 0; padding: 0; }
+a { cursor: pointer; text-decoration: none; color: #333; }
+html { width: 100%; height: 100%; }
+body { width: 100%; height: 100%; position: relative; color: #007cc2; }
+a:link, a:visited { color: #444; }
+img { border: none; max-width: 100%; }
+h1 { font-size: 14pt; }
+/*主标题*/
+h2 { font-size: 12pt; }
+/*副标题*/
+ul { list-style-type: none; }
+.wrap { background: #d6dee0 url(/assets/admin/images/login_bg.jpg) center center no-repeat; min-width: 1200px; min-height: 600px; width: 100%; height: 100%; background-size: 100%; }
+.wrap .main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 500px;
+    height: 262px;
+    background: url("/assets/admin/images/login_glass.png") no-repeat;
+    background-size: 100%;
+    margin: -160px auto 0 -250px;
+}
+.main .content .site_name {
+    position: absolute;
+    top: -100px;
+    text-align: center;
+    font-size: 24px;
+    width: 100%;
+    font-weight: normal;
+}
+@media all and (min-width: 1600px) {
+    .main .content .site_name {
+        top: -160px;
+    }
+}
+@media all and (max-width: 1200px) {
+    .wrap .main {
+        position: absolute;
+        left: 600px;
+        width: 500px;
+        height: 262px;
+        background: url("/assets/admin/images/login_glass.png") no-repeat;
+        background-size: 100%;
+        margin: -120px auto 0 -250px;
+    }
+}
+@media all and (max-width: 1400px) {
+    .wrap .main {
+        margin-top: -140px;
+    }
+}
+@media all and (max-height: 500px) {
+    .wrap .main {
+        margin-top: -120px;
+    }
+    .wrap {
+        height: 500px;
+    }
+}
+.main .content {
+    margin: 12px;
+    position: relative;
+}
+.main .content .logo {
+    position: absolute;
+    text-align: center;
+    margin-top: 60px;
+    width: 200px;
+}
+.main .content .logo img {
+    height: 36px;
+}
+.main .content .loginForm {
+    margin-left: 200px;
+    margin-top: 40px;
+}
+.main .content .loginForm label {
+    width: 32px;
+    display: inline-block;
+    color: #999;
+}
+.main .content .loginForm .loginBtn {
+    background: linear-gradient(#52b5fa, #047fc4);
+    border: 1px solid #4a91be;
+    line-height: 30px;
+    padding: 0 20px;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+}
+.main .content .loginForm .loginBtn:hover {
+    background: linear-gradient(#4ba4e2, #0473b5);
+    border: 1px solid #0472b7;
+}
+.main .content .loginForm .formHead {
+    margin-bottom: 20px;
+    margin-left: 36px;
+}

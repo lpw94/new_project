@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>成为会员</title>
+		<link rel="stylesheet" type="text/css" href="../assets/home/css/base.css"/>
+		<link rel="stylesheet" type="text/css" href="../assets/home/css/style.css"/>
+		<script src="../assets/home/js/jquery/jquery-1.9.1.js" type="text/javascript"></script>
+		<script src="../assets/home/js/seajs/sea.js" type="text/javascript"></script>
+		<script type="text/javascript">
+				seajs.config({
+					base: '../assets/home/js',
+					charset: 'utf-8',
+					timeout: 10000
+				})
+		</script>
+	</head>
+	<body>
+	<!--头部开始-->
+	<div class="head">
+		<div class="header fixed">
+			<div class="contain">
+				<div class="head-left">
+					<a href="#">创客港</a>
+				</div>
+				<div class="head-right">
+					<ul class="nav">
+						<li><a href="#">首页</a></li>
+						<li class="city"><a href="javascript:;">服务中心</a><i></i></li>
+						<li><a href="#">服务及定价</a></li>
+						<li class="social"><a href="javascript:;">社群</a></li>
+						<li class="login"><a href="#">登录</a></li>
+						<li class="register"><a href="#">注册</a></li>
+					</ul>
+				</div>
+			</div>
+		</div><!-- header end -->
+		<div class="city-drop">
+			<div class="contain">
+				<div class="city-down">
+					<ul>
+						<li><a href="javascript:;">北京</a></li>
+						<li><a href="javascript:;">上海</a></li>
+						<li><a href="javascript:;">广州</a></li>
+						<li><a href="javascript:;">深圳</a></li>
+						<li><a href="javascript:;">香港</a></li>
+						<li><a href="javascript:;">成都</a></li>
+						<li><a href="javascript:;">宁波</a></li>
+						<li><a href="javascript:;">杭州</a></li>
+					</ul>
+				</div>
+			</div>
+		</div><!-- city-drop end -->
+	</div><!-- head end -->
+	<!--头部结束-->
+	<!--内容开始-->
+	<div class="contain columns700_280 pb_50 mt_80">
+		<div class="col_right">
+			<div class="summary mt_30">
+				<div class="summary_warp">
+					<div class="summary_title">订单总结</div>
+					<ul class="summary_total">
+						<li>普通注册创客<span class="fr">100元/月</span></li>
+						<li><p>输入优惠码<input type="text"/></p></li>
+						<li><strong>共计</strong><span class="fr strong">100元/月</span></li>
+					</ul>
+				</div>
+				<div class="summary_info">
+					<p>工作时间：周一至周五 09:00 - 18:00</p>
+					<p>客服热线：<span class="tel">400-2334-8244</span></p>
+				</div>
+			</div>
+		</div><!--col_right end-->
+		<div class="col_left">
+			<div class="sign_warp">
+				<h2 class="h2_title">成为会员</h2>
+				<ul class="sign_list">
+					<li>在我们各个地方的网点中可以租用一整天的办公室</li>
+					<li>可以加入在线会员系统，独享会员优惠政策</li>
+					<li>和入驻的其他公司和员工同在一个社区，提供业务增长新方式</li>
+				</ul>
+				<h3 class="h3_title">选择套餐</h3>
+				<div class="Package_box">
+					<label><input type="radio" checked class="Package" name="Package" value="是"/>
+						普通注册客户
+						<p>￥100/月</p>
+						<a href="javascript:;">了解更多</a>
+					</label>
+				</div>
+				<div class="Package_box">
+					<label><input type="radio" class="Package" name="Package" value="否"/>
+						不受限制注册客户
+						<p>￥300/月</p>
+						<a href="javascript:;">了解更多</a>
+					</label>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+
+			<div class="sign_warp">
+				<h4 class="h4_title">个人信息</h4>
+				<input class="input_md" type="text" name="username" value="" placeholder="姓名" />
+				<input class="input_md" type="email" name="email" value="" placeholder="邮箱地址" />
+				<input class="input_md" type="text" name="company_name" value="" placeholder="公司名称" />
+				<input class="input_md" type="password" name="psw" value="" placeholder="密码" />
+				<input class="input_md" type="tel" name="telphone" value="" placeholder="联系电话" />
+				<h4 class="h4_title">期望办公网点</h4>
+				<select class="select_lg" name="office">
+					<option value="0">请选择期望办公网点 </option>
+					<option value="1">北京 </option>
+					<option value="2">深圳 </option>
+					<option value="3">上海 </option>
+					<option value="4">广州 </option>
+					<option value="5">天津 </option>
+				</select>
+			</div>
+
+			<div class="sign_warp">
+				<h4 class="h4_title">信用卡绑定</h4>
+				<input class="input_lg" type="text" name="card" value="" placeholder="请输入信用卡" />
+				<select class="select_md" name="year">
+					<option value="0">有效期 ：年</option>
+					<option value="1">2016</option>
+					<option value="2">2017</option>
+					<option value="3">2018</option>
+					<option value="4">2019</option>
+					<option value="5">2020</option>
+				</select>
+				<select class="select_md" name="month">
+					<option value="0">有效期 ：月</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+				</select>
+				<input class="input_lg" type="text" name="IDcard" value="" placeholder="请输入身份证号" />
+				<input class="input_lg" type="text" name="telphone" value="" placeholder="请输入银行预留的手机号码" />
+				<p class="check_box">
+					<label><input type="checkbox" name="check_box"/>我已同意<a href="javascript:;">《创客港服务协议》</a></label>
+				</p>
+				<a href="javascript:;" class="btn_sign" type="button">注册会员</a>
+			</div>
+		</div><!--col_left end-->
+	</div>
+	<!--内容结束-->	
+	
+	<!--底部-->
+	<div class="footer">
+		<div class="contain">
+			<div class="foot-logo">
+				<a href="javascript:;">创客港</a>
+			</div>
+			<div class="foot-left">
+				<ul>
+					<li><a href="javascript:;">关于我们</a></li>
+					<li><a href="javascript:;">商务合作</a></li>
+					<li><a href="javascript:;">加入我们</a></li>
+					<li><a href="javascript:;">隐私政策</a></li>
+					<li><a href="javascript:;">帮助中心</a></li>
+				</ul>
+				<div class="hr"></div>
+				<table class="foot-city">
+					<tr>
+						<td><a href="javascript:;">北京</a></td>
+						<td><a href="javascript:;">上海</a></td>
+						<td><a href="javascript:;">广州</a></td>
+						<td><a href="javascript:;">深圳</a></td>
+					</tr>
+					<tr>
+						<td><a href="javascript:;">香港</a></td>
+						<td><a href="javascript:;">成都</a></td>
+						<td><a href="javascript:;">宁波</a></td>
+						<td><a href="javascript:;">杭州</a></td>
+					</tr>
+				</table>
+				<div class="hr01"></div>
+				<p>深圳市创富港商务股份有限公司版权所有&nbsp;粤ICP备12345678号 &nbsp;服务热线 400-6768-2138 </p>
+			</div>
+			<div class="foot-right">
+				<a href="javascript:;"><img src="../assets/home/images/weixin.png" alt=""></a>
+				<a href="javascript:;"><img src="../assets/home/images/weibo.png" alt=""></a>
+			</div>
+		</div>
+	</div><!--footer end-->
+	<!--底部结束-->
+	<script type="text/javascript">
+		seajs.use('app/app.head',function(api){
+			api.head();
+		});
+   </script>
+	</body>
+</html>

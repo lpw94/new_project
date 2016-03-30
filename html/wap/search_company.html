@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>公司选择</title>
+    <meta name="robots" content="all"/>
+    <!-- Mobile Devices Support @begin -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta content="application/xhtml+xml;charset=UTF-8" http-equiv="Content-Type">
+    <meta content="telephone=yes, address=yes" name="format-detection">
+    <!-- apple devices -->
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="white"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+    <!-- Mobile Devices Support @end -->
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="ESTT Team">
+    <link rel="stylesheet" href="../../assets/wap/css/iconfont.css"/>
+    <link rel="stylesheet" href="../../assets/wap/css/base.css"/>
+    <link rel="stylesheet" href="../../assets/wap/css/content.css"/>
+    <script src="../../assets/wap/js/sea.js"></script>
+    <script src="../../assets/wap/js/jquery/jquery.min.js"></script>
+    <script>
+        seajs.config({
+            base: '/assets/wap/js',
+            charset: 'utf-8',
+            timeout: 10000
+        });
+    </script>
+</head>
+<body>
+<section id="main">
+    <header>
+        <i class="backBtn iconfont icon-xiangzuo"></i><a class="rBtn" href="javascript:;">搜索</a>
+        <div class="searchWrap">
+            <div class="box">
+                <i class="iconfont icon-fangdajing"></i>
+                <input type="text" placeholder="请输入搜索关键词" value="" />
+            </div>
+        </div>
+    </header><div data-Placeholder="header"></div>
+    <style>
+
+
+    </style>
+
+    <dl class="mDL06">
+        <dt>公司</dt>
+        <dd>
+            <ul class="mUser02 company">
+                <li>
+                    <a href="javascript:;">
+                        <div class="box">
+                            <span class="avatar"><img src="" /></span>
+                            <section class="info">
+                                <div class="name">深动力动画<em>设计</em>有限公司</div>
+                                <div class="desc">深圳市灵动广告<em>设计</em>有限公司最早是由工作室组成，经过不断的发展与努力，现已成为一家专注于企业形象视觉整合，由优秀策划人及设计精英组合而成。致力于为各企业、机构或政府相关部门提供品牌形象策划、品牌视觉设计、平面设计、网页网站设计、印刷等专业设计服务。</div>
+                            </section>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <div class="box">
+                            <span class="avatar"><img src="" /></span>
+                            <section class="info">
+                                <div class="name">深动力动画<em>设计</em>有限公司</div>
+                                <div class="desc">深圳市灵动广告<em>设计</em>有限公司最早是由工作室组成</div>
+                            </section>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </dd>
+    </dl>
+    <style>
+        dl.mDL06{}
+        dl.mDL06 > dt{ height: 35px; line-height: 34px; color:#999; padding: 0 15px; border-bottom: 1px solid #e6e6e6;}
+        dl.mDL06 > dd{ border-bottom: 1px solid #e6e6e6;}
+        dl.mDL06 ul.mUser02{ border-bottom: 0;}
+    </style>
+
+
+</section><!--#main end-->
+<script>
+    $('document').ready(function(){
+        //初始化main高度，兼容部分页面有底色的情况
+        $('#main').css({'min-height':$(window).height()});
+
+
+    });
+</script>
+</body>
+</html>

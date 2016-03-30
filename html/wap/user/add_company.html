@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>添加公司</title>
+    <meta name="robots" content="all"/>
+    <!-- Mobile Devices Support @begin -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta content="application/xhtml+xml;charset=UTF-8" http-equiv="Content-Type">
+    <meta content="telephone=yes, address=yes" name="format-detection">
+    <!-- apple devices -->
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="white"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+    <!-- Mobile Devices Support @end -->
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="ESTT Team">
+    <link rel="stylesheet" href="../../../assets/wap/css/iconfont.css"/>
+    <link rel="stylesheet" href="../../../assets/wap/css/base.css"/>
+    <link rel="stylesheet" href="../../../assets/wap/css/content.css"/>
+    <script src="../../../assets/wap/js/sea.js"></script>
+    <script src="../../../assets/wap/js/jquery/jquery.min.js"></script>
+    <script>
+        seajs.config({
+            base: '/assets/wap/js',
+            charset: 'utf-8',
+            timeout: 10000
+        });
+    </script>
+</head>
+<body>
+<form action="?" method="post">
+    <section id="main" class="bgColor">
+        <div id="header">
+            <a class="backPage" href="javascript:;"><i class="iconfont icon-xiangzuo"></i><em></em></a>
+            <input class="rBtn" type="submit" value="确定" />
+        </div>
+
+        <div class="companyTop mb_10">
+            <div class="bg" style="background:#f1f1f1 url('http://g.hiphotos.baidu.com/image/w%3D310/sign=772e37e5b4fd5266a72b3a159b199799/b8014a90f603738d5f92372cb11bb051f919ece0.jpg') no-repeat; background-size:cover; background-position:center center;"></div>
+            <span class="avatar"><img src="" /></span>
+            <div class="con"></div>
+        </div>
+
+        <div class="mblock pd_LR_10 mb_10 edit">
+            <menu class="mMenu02">
+                <div class="row items"><a href="javascript:;" data-type="companyName">名称<span class="empty"><em>请填写公司名称</em></span></a></div>
+                <div class="row items"><a href="javascript:;" data-type="companyAbout">简介<span class="empty"><em>请填写公司简介</em></span></a></div>
+                <div class="row items"><a href="javascript:;" data-type="city">城市<span class="empty"><em>请选择城市</em></span></a></div>
+                <div class="row items"><a href="javascript:;" data-type="center">中心<span class="empty"><em>请选择中心</em></span></a></div>
+                <div class="row items"><a href="javascript:;" data-type="addr">详细地址<span class="empty"><em>请填写地址</em></span></a></div>
+            </menu>
+        </div>
+
+        <div class="mblock pd_LR_10 mb_10 edit">
+            <menu class="mMenu02">
+                <div class="row items"><a href="javascript:;" data-type="service">服务<span class="empty"><em>添加服务</em></span></a></div>
+            </menu>
+        </div>
+
+        <div class="mblock pd_LR_10 edit">
+            <menu class="mMenu02">
+                <div class="row items"><a href="javascript:;" data-type="phone">电话<span class="empty"><em>公司电话</em></span></a></div>
+                <div class="row items"><a href="javascript:;" data-type="email">邮箱<span class="empty"><em>公司邮箱</em></span></a></div>
+                <div class="row items"><a href="javascript:;" data-type="wx">微信<span class="empty"><em>公司微信公众号</em></span></a></div>
+                <div class="row items"><a href="javascript:;" data-type="wb">微博<span class="empty"><em>公司微博</em></span></a></div>
+                <div class="row items"><a href="javascript:;" data-type="site">网站<span class="empty"><em>公司网站</em></span></a></div>
+            </menu>
+        </div>
+    </section><!--#main end-->
+    <!--遮罩层-->
+    <section id="mPOP" class="mPOP">
+        <div class="pd_15">
+            <div class="mInput mb_10" data-type="companyName" data-in="input">
+                <input type="text" name="" placeholder="请输入公司名称" />
+            </div>
+            <div class="mTextarea2 mb_10" data-type="companyAbout" data-in="textarea">
+                <textarea placeholder="请输入公司简介"></textarea>
+            </div>
+            <div class="mSelect mb_10" data-type="city" data-in="select" data-in="select">
+                <select>
+                    <option selected="true" disabled="true">点击选择城市</option>
+                    <option>深圳</option>
+                    <option>北京</option>
+                    <option>广州</option>
+                </select>
+            </div>
+            <div class="mSelect mb_10" data-type="center" data-in="select">
+                <select>
+                    <option selected="true" disabled="true">点击选择中心</option>
+                    <option>华美居</option>
+                    <option>华商大厦</option>
+                </select>
+            </div>
+            <div class="mInput mb_10" data-type="addr" data-in="input">
+                <input type="text" placeholder="请填写地址" />
+            </div>
+            <ul class="mMulti" data-type="service" data-in="checkbox">
+                <li><i class="iconfont icon-dagou"></i>Web开发<input type="checkbox" name="service" value="Web" /></li>
+                <li><i class="iconfont icon-dagou"></i>PHP建设<input type="checkbox" name="service" value="PHP" /></li>
+                <li><i class="iconfont icon-dagou"></i>UI设计<input type="checkbox" name="service" value="UI" /></li>
+            </ul>
+            <div class="mInput mb_10" data-type="phone" data-in="input">
+                <input type="text" placeholder="请填写公司电话" />
+            </div>
+            <div class="mInput mb_10" data-type="email" data-in="input">
+                <input type="text" placeholder="请填写公司邮箱" />
+            </div>
+            <div class="mInput mb_10" data-type="wx" data-in="input">
+                <input type="text" placeholder="请填写公司微信公众号" />
+            </div>
+            <div class="mInput mb_10" data-type="wb" data-in="input">
+                <input type="text" placeholder="请填写公司微博" />
+            </div>
+            <div class="mInput mb_10" data-type="site" data-in="input">
+                <input type="text" placeholder="请填写公司网站" />
+            </div>
+            <br>
+            <a class="btn" href="javascript:;">确认</a>
+        </div>
+    </section>
+</form>
+
+<script>
+    $('document').ready(function(){
+        //初始化main高度，兼容部分页面有底色的情况
+        $('#main').css({'min-height':$(window).height()});
+        //打开覆盖层
+        $('.mMenu02 > .items > a').on('click',function(e){
+            var _type = $(this).attr('data-type');
+            var _dom = $('#mPOP').find('[data-type='+_type+']').eq(0);
+            if(_dom.length){
+                $('#mPOP').show();
+                $('#mPOP .btn').attr('data-btnType',_type);
+                _dom.show().siblings('[data-type]').hide();
+            }
+            $('#main').hide();
+            e.stopPropagation();
+        });
+        //多选
+        $('ul.mMulti').delegate('li','click',function(e){
+            if( $(this).hasClass('checked') ){
+                $(this).removeClass('checked');
+                $(this).find('input[type=checkbox]').attr('checked',false);
+            }else{
+                $(this).addClass('checked');
+                $(this).find('input[type=checkbox]').attr('checked',true);
+            }
+            e.stopPropagation();
+        });
+        //填写
+        $('#mPOP .btn').on('click',function(e){
+            var _type = $(this).attr('data-btnType');
+            var _box = $('#mPOP').find('[data-type='+_type+']').eq(0);
+            var _in = _box.attr('data-in'),_val;
+            if(_in == 'checkbox'){
+                _val = _box.find('input[type='+_in+'][checked]').length;
+            }else{
+                _val = _box.find(_in).eq(0).val();
+            }
+            var _class = '';
+            (_val)?_class=_class:_class='empty';
+            switch(_type){
+                case 'companyName':
+                    (_val)?_val=_val:_val='请填写公司名称';
+                    break;
+                case 'companyAbout':
+                    (_val)?_val=_val:_val='请填写公司简介';
+                    break;
+                case 'city':
+                    (_val)?_val=_val:_val='请选择城市';
+                    break;
+                case 'center':
+                    (_val)?_val=_val:_val='请选择中心';
+                    break;
+                case 'addr':
+                    (_val)?_val=_val:_val='请填写详细地址';
+                    break;
+                case 'service':
+                    (_val)?_val='已添加'+_val+'个服务':_val='添加服务';
+                    break;
+                case 'phone':
+                    (_val)?_val=_val:_val='公司电话';
+                    break;
+                case 'email':
+                    (_val)?_val=_val:_val='公司邮箱';
+                    break;
+                case 'wx':
+                    (_val)?_val=_val:_val='公司微信公众号';
+                    break;
+                case 'wb':
+                    (_val)?_val=_val:_val='公司微博';
+                    break;
+                case 'site':
+                    (_val)?_val=_val:_val='公司网站';
+                    break;
+            }
+            $('.mMenu02 [data-type='+_type+']').find('span').removeClass('empty').addClass(_class).find('em').html(_val);
+            $('#main').show();
+            $('#mPOP').hide();
+            e.stopPropagation();
+        });
+        //提交验证(待定)
+    });
+</script>
+</body>
+</html>

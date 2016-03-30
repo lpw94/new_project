@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>圈子发布</title>
+    <meta name="robots" content="all"/>
+    <!-- Mobile Devices Support @begin -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta content="application/xhtml+xml;charset=UTF-8" http-equiv="Content-Type">
+    <meta content="telephone=yes, address=yes" name="format-detection">
+    <!-- apple devices -->
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="white"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+    <!-- Mobile Devices Support @end -->
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="ESTT Team">
+    <link rel="stylesheet" href="../../assets/wap/css/iconfont.css"/>
+    <link rel="stylesheet" href="../../assets/wap/css/base.css"/>
+    <link rel="stylesheet" href="../../assets/wap/css/content.css"/>
+    <script src="../../assets/wap/js/sea.js"></script>
+    <script src="../../assets/wap/js/jquery/jquery.min.js"></script>
+    <script>
+        seajs.config({
+            base: '/assets/wap/js',
+            charset: 'utf-8',
+            timeout: 10000
+        });
+    </script>
+</head>
+<body>
+<style>
+    .mMenu02 .items{padding: 0 10px;}
+    .mMenu02 .items textarea{  width: 96%; border: 1px solid #ddd; resize: none;padding: 10px;margin: 0 5px;}
+    .mMenu02 .items textarea:focus{border-color: #f47857;outline: none;}
+    .mMenu02 .items span{color: #999;}
+    .mMenu02 .items span input{width: 215px;direction:rtl}
+    .mMenu02 .items:nth-child(3){border-bottom: none;}
+    .group_name{line-height: 54px;padding: 0 15px;}
+    .pub-btn, .pub-btn01{position: relative;width: 80px;height: 80px;margin: 0 15px 30px;;}
+    .pub-btn01{display:none;}
+    .pub-btn .file{width: 100%;height: 100%;overflow: hidden;opacity: 0;z-index: 2;position: absolute;left: 0; top: 0;}
+    .pub-btn .file-pic{position: absolute;left: 0; top: 0;border: 1px dashed #bababa;width: 100%;height: 100%;text-align: center;line-height: 80px;}
+    .pub-btn .file-pic i{font-size: 32px; color: #bababa}
+    .pub-btn01 img{width: 100%;height: 100%;display: block;}
+    .pub-btn01 label{position: absolute;right: 0;top: 0;background-color: rgba(0,0,0,.5)}
+    .pub-btn01 label i{font-size: 20px;color: #fff;}
+    .group_type{width: 80%;height: 300px;position: fixed;left: 50%;top: 35%;margin-left: -40%;margin-top: -120px;border-radius: 7px;overflow: hidden;background: #fff;z-index: 100;display: none}
+    .group_type h3{line-height: 50px;background: #000;color: #fff;text-align: center;font-weight: normal}
+    .group_type ul li{line-height: 50px;border-bottom: 1px solid #ddd; padding: 0 15px;}
+    .group_type ul li i{font-size: 30px;color: #f47857;float: right;display: none;}
+
+</style>
+<div id="maskLayer"></div>
+
+<form action="?" method="post">
+    <section id="main">
+        <header><a class="backBtn iconfont icon-xiangzuo" href="javascript:;"></a><input class="rBtn" type="submit" value="确定" /></header><div data-Placeholder="header"></div>
+
+        <div class="mblock edit">
+            <menu class="mMenu02">
+                <div class="row items"><a href="javascript:;">分类<span class="gr_type">请选择圈子分类</span></a></div>
+                <div class="row items"><a href="javascript:;">名称<span><input type="text" placeholder="请输入圈子名称"></span></a></div>
+                <div class="row items"><a href="javascript:;">描述</a></div>
+                <div class="row items"><textarea cols="30" rows="10" placeholder="请输入圈子描述（80字）"></textarea></div>
+            </menu>
+            <p class="group_name">圈子logo</p>
+            <div class="pub-btn">
+                <input class="file" type="file"/>
+                <div class="file-pic"><i class="iconfont icon-icontitletianjia"></i></div>
+            </div>
+            <div class="pub-btn01">
+                <img src="../../assets/home/images/pic1.jpg" alt="">
+                <label><i class="iconfont icon-guanbi"></i></label>
+            </div>
+            
+        </div>
+    </section><!--#main end-->
+    <section class="group_type">
+        <h3>圈子分类</h3>
+        <ul>
+            <li><span>人才招聘 </span> <i class="iconfont icon-dagou"></i></li>
+            <li><span>生活饮食 </span> <i class="iconfont icon-dagou"></i></li>
+            <li><span>娱乐活动 </span> <i class="iconfont icon-dagou"></i></li>
+            <li><span>交通出行 </span> <i class="iconfont icon-dagou"></i></li>
+            <li><span>房产出租 </span> <i class="iconfont icon-dagou"></i></li>
+        </ul>
+    </section>
+</form>
+<script>
+    $('document').ready(function(){
+        //初始化main高度，兼容部分页面有底色的情况
+        $('#main').css({'min-height':$(window).height()});
+    });
+
+    //选择logo
+    $(".pub-btn").on('click',function(){
+        $(this).hide();
+        $(".pub-btn01").show();
+    });
+    //删除logo
+    $(".pub-btn01 i").on('click',function(){
+        $(this).parents(".pub-btn01").hide();
+        $(".pub-btn").show();
+    });
+    //选择分类
+    $(".items .gr_type").on('click',function(){
+        $(".group_type").show();
+        $("#maskLayer").show();
+    });
+    $("#maskLayer").on('click',function(){
+        $(".group_type").hide();
+        $("#maskLayer").hide();
+    });
+    $(".group_type ul li").on('click',function(){
+        var txt = $(this).find("span").html();
+        $(this).find("i").show();
+        $(this).siblings("li").find("i").hide();
+        //console.log(txt);
+        $(".items .gr_type").html(txt);
+        $(".group_type").hide();
+        $("#maskLayer").hide();
+    })
+</script>
+
+</body>
+</html>

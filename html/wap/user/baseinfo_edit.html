@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>基本资料-编辑</title>
+    <meta name="robots" content="all"/>
+    <!-- Mobile Devices Support @begin -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta content="application/xhtml+xml;charset=UTF-8" http-equiv="Content-Type">
+    <meta content="telephone=yes, address=yes" name="format-detection">
+    <!-- apple devices -->
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="white"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+    <!-- Mobile Devices Support @end -->
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="ESTT Team">
+    <link rel="stylesheet" href="../../../assets/wap/css/iconfont.css"/>
+    <link rel="stylesheet" href="../../../assets/wap/css/base.css"/>
+    <link rel="stylesheet" href="../../../assets/wap/css/content.css"/>
+    <script src="../../../assets/wap/js/sea.js"></script>
+    <script src="../../../assets/wap/js/jquery/jquery.min.js"></script>
+    <script>
+        seajs.config({
+            base: '/assets/wap/js',
+            charset: 'utf-8',
+            timeout: 10000
+        });
+    </script>
+</head>
+<body>
+<form action="?" method="post">
+    <section id="main" class="bgColor">
+        <header><a class="backBtn iconfont icon-xiangzuo" href="javascript:;"></a><input class="rBtn" type="submit" value="完成" /></header><div data-Placeholder="header"></div>
+
+        <!--div-- class="mblock pd_LR_10 edit"> 这段代码需作保留，后面整理到技术文档中
+            <menu class="mMenu02">
+                <div class="row items"><a href="javascript:;">姓名<span>毕莎</span></a></div>
+                <div class="row items"><a href="javascript:;">性别<span>女</span></a></div>
+                <div class="row items"><a href="javascript:;">出生日期<span>1990-07-07</span></a></div>
+                <div class="row items"><a href="javascript:;">职务<span>工程师</span></a></div>
+                <div class="row items"><a href="javascript:;">城市<span>深圳</span></a></div>
+                <div class="row items"><a href="javascript:;">中心<span>华美居</span></a></div>
+                <div class="row items"><a href="javascript:;">详细地址<span>宝安区宝体</span></a></div>
+            </menu>
+        </div-->
+        <div class="mblock pd_LR_10 edit">
+            <menu class="mMenu02">
+                <div class="row items"><a href="javascript:;" data-type="userName">姓名<span class="empty"><em>真实姓名</em></span></a></div>
+                <div class="row items"><a href="javascript:;" data-type="sex">性别<span class="empty"><em>请选择</em></span></a></div>
+                <div class="row items"><a href="javascript:;" data-type="time">出生日期<span class="empty"><em>请填写</em></span></a></div>
+                <div class="row items"><a href="javascript:;" data-type="pos">职务<span class="empty"><em>请填写</em></span></a></div>
+                <div class="row items"><a href="javascript:;" data-type="city">城市<span class="empty"><em>请选择</em></span></a></div>
+                <div class="row items"><a href="javascript:;" data-type="center">中心<span class="empty"><em>请选择</em></span></a></div>
+                <div class="row items"><a href="javascript:;" data-type="addr">详细地址<span class="empty"><em>请填写</em></span></a></div>
+            </menu>
+        </div>
+    </section><!--#main end-->
+    <!--遮罩层-->
+    <section id="mPOP" class="mPOP">
+        <div class="pd_15">
+            <div class="mInput mb_10" data-type="userName" data-in="input">
+                <input type="text" name="" placeholder="请输入您的真实名称" />
+            </div>
+            <div class="" data-type="sex" data-in="radio">
+                <p class="mb_10">性别类型:</p>
+                <p class="row mOption">
+                    <span><i class="iconfont icon-dagou"></i>男<input type="radio" name="sex" value="男" /></span>
+                    <span><i class="iconfont icon-dagou"></i>女<input type="radio" name="sex" value="女" /></span>
+                </p>
+            </div>
+            <div class="mInput mb_10" data-type="time" data-in="input">
+                <input type="text" name="" placeholder="请输入出生日期，如：1990-1-1" />
+            </div>
+            <div class="mInput mb_10" data-type="pos" data-in="input">
+                <input type="text" name="" placeholder="请输入您的职务" />
+            </div>
+            <div class="mSelect mb_10" data-type="city" data-in="select" data-in="select">
+                <select>
+                    <option selected="true" disabled="true">点击选择城市</option>
+                    <option>深圳</option>
+                    <option>北京</option>
+                    <option>广州</option>
+                </select>
+            </div>
+            <div class="mSelect mb_10" data-type="center" data-in="select">
+                <select>
+                    <option selected="true" disabled="true">点击选择中心</option>
+                    <option>华美居</option>
+                    <option>华商大厦</option>
+                </select>
+            </div>
+            <div class="mInput mb_10" data-type="addr" data-in="input">
+                <input type="text" placeholder="请填写地址" />
+            </div>
+            <br>
+            <a class="btn" href="javascript:;">确认</a>
+        </div>
+    </section>
+</form>
+<script>
+    $('document').ready(function(){
+        //初始化main高度，兼容部分页面有底色的情况
+        $('#main').css({'min-height':$(window).height()});
+        //打开覆盖层
+        $('.mMenu02 > .items > a').on('click',function(e){
+            var _type = $(this).attr('data-type');
+            var _dom = $('#mPOP').find('[data-type='+_type+']').eq(0);
+            if(_dom.length){
+                $('#mPOP').show();
+                $('#mPOP .btn').attr('data-btnType',_type);
+                _dom.show().siblings('[data-type]').hide();
+            }
+            $('#main').hide();
+            e.stopPropagation();
+        });
+        //单选
+        $('.mOption input[type=radio]').on('change',function(){
+            $(this).parent('span').addClass('on').siblings('span').removeClass('on');
+        });
+        //填写
+        $('#mPOP .btn').on('click',function(e){
+            var _type = $(this).attr('data-btnType');
+            var _box = $('#mPOP').find('[data-type='+_type+']').eq(0);
+            var _in = _box.attr('data-in'),_val;
+            if(_in == 'radio'){
+                _val = _box.find('input[type=radio]:checked').val();
+                console.log(_val)
+            }else{
+                _val = _box.find(_in).eq(0).val();
+            }
+            var _class = '';
+            (_val)?_class=_class:_class='empty';
+            switch(_type){
+                case 'userName':
+                    (_val)?_val=_val:_val='真实姓名';
+                    break;
+                case 'sex':
+                    (_val)?_val=_val:_val='请选择';
+                    break;
+                case 'time':
+                    (_val)?_val=_val:_val='请填写';
+                    break;
+                case 'pos':
+                    (_val)?_val=_val:_val='请填写';
+                    break;
+                case 'city':
+                    (_val)?_val=_val:_val='请选择';
+                    break;
+                case 'center':
+                    (_val)?_val=_val:_val='请选择';
+                    break;
+                case 'addr':
+                    (_val)?_val=_val:_val='请填写';
+                    break;
+            }
+            $('.mMenu02 [data-type='+_type+']').find('span').removeClass('empty').addClass(_class).find('em').html(_val);
+            $('#main').show();
+            $('#mPOP').hide();
+            e.stopPropagation();
+        });
+        //提交验证(待定)
+    });
+</script>
+</body>
+</html>

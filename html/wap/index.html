@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>创客港Wap首页</title>
+    <meta name="robots" content="all"/>
+    <!-- Mobile Devices Support @begin -->
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta content="application/xhtml+xml;charset=UTF-8" http-equiv="Content-Type">
+    <meta content="telephone=yes, address=yes" name="format-detection">
+    <!-- apple devices -->
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="white"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+    <!-- Mobile Devices Support @end -->
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="ESTT Team">
+    <link rel="stylesheet" href="../../assets/wap/css/base.css"/>
+    <script src="../../assets/wap/js/sea.js"></script>
+    <script src="../../assets/wap/js/jquery/jquery.min.js"></script>
+    <script>
+        seajs.config({
+            base: '/assets/wap/js',
+            charset: 'utf-8',
+            timeout: 10000
+        });
+    </script>
+    <script type="text/javascript" src="../../assets/home/js/app.base.js"></script>
+</head>
+<body>
+<aside id="sidePanel">
+    <div class="bd">
+        免费的在线翻译服务可即时翻译文本和网页。
+    </div>
+</aside><!--#sidePanel end-->
+<div id="maskLayer"></div>
+<section id="main" class="">
+    <header><i class="menuBtn"></i></header>
+
+
+</section><!--#main end-->
+
+<script>
+    $('document').ready(function(){
+        //侧边栏
+        $('header > .menuBtn').on('click',function(){
+            $('#maskLayer').stop(true,false).fadeIn(function(){
+                $('#sidePanel').addClass('show');
+            });
+        });
+        $('#sidePanel > .close').on('click',function(){
+            $('#sidePanel').removeClass('show');
+            $('#maskLayer').stop(true,false).fadeOut();
+        });
+    });
+</script>
+</body>
+</html>

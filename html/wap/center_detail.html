@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>服务中心-详情页</title>
+    <meta name="robots" content="all"/>
+    <!-- Mobile Devices Support @begin -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta content="application/xhtml+xml;charset=UTF-8" http-equiv="Content-Type">
+    <meta content="telephone=yes, address=yes" name="format-detection">
+    <!-- apple devices -->
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="white"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+    <!-- Mobile Devices Support @end -->
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="ESTT Team">
+    <link rel="stylesheet" href="../../assets/wap/css/iconfont.css"/>
+    <link rel="stylesheet" href="../../assets/wap/css/base.css"/>
+    <link rel="stylesheet" href="../../assets/wap/css/content.css"/>
+    <script src="../../assets/wap/js/sea.js"></script>
+    <script src="../../assets/wap/js/jquery/jquery.min.js"></script>
+    <script>
+        seajs.config({
+            base: '/assets/wap/js',
+            charset: 'utf-8',
+            timeout: 10000
+        });
+    </script>
+    <script src="../../assets/wap/js/jquery/swipe.js"></script>
+</head>
+<body>
+<section id="main" class="bgColor">
+    <div id="header">
+        <a class="backPage" href="javascript:;"><i class="iconfont icon-xiangzuo"></i><em></em></a>
+    </div>
+
+    <div id="swipe" class="swipe">
+        <div class="swipe-wrap">
+            <figure><img src="http://img1.imgtn.bdimg.com/it/u=1337702295,2747759080&fm=21&gp=0.jpg" /></figure>
+            <figure><img src="http://img1.imgtn.bdimg.com/it/u=1337702295,2747759080&fm=21&gp=0.jpg" /></figure>
+        </div>
+        <nav><ul id="swipeLi"><li class="on"></li><li></li></ul></nav>
+    </div>
+
+    <div class="mblock border_TB mb_10 pd_15">北京大厦，位于海口市国贸CBD核心，每天超过10万人次的核心商圈。融合商业文化、商务酒店、高档写字楼等多文化商务功能；大面积办公空间任您自由分割组合。国贸区大润发大型购物中心近在咫尺、办公用品应有尽有，消费购物场所丰富。北京大厦营造领袖级的商务休闲、享乐配套资源。是经贸区为数不多的黄金路段，高品质商务写字间之一。</div>
+    <div class="mblock border_TB mb_10 pd_TB_15">
+        <dl class="mDL01">
+            <dt>中心地址<a class="addr" href="javascript:;"><span>深圳市罗湖区笋岗东路3002号</span><i class="iconfont icon-dingwei mapIcon"></i><i class="arrow iconfont icon-xiangyou"></i></a></dt>
+        </dl>
+        <dl class="mDL01">
+            <dt>服务团队
+                <span class="avatar"><a href="javascript:;"><img src="" /></a></span>
+                <span class="avatar"><a href="javascript:;"><img src="" /></a></span>
+                <span class="avatar"><a href="javascript:;"><img src="" /></a></span>
+                <span class="avatar"><a href="javascript:;"><img src="" /></a></span>
+                <span class="avatar"><a href="javascript:;"><img src="" /></a></span>
+            </dt>
+        </dl>
+        <dl class="mDL01">
+            <dt>周边设施</dt>
+            <dd class="pd_LR_15">
+                <span class="mark">沃尔玛</span><span class="mark">沃尔玛</span><span class="mark">沃尔玛</span><span class="mark">沃尔玛</span><span class="mark">沃尔玛</span>
+            </dd>
+        </dl>
+        <dl class="mDL01">
+            <dt>办公配套</dt>
+            <dd class="pd_LR_15">
+                <span class="mark">沃尔玛</span><span class="mark">沃尔玛</span><span class="mark">沃尔玛</span><span class="mark">沃尔玛</span><span class="mark">沃尔玛</span>
+            </dd>
+        </dl>
+    </div>
+    <div class="mblock border_TB pd_T_15">
+        <dl class="mDL01">
+            <dt>场地及价格区间</dt>
+            <dd>
+                <menu class="mMenu02">
+                    <div class="row items"><a href="javascript:;">移动办公位<span>100元/月</span></a></div>
+                    <div class="row items"><a href="javascript:;">固定办公位<span>160元/月</span></a></div>
+                    <div class="row items"><a href="javascript:;">私人办公室<span>面议</span></a></div>
+                    <div class="row items"><a href="javascript:;">收件服务<span>180元/月</span></a></div>
+                    <div class="row items"><a href="javascript:;">秘书服务<span>180元/月</span></a></div>
+                    <div class="row items"><a href="javascript:;">通讯全包<span>380元/月</span></a></div>
+                </menu>
+            </dd>
+        </dl>
+    </div>
+    <a class="btn bottom_fixed" href="javascript:;">立即预约</a>
+    <div data-Placeholder="bottom_fixed"></div>
+</section><!--#main end-->
+<script>
+    $('document').ready(function(){
+        //初始化main高度，兼容部分页面有底色的情况
+        $('#main').css({'min-height':$(window).height()});
+
+        //Swipe
+        var swipe = Swipe(document.getElementById('swipe'), {
+            auto: 3000,
+            continuous: true,
+            callback: function(pos) {
+                var i = bullets.length;
+                while (i--) {
+                    bullets[i].className = ' ';
+                }
+                bullets[pos].className = 'on';
+            }
+        });
+        var bullets = document.getElementById('swipeLi').getElementsByTagName('li');
+
+    });
+</script>
+</body>
+</html>

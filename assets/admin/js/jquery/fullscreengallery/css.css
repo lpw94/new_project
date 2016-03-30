@@ -1,0 +1,30 @@
+/* photo view*/
+#picView-overlay { background: #191919; z-index: 99; position: fixed; left: 0; top: 0; display: none; }
+#picView-overlay a { transition: none; }
+#picView-overlay .picView-btn { background: url(pic_view.png) no-repeat; }
+#picView-overlay .go-btn { height: 50px; margin-top: -30px; overflow: hidden; position: absolute; cursor: pointer; top: 50%; width: 50px; z-index: 100; text-indent: -99999px; background-color: #000; }
+#picView-overlay #picView-imgViewBox { margin: 0 auto; overflow: hidden; text-align: center; position: relative; background: #202020; color: #fff }
+#picView-overlay #picView-imgViewBox img { position: absolute; left: 0; }
+#picView-overlay #overlay-header { height: 36px; color: #fff; font-size: 16px; font-family: 'microsoft yahei'; line-height: 36px; text-align: center; }
+#picView-overlay #overlay-footer { height: 36px; line-height: 36px; text-align: center; }
+#picView-overlay #picView-next { right: 0; border-radius: 2px 0 0 2px; width: 49px; height: 48px; background-position: -101px -1px; }
+#picView-overlay #picView-next:hover { background-position: -101px -101px }
+#picView-overlay #picView-prev { border-radius: 0 2px 2px 0; }
+#picView-overlay #picView-prev:hover { background-position: 0 -100px; background-color: inherit; }
+#picView-overlay #picView-close { position: absolute; right: 0; top: 0; display: block; width: 55px; height: 50px; background-position: 0 -150px; text-indent: -99999px; overflow: hidden; cursor: pointer; }
+#picView-overlay #picView-close:hover { background-position: -60px -150px }
+#picView-overlay a.zoom { position: absolute; left: 50%; bottom: 10px; display: none; width: 36px; height: 36px; cursor: pointer; border: 0; }
+#picView-overlay a#zoomOut { background-position: -50px -200px }
+#picView-overlay a#zoomOut:hover { background-position: -50px -250px }
+#picView-overlay a#zoomIn { background-position: -100px -200px }
+#picView-overlay a#zoomIn:hover { background-position: -100px -250px }
+#picView-overlay #picView-fullscreen { position: absolute; right: 100px; top: 13px; color: #fff; text-decoration: none; font-size: 12px }
+#picView-overlay #loading { background: #900; width: 250px; text-align: center; height: 30px; line-height: 30px; border-radius: 4px; margin-left: -100px; margin-top: -15px; color: #fff; position: absolute; left: 50%; top: 50%; z-index: 100; font-family: '微软雅黑' }
+#picView-overlay #count { position: absolute; left: 0; bottom: 0; font-size: 22px; color: #ccc; font-family: Arial, Helvetica, sans-serif }
+#picView-overlay #count span { padding: 2px }
+#picView-overlay #overlay-panel { position: absolute; right: -400px; top: 0; width: 400px; background: #fff; overflow-y: auto; }
+#picView-overlay #overlay-panel .comment-wrap { overflow-y: auto; padding: 8px; }
+#picView-overlay #overlay-panel .comment-wrap .title { font-size: 14px; font-family: 'microsoft yahei'; font-weight: normal; border-bottom: 1px dotted #E0E0E0; padding: 0 8px; }
+#picView-overlay #overlay-panel .panel-title { line-height: 36px; height: 36px; font-weight: normal; font-size: 16px; font-family: 'microsoft yahei'; padding: 0 8px; color: #333; overflow: hidden; border-top: 1px solid #E0E0E0; margin: 0 0 8px; }
+#picView-overlay #overlay-panel .panel-meta { padding: 0 8px; }
+#picView-overlay #overlay-panel .panel-title .circle { border-radius: 12px; font-style: normal; font-size: 12px; background: #f60; color: #fff; display: inline-block; width: 24px; height: 24px; margin: 0 4px 0 0; line-height: 24px; text-align: center; }

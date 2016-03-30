@@ -1,0 +1,262 @@
+/*
+Panel --> z-index:90
+Chat  --> z-index:90
+Pop  --> z-index:92
+Masklayer --> z-index:91
+Masklayer2  --> z-index:93
+*/
+#IM-Panel,#IM-Panel *{ box-sizing: border-box; -webkit-box-sizing:border-box; -moz-box-sizing: border-box;}
+#IM-Panel{ position:fixed; z-index: 90; background:#fff; right:30px; bottom:0; width:260px; /*height:400px; */font-size:14px; border-radius:3px; overflow:hidden; box-shadow:0 7px 9px #d4d4d4; font-family: "微软雅黑";}
+#IM-Panel > [im-masklayer]{ position:absolute; z-index: 10; left:0; top:0; width:100%; height:100%; background:#000; opacity:0.85;}
+#IM-Panel > [im-loginTips],#IM-Panel > [im-loginError]{ position:absolute; z-index: 11; left: 50%; top: 50%; color:#fff; text-align: center;}
+#IM-Panel > [im-loginTips]{ width: 100px; height:100px; margin:-50px 0 0-50px; letter-spacing:2px;}
+#IM-Panel > [im-loginTips] > i{ display:block; width:25px; height: 25px; overflow:hidden; margin:10px auto; background: url('../images/im.png') no-repeat -218px 1px; animation: myRotate 1s infinite linear;}
+#IM-Panel > [im-loginError]{ width: 200px; height: 30px; margin: -15px 0 0 -100px; display:none;}
+#IM-Panel [im-avatar],#IM-Chat [im-avatar]{ display:block; border-radius:100%; overflow:hidden; border:1px solid #ddd; background:#f1f1f1;}
+#IM-Panel [im-avatar] img,#IM-Chat [im-avatar] img{ display:block; width:100%; height:100%;}
+#IM-Panel > [im-header]{ height:40px; background:#323538; color:#fff; line-height: 30px;}
+#IM-Panel > [im-header] > [im-userInfo]{ height: 40px; padding:5px 10px; overflow:hidden; position:relative;}
+#IM-Panel > [im-header] > [im-userInfo] > [im-switch]{ display:block; width:20px; height:20px; background: url('../images/im.png') no-repeat 4px 9px; position:absolute; right:10px; top: 10px; cursor:pointer;}
+#IM-Panel > [im-header] > [im-userInfo] > [im-switch]:hover{ background-position:-32px 9px;}
+#IM-Panel > [im-header] > [im-userInfo] > [im-avatar]{ float:left; width: 30px; height:30px; background:#ccc; border: 0;}
+#IM-Panel > [im-header] > [im-userInfo] > [im-name]{ float:left; margin-left:10px;}
+#IM-Panel > [im-header] > [im-msgBox]{ height: 40px; padding:5px 10px; text-align: center; font-size:16px; position:relative; cursor:pointer;}
+#IM-Panel > [im-header] > [im-msgBox] [im-msgTips]{ display:block; width: 30px; height:30px; background:url('../images/im.png') no-repeat 1px -15px; position:absolute; left:10px; top:5px;}
+#IM-Panel > [im-header] > [im-msgBox] [im-msgTips] i{ display:none; width:18px; height:18px; border-radius:100%; line-height: 18px; text-align:center; overflow:hidden; position:absolute; left:25px; top:-1px; background:#f47857; font-size:10px; font-style:normal;}
+
+#IM-Panel.unread > [im-header] > [im-msgBox] [im-msgTips] i{ display:block;}
+#IM-Panel > [im-tab]{}
+#IM-Panel > [im-tab] > ul[im-tab-bar]{ border: 1px solid #ddd; border-top:0;}
+#IM-Panel > [im-tab] > ul[im-tab-bar]:after{ display:block; content:''; clear:both; width:100%; height:0; overflow:hidden;}
+#IM-Panel > [im-tab] > ul[im-tab-bar] > li{ float:left; width: 50px; height:40px; cursor:pointer; position:relative;}
+#IM-Panel > [im-tab] > ul[im-tab-bar] > li span{ display:block; width: 30px; height: 30px; overflow:hidden; margin:5px auto; background:url('../images/im.png') no-repeat;}
+#IM-Panel > [im-tab] > ul[im-tab-bar] > li[im-tab-id=rc] span{ background-position:3px -58px;}
+#IM-Panel > [im-tab] > ul[im-tab-bar] > li[im-tab-id=rc]:hover span{ background-position:3px -92px;}
+#IM-Panel > [im-tab] > ul[im-tab-bar] > li[im-tab-id=rc].on span{ background-position:3px -126px;}
+#IM-Panel > [im-tab] > ul[im-tab-bar] > li[im-tab-id=friends] span{ background-position:-48px -58px;}
+#IM-Panel > [im-tab] > ul[im-tab-bar] > li[im-tab-id=friends]:hover span{ background-position:-48px -92px;}
+#IM-Panel > [im-tab] > ul[im-tab-bar] > li[im-tab-id=friends].on span{ background-position:-48px -126px;}
+#IM-Panel > [im-tab] > ul[im-tab-bar] > li[im-tab-id=groups] span{ background-position:-102px -58px;}
+#IM-Panel > [im-tab] > ul[im-tab-bar] > li[im-tab-id=groups]:hover span{ background-position:-102px -92px;}
+#IM-Panel > [im-tab] > ul[im-tab-bar] > li[im-tab-id=groups].on span{ background-position:-102px -126px;}
+#IM-Panel > [im-tab] > ul[im-tab-bar] > li i{ display:none; width:18px; height:18px; border-radius:100%; line-height: 18px; text-align:center; overflow:hidden; position:absolute; left:50%; top:2px; margin-left:7px; background:#f47857; color:#fff; font-size:10px; font-style:normal;}
+
+#IM-Panel > [im-tab] > ul[im-tab-bar] > li em{ display:none; width:8px; height:8px; background:#fff; border-top:1px solid #ddd; border-left:1px solid #ddd; position:absolute; left:50%; bottom:-4px; margin-left:-4px; transform: rotate(45deg); -ms-transform: rotate(45deg); -webkit-transform: rotate(45deg); -o-transform: rotate(45deg); -moz-transform: rotate(45deg);}
+#IM-Panel > [im-tab] > ul[im-tab-bar] > li.on em{ display:block;}
+
+#IM-Panel.unread > [im-header] > [im-msgBox] [im-msgTips] i,#IM-Panel.unread > [im-tab] > ul[im-tab-bar] > li i{ display:block;}
+
+#IM-Panel [im-tab-con]{ height: 330px; border: 1px solid #ddd; border-top:0; overflow:hidden;}
+/*#IM-Panel [im-tab-con] > [im-loading]{ position:absolute; width:100%; height:100%; background: #fff; opacity: 0.85;}*/
+#IM-Panel [im-tab-con] > .items{ height: 330px; overflow-y:scroll;}
+#IM-Panel [im-tab-con] > .items{ display:none;}
+#IM-Panel [im-tab-con] > .items.on{ display:block;}
+#IM-Panel [im-tab-id=rc] > ul{ }
+#IM-Panel [im-tab-id=rc] > ul > li{ border-bottom:1px solid #f2f2f2; padding:15px 10px; position:relative; overflow:hidden; cursor:pointer; transition:background .2s;}
+#IM-Panel [im-tab-id=rc] > ul > li:hover{ background:#f5f5f7;}
+#IM-Panel [im-tab-id=rc] > ul > li > div{ padding-left: 50px; position:relative;}
+#IM-Panel [im-tab-id=rc] > ul > li > i{ display:none; width:8px; height:8px; overflow:hidden; border-radius:100%; background:#f47857; position:absolute; right:5px; top:21px;}
+#IM-Panel [im-tab-id=rc] > ul > li.unread > i{ display:block;}
+#IM-Panel [im-tab-id=rc] > ul > li [im-time]{ position:absolute; right:10px; top: 0; font-size: 12px; color:#999;}
+#IM-Panel [im-tab-id=rc] > ul > li.none{ text-align: center; border-bottom: 0; color:#999; margin-top:100px; line-height: 22px;}
+#IM-Panel [im-tab-id=rc] > ul > li.none:hover{ background: none;}
+/*
+#IM-Panel [im-tab-id=rc] > ul > li [im-time] i{ display:none; width:8px; height:8px; border-radius:100%; background:#f47857; margin-right:5px;}
+#IM-Panel [im-tab-id=rc] > ul > li.unread [im-time] i{ display:inline-block;}
+*/
+#IM-Panel [im-tab-id=rc] > ul > li [im-avatar]{ float:left; width:40px; height:40px;border-radius:0;}
+#IM-Panel [im-tab-id=rc] > ul > li[data-gid='0'] [im-avatar]{ border-radius:100%;}
+#IM-Panel [im-tab-id=rc] > ul > li [im-name]{ font-size: 16px; color:#333;}
+#IM-Panel [im-tab-id=rc] > ul > li [im-msg]{ font-size: 12px; color:#999; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+#IM-Panel [im-tab-con] [im-tab-id=friends]{ padding:0 10px;}
+#IM-Panel [im-tab-con] [im-tab-id=friends] [im-add-friend]{ height:40px; line-height: 40px; cursor:pointer;}
+#IM-Panel [im-tab-con] [im-tab-id=friends] [im-add-friend] i{ display:inline-block; width: 20px; height:20px; overflow:hidden; background:url('../images/im.png') no-repeat -72px 0; vertical-align: middle; margin-right:7px;}
+#IM-Panel [im-tab-con] [im-tab-id=friends] [im-friendlistbox]{ padding-bottom: 10px;}
+#IM-Panel [im-tab-con] [im-tab-id=friends] [im-friendlistbox] .noBody{ text-align: center; margin-top:90px; line-height: 22px;}
+#IM-Panel [im-tab-con] [im-tab-id=friends] [im-friendlistbox] .noBody a{ color:#999;}
+dl[im-org]{ color:#333;}
+dl[im-org] > dt{ height: 30px; line-height: 30px; cursor:default; position:relative;}
+dl[im-org] > dt:before{ content:''; display:inline-block; margin-right:7px; width:0; height:0; border-top:5px solid transparent; border-left:7px solid #4d4d4d; border-bottom:5px solid transparent; transition:all .2s;}
+dl[im-org] > dt [im-count]{ margin-left:10px;}
+dl[im-org] > dd{ display:none; padding:4px 0; line-height: 30px; cursor:pointer;}
+dl[im-org] > dd [im-avatar]{ width: 30px; height:30px; display:inline-block; vertical-align: middle; margin-right:7px; border-radius:100%; overflow:hidden;}
+dl[im-org] > dd [im-avatar] img{ display:block; width:100%; height:100%;}
+dl[im-org].show dt:before{transform: rotate(90deg); -ms-transform: rotate(90deg); -webkit-transform: rotate(90deg); -o-transform: rotate(90deg); -moz-transform: rotate(90deg);}
+dl[im-org].show dd{ display:block;}
+#IM-Panel dl[im-org] > dd [im-avatar]{ display:inline-block;}
+#IM-Panel dl[im-org] > dd[data-online='0']{ color:#999;}
+#IM-Panel dl[im-org] > dd[data-online='0'] [im-name]:after{ content:'(离线)'; font-size: 12px; color:#999; margin-left:7px;}
+#IM-Panel [im-tab-id=groups] > ul{ padding:10px 0;}
+#IM-Panel [im-tab-id=groups] > ul > li{ padding: 0 10px; margin-bottom:10px; cursor:pointer; line-height: 30px;}
+#IM-Panel [im-tab-id=groups] > ul > li:last-child{ margin-bottom:0;}
+#IM-Panel [im-tab-id=groups] > ul > li [im-avatar]{ width: 30px; height:30px; border-radius:0; border: 0; display:inline-block; vertical-align:middle; margin-right:7px; background:#ccc url('../images/im.png') no-repeat -109px 9px;}
+#IM-Panel [im-tab-id=groups] > ul > li.none{ text-align: center; margin-top: 100px; color:#999; line-height: 22px;}
+#IM-Panel [im-tab-id=groups] > ul > li.none a{ text-decoration: underline;}
+
+#IM-Chat{ width:445px; height: 410px; background:#fff; font-size: 14px; font-family: "微软雅黑"; position:fixed; z-index: 90; right:330px; bottom:0; border-radius:3px; overflow:hidden; box-shadow:0 7px 9px #d4d4d4; transition:width .2s ease;}
+#IM-Chat > ul[imchat-list]{ float:left; width:0; height:410px; overflow-x:hidden; overflow-y:scroll; background:#f5f5f7; transition:width .2s ease;}
+#IM-Chat.multi{ width:615px;}
+#IM-Chat.multi > ul[imchat-list]{ width: 170px; padding-top:7px;}
+#IM-Chat > [imchat-box]{ float:left; width: 445px;}
+#IM-Chat > [imchat-viewHistory]{ float:left; width: 0; height:410px; overflow:hidden; background:#f5f5f7; transition:width .2s ease; box-shadow:3px 0px 5px #d3d3d3 inset;}
+#IM-Chat > [imchat-viewHistory] > [im-viewBox]{ height: 375px; overflow-y:scroll; position:relative;}
+#IM-Chat > [imchat-viewHistory] > [im-viewBox] > article[imHistory-view]{ padding:7px 13px;}
+#IM-Chat > [imchat-viewHistory] [imHistory-view] > ul[data-page]{ line-height: 25px; font-size: 12px;}
+#IM-Chat > [imchat-viewHistory] [imHistory-view] > ul[data-page] > li{ color:#333;}
+#IM-Chat > [imchat-viewHistory] [imHistory-view] > ul[data-page] > li [im-info]{ font-weight: bold; color:#f47857;}
+#IM-Chat > [imchat-viewHistory] [imHistory-view] > ul[data-page] > li.self [im-info]{ color:#375f80;}
+#IM-Chat > [imchat-viewHistory] [imHistory-view] > ul[data-page] > li.time{ color:#aaa; text-align: center; padding:10px 0 5px;}
+#IM-Chat > [imchat-viewHistory] [imHistory-view] > ul[data-page] > li [im-log]{ padding:0 7px; min-height: 25px;}
+
+
+#IM-Chat > [imchat-viewHistory] > [im-viewBox] > [im-viewLoading],#IM-Chat > [imchat-viewGroupMembers] > [im-viewLoading]{ position:absolute; z-index: 1; left:0; top:0; width:100%; height:100%;}
+#IM-Chat > [imchat-viewHistory] [im-viewLoading] > [im-viewIcon],#IM-Chat > [imchat-viewGroupMembers] > [im-viewLoading] > [im-viewIcon]{ position:absolute; left:50%; top:50%; margin:-10px 0 0 -10px; z-index: 2; display:block; width: 20px; height:20px; background: url('../images/im.png') no-repeat -220px -1px; animation: myRotate 1s infinite linear;}
+#IM-Chat > [imchat-viewHistory] [im-viewLoading] > em,#IM-Chat > [imchat-viewGroupMembers] > [im-viewLoading] > em{ display: block; position: absolute; left:0; top:0; z-index: 1; width: 100%; height:100%; background: #fff; opacity:0.75;}
+
+#IM-Chat > [imchat-viewHistory] > [im-viewCtl]{ height:35px; line-height: 35px; border-top:1px solid #ddd;}
+#IM-Chat > [imchat-viewHistory] > [im-viewCtl] [im-viewPage]{ float:right; padding-right: 15px;}
+#IM-Chat > [imchat-viewHistory] > [im-viewCtl] [im-viewPage] em{ display:inline-block; cursor:pointer; margin-left: 10px; width:15px; height:15px; vertical-align: middle; margin-top: -2px; background: url('../images/im.png') no-repeat;}
+#IM-Chat > [imchat-viewHistory] > [im-viewCtl] [im-viewPage] em[data-page=first]{ background-position: -152px -90px;}
+#IM-Chat > [imchat-viewHistory] > [im-viewCtl] [im-viewPage] em[data-page=prev]{ background-position: -180px -90px;}
+#IM-Chat > [imchat-viewHistory] > [im-viewCtl] [im-viewPage] em[data-page=next]{ background-position: -208px -90px;}
+#IM-Chat > [imchat-viewHistory] > [im-viewCtl] [im-viewPage] em[data-page=last]{ background-position: -237px -90px;}
+#IM-Chat > [imchat-viewHistory] > [im-viewCtl] [im-viewPage] em[data-page=first].disable{ background-position: -152px -59px;}
+#IM-Chat > [imchat-viewHistory] > [im-viewCtl] [im-viewPage] em[data-page=prev].disable{ background-position: -180px -59px;}
+#IM-Chat > [imchat-viewHistory] > [im-viewCtl] [im-viewPage] em[data-page=next].disable{ background-position: -208px -59px;}
+#IM-Chat > [imchat-viewHistory] > [im-viewCtl] [im-viewPage] em[data-page=last].disable{ background-position: -237px -59px;}
+
+#IM-Chat.viewHistory{ width:695px;}
+#IM-Chat.viewHistory > [imchat-viewHistory]{ width:250px;}
+#IM-Chat.viewHistory.multi{ width:865px;}
+
+/** viewGroupMember **/
+#IM-Chat.group{ width:645px;}
+#IM-Chat.group > [imchat-viewGroupMembers]{ width:200px;}
+#IM-Chat.group.multi{ width:815px;}
+#IM-Chat > [imchat-viewGroupMembers]{ float:left; position: relative; width: 0; height:410px; overflow: hidden; background:#f5f5f7; transition:width .2s ease; box-shadow:3px 0px 5px #d3d3d3 inset;}
+#IM-Chat > [imchat-viewGroupMembers] dl{ position: relative; padding: 30px 0 10px 0;}
+#IM-Chat > [imchat-viewGroupMembers] dt{ position: absolute; left:0; top: 0; background: #ddd; width: 100%; height: 30px; line-height: 30px; padding: 0 10px;}
+#IM-Chat > [imchat-viewGroupMembers] dd{}
+#IM-Chat > [imchat-viewGroupMembers] ul{ height: 380px; overflow-y: scroll; overflow-x: hidden; padding: 0 10px;}
+#IM-Chat > [imchat-viewGroupMembers] li{ overflow:hidden; line-height: 30px; padding: 3px 0; cursor:pointer;}
+#IM-Chat > [imchat-viewGroupMembers] [im-avatar]{ display:inline-block; vertical-align: middle; width: 30px; height: 30px; margin-right: 7px; background: #f1f1f1; border-radius:100%; overflow: hidden;}
+#IM-Chat > [imchat-viewGroupMembers] [im-name]{ display:inline-block; vertical-align: middle; height: 30px;}
+
+#IM-Chat > ul[imchat-list] > li{ padding:7px 15px 7px 10px; cursor:pointer; position:relative;}
+#IM-Chat > ul[imchat-list] > li [im-avatar]{ float:left; width:40px; height:40px; margin-right:7px; transition:background .2s ease;}
+#IM-Chat > ul[imchat-list] > li[data-chatType=group] [im-avatar]{ border-radius:0;}
+#IM-Chat > ul[imchat-list] > li [im-name]{ float:left; width:70px; height: 40px; line-height: 40px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+#IM-Chat > ul[imchat-list] > li.on,#IM-Chat > ul[imchat-list] > li.on:hover{ background:#e3e3e6;}
+#IM-Chat > ul[imchat-list] > li:after{ clear:both; display:block; height:0; width:100%; content:''; overflow:hidden;}
+#IM-Chat > ul[imchat-list] > li [imchat-close]{ display:none; width:20px; height:20px; border-radius:2px; overflow:hidden; position:absolute; z-index: 2; right:5px; top:50%; margin-top:-10px; background:#eee url('../images/im.png') no-repeat -55px -172px;}
+#IM-Chat > ul[imchat-list] > li:hover{ background:#eee;}
+#IM-Chat > ul[imchat-list] > li:hover [imchat-close]{ display:block;}
+#IM-Chat > ul[imchat-list] > li.on:hover [imchat-close]{ background:#e3e3e6 url('../images/im.png') no-repeat -55px -203px;}
+#IM-Chat > ul[imchat-list] > li [imchat-close]:hover,#IM-Chat > ul[imchat-list] > li.on:hover [imchat-close]:hover{ background:#f47857 url('../images/im.png') no-repeat -55px -203px;}
+#IM-Chat > ul[imchat-list] > li [imchat-unread]{ display:none; background:#f47857; width:10px; height:10px; border-radius:100%; overflow:hidden; position:absolute; z-index: 1; right:5px; top:50%; margin-top:-5px;}
+#IM-Chat > ul[imchat-list] > li.unread [imchat-unread]{ display:block;}
+#IM-Chat > [imchat-box] > [imchat-header]{ background:#323538; color:#fff; position:relative;}
+#IM-Chat > [imchat-box] > [imchat-header] > [imchat-cmAction]{ position:absolute; right: 5px; top:10px; line-height: 20px;}
+#IM-Chat > [imchat-box] > [imchat-header] > [imchat-cmAction] > span{ display:inline-block; width:20px; height:20px; margin-left:5px; background:url('../images/im.png') no-repeat; cursor:pointer;}
+#IM-Chat > [imchat-box] > [imchat-header] > [imchat-cmAction] > [ac-type=more]{ background-position:3px -172px;}
+#IM-Chat > [imchat-box] > [imchat-header] > [imchat-cmAction] > [ac-type=min]{ background-position:-27px -172px;}
+#IM-Chat > [imchat-box] > [imchat-header] > [imchat-cmAction] > [ac-type=close]{ background-position:-55px -172px;}
+#IM-Chat > [imchat-box] > [imchat-header] > [imchat-cmAction] > [ac-type=more]:hover{ background-position:3px -203px;}
+#IM-Chat > [imchat-box] > [imchat-header] > [imchat-cmAction] > [ac-type=min]:hover{ background-position:-27px -203px;}
+#IM-Chat > [imchat-box] > [imchat-header] > [imchat-cmAction] > [ac-type=close]:hover{ background-position:-55px -203px;}
+#IM-Chat > [imchat-box] > [imchat-header] > [imchat-info]{ padding:5px 20px;}
+#IM-Chat > [imchat-box] > [imchat-header] > [imchat-info] [im-avatar]{ width: 30px; height: 30px; display:inline-block; vertical-align:middle; margin-right:7px;}
+#IM-Chat > [imchat-box] > [imchat-main]{}
+#IM-Chat [imchat-main]{}
+#IM-Chat [imchat-viewArea]{ height:265px; overflow-y:scroll; padding:10px;}
+#IM-Chat [imchat-scrollintoview]{ clear:both; display:block; width:100%; height:0;}
+
+#IM-Chat [imchat-viewArea] > [data-id][data-chatType]{ padding-bottom: 15px;}
+#IM-Chat [imchat-viewArea] > [data-id][data-chatType] > mark{display:block; clear:both; margin:0 auto;height:20px; line-height: 20px; font-size: 12px; text-align: center; background: none;}
+#IM-Chat [imchat-viewArea] > [data-id][data-chatType] > [data-lastID]{ width: 120px; color:#f47857;}
+#IM-Chat [imchat-viewArea] > [data-id][data-chatType] > [data-lastID] i{ display:inline-block; width:15px; height:15px; vertical-align: middle; background: url('../images/im.png') no-repeat -114px -164px; margin-right:3px;}
+#IM-Chat [imchat-viewArea] > [data-id][data-chatType] > [data-lastID]:hover{ text-decoration:underline; cursor:pointer;}
+#IM-Chat [imchat-viewArea] > [data-id][data-chatType] > div{ padding:5px 0; position:relative;}
+#IM-Chat [imchat-viewArea] > [data-id][data-chatType] > div:after{ content:''; display:block; width:100%; height:0; clear:both; overflow:hidden;}
+
+#IM-Chat [imchat-viewArea] > [data-id][data-chatType] [im-avatar]{ width:40px; height:40px; position:absolute; left:0; top:5px;}
+#IM-Chat [imchat-viewArea] > [data-id][data-chatType] [im-name]{ height: 25px; line-height: 25px; padding:0 50px;}
+#IM-Chat [imchat-viewArea] > [data-id][data-chatType] [im-log]{ float:left; background:#e6e6e6; padding:12px 10px; line-height: 20px; min-height: 44px; margin: 0 30px 0 55px; border-radius:10px; position:relative; top:3px;}
+#IM-Chat [imchat-viewArea] > [data-id][data-chatType] [im-log]:before{ content:''; display:block; width: 0; height: 0; position:absolute; left:-10px; top:9px; border-left:0; border-top: 1px solid transparent; border-right: 10px solid #e6e6e6; border-bottom: 6px solid transparent;}
+#IM-Chat [imchat-viewArea] > [data-id][data-chatType] > .self [im-avatar]{ left:auto; right: 0;}
+#IM-Chat [imchat-viewArea] > [data-id][data-chatType] > .self [im-log]{ float:right; margin:0 55px 0 30px; background:#abd3ed; color:#375f80;}
+#IM-Chat [imchat-viewArea] > [data-id][data-chatType] > .self [im-log]:before{ left:auto; right:-10px; border-right: 0; border-top: 1px solid transparent; border-left: 10px solid #abd3ed; border-bottom: 6px solid transparent;}
+
+#IM-Chat [imchat-viewArea] > [data-id][data-chatType] > .self [im-log] [im-reSend]{ display:none; width:15px; height:15px; overflow:hidden; background: url('../images/im.png') no-repeat -188px 0px; position:absolute; left:-25px; top:50%; margin-top:-7px; cursor:pointer;}
+#IM-Chat [imchat-viewArea] > [data-id][data-chatType] > .self [im-log] [im-reSend]:hover{ background-position:-188px -28px;}
+#IM-Chat [imchat-viewArea] > [data-id][data-chatType] > .self.fail [im-log] [im-reSend]{ display:block;}
+#IM-Chat [imchat-viewArea] > [data-id][data-chatType] > .self.sending [im-log] [im-reSend]{ display:block; background-position:-188px -28px; animation: myRotate 1s infinite linear; cursor:default;}
+@keyframes myRotate{ from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+#IM-Chat [imchat-viewArea] > [data-id][data-chatType] > .time{ text-align:center; padding:10px 0; letter-spacing:1px; font-size:12px; color:#aaa;}
+
+#IM-Chat [imchat-editTools]{ background:#f5f5f7; height:30px; line-height: 28px; padding: 4px 10px;}
+#IM-Chat [imchat-editTools] > em{ display:block; float:left; margin-right: 7px; width:24px; height:24px; overflow:hidden; border:1px solid #f5f5f7; background: url('../images/im.png') no-repeat; cursor:pointer;}
+#IM-Chat [imchat-editTools] > em:hover{ border-color:#797979;}
+#IM-Chat [imchat-editTools] > em.fontSize{ background-position:4px -237px;}
+#IM-Chat [imchat-editTools] > em.face{ background-position:-27px -237px;}
+#IM-Chat [imchat-editTools] > em.uploadImg{ background-position:-60px -237px;}
+#IM-Chat [imchat-editTools] > em.uploadFile{ background-position:-96px -237px;}
+#IM-Chat [imchat-editTools] > em.fontSize:hover{ background-position:4px -273px;}
+#IM-Chat [imchat-editTools] > em.face:hover{ background-position:-27px -273px;}
+#IM-Chat [imchat-editTools] > em.uploadImg:hover{ background-position:-60px -273px;}
+#IM-Chat [imchat-editTools] > em.uploadFile:hover{ background-position:-96px -273px;}
+#IM-Chat [imchat-editTools] > em.uploadImg > input[type=file]{ display:block; width:100%; height:100%; border:0; opacity: 0; cursor:pointer;}
+#IM-Chat [imchat-editTools] > [imchat-recordBtn]{ display: block; float: right; height: 24px; line-height: 24px; font-size: 12px; color:#505050;}
+#IM-Chat [imchat-editTools] > [imchat-recordBtn]:hover{ text-decoration:underline;}
+#IM-Chat [imchat-editTools] > [imchat-recordBtn] i{ display: inline-block; height: 24px; width: 24px; vertical-align: middle; background: url('../images/im.png') no-repeat -127px -238px;}
+#IM-Chat [imchat-editWrap]{ background:#f5f5f7; padding:0 10px 10px 10px;}
+#IM-Chat > [imchat-box][data-chatType=group] [imchat-editTools] > [imchat-recordBtn]{ display:none;}
+#IM-Chat [imchat-editWrap]:after{ content:''; display:block; height:0; width:100%; clear:both; overflow:hidden;}
+#IM-Chat [imchat-editWrap] > [imchat-Edit]{ width:355px; height:65px; border:1px solid #e1e4e5; background:#fff; float:left; padding:7px 10px; resize: none; line-height: 18px; font-size:14px;}
+#IM-Chat [imchat-editWrap] > [imchat-Send]{ display:block; width: 60px; height: 30px; text-align: center; line-height: 30px; color:#fff; background:#f47857; float:right; margin-top: 5px; border-radius:3px; cursor:pointer;}
+
+
+#IM-Chat-Min{ display:none; position:fixed; z-index: 90; right:330px; bottom:0; background:#f2f5f7; font-size:16px; color:#333; box-shadow:0 1px 9px #d4d4d4; width: 200px; height:40px; line-height: 40px; cursor:pointer;}
+#IM-Chat-Min > [imchating-count]{ position:absolute; left:0; top:0; width:40px; height:40px; display:block; border-right:1px solid #ddd; text-align: center;}
+#IM-Chat-Min > [imchating-user]{ display:block; height:40px; padding: 0 10px 0 50px; width: 100%;overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+
+
+
+[im-search]{ display:block; width:100%; height:28px; border: 1px solid #ddd; position:relative;}
+[im-search] input{ display:block; width:100%; height:100%; border:0; padding:0 10px;}
+[im-search] i{ display:none; position:absolute; right:5px; top:5px; width:16px; height:16px; overflow:hidden; cursor:pointer; background: url('../images/im.png') no-repeat -57px -174px;}
+[im-list]{ background:#fafafa; border:1px solid #ddd; padding:5px 0; height:320px; overflow-y:scroll;}
+[im-list] dl[im-org] > dt:hover,[im-list] dl[im-org] > dd:hover{ background:#ededed;}
+[im-list] dl[im-org] > dt{ padding:0 10px; height: 35px; line-height: 35px;}
+[im-list] dl[im-org] > dt [im-addAll]{ position:absolute; right:10px; top:9px; display:block; height:18px; width:18px; border:1px solid #f47857; background: url('../images/im.png') no-repeat -45px -35px;}
+[im-list] dl[im-org] > dt [im-addAll]:hover{ background:#fff url('../images/im.png') no-repeat -45px -35px; cursor:pointer;}
+[im-list] dl[im-org] > dd{ margin-bottom:4px; padding:4px 10px;}
+[im-list] dl[im-org] > dd:last-child{ margin-bottom:0;}
+[im-list] dl[im-org] > dd.unshow{ display:none;}
+[im-list] dl[im-org] > dd [im-avatar]{ background: #fff;}
+[im-pop]{ position:fixed; z-index: 92; left:50%; top:50%; background:#fff; border-radius:3px; overflow:hidden; color:#333;}
+[im-pop] > [im-pop-close]{ display:block; position:absolute; right:10px; top:10px; width:20px; height:20px; background: url('../images/im.png') no-repeat -55px -172px; cursor:pointer;}
+[im-pop] > [im-pop-close]:hover{ background-position:-55px -203px;}
+[im-pop] > [im-pop-header]{ height:40px; line-height: 40px; text-align: center; background:#323538; color:#fff; font-size: 16px;}
+[im-pop] > [im-pop-con]{ padding:20px 15px;}
+[im-pop] > [im-pop-con]:after{ display:block; content:''; width:100%; height:0; clear:both; overflow:hidden;}
+[im-pop][im-pop-type=addGroupChat]{ width: 555px; height:480px; margin:-240px 0 0 -277px;}
+[im-pop][im-pop-type=addGroupChat] > [im-pop-con]{ position:relative;}
+[im-pop][im-pop-type=addGroupChat] > [im-pop-con] [im-addGroup-icon]{ display:block; width:18px; height:35px; background: url('../images/im.png') no-repeat -151px 0; position:absolute; left:268px; top:190px;}
+[im-pop] [im-searchLeft]{ width:235px; float:left; margin-bottom: 10px;}
+[im-pop] [im-searchRight]{ width:235px; float:right;}
+[im-pop][im-pop-type=addGroupChat] [im-search]{ margin-bottom: 10px;}
+[im-pop][im-pop-type=addGroupChat] [im-searchResultCount]{ height:28px; line-height: 28px; margin-bottom:10px;}
+[im-pop-action]{ clear:both; text-align: right;}
+[im-pop-action] span{ display:inline-block; width: 90px; height:32px; border-radius:3px; overflow:hidden; text-align: center; line-height: 30px; border: 1px solid #ddd; background:#fafafa; margin-left:20px; cursor:pointer;}
+[im-pop-action] span:hover{ background: #fff;}
+[im-pop][im-pop-type=tips]{ z-index: 94; width: 300px; height:180px; margin:-90px 0 0 -150px; box-shadow:0 0 9px #9d9d9d;}
+[im-pop][im-pop-type=tips] [im-pop-action]{ padding:5px 10px; background:#eee;}
+[im-pop][im-pop-type=tips] [im-pop-action] span{ margin-left: 10px;}
+[im-pop][im-pop-type=tips] > [im-pop-header]{ text-align: left; padding:0 10px; font-size: 14px;}
+[im-pop][im-pop-type=tips] > [im-pop-con]{ height: 98px;}
+#IM-Masklayer,#IM-Masklayer2{ position:fixed; z-index: 91; width:100%; height:100%; left:0; top:0; background:#000; opacity:0.7;}
+#IM-Masklayer2{ z-index:93;background:#fff; opacity: 0.35;}
+[im-pop-tips]{ width:235px; overflow:hidden; margin:0 auto; position:relative; min-height: 40px; font-size: 14px; line-height: 25px; padding:5px 0 0 55px;}
+[im-pop-tips] > i{ display:block; width:40px; height:40px; overflow:hidden; border-radius:100%; background:#f47857 url('../images/im.png') no-repeat -71px -158px; position:absolute; left:0; top:0;}
+

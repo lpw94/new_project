@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>公司-详情页</title>
+    <meta name="robots" content="all"/>
+    <!-- Mobile Devices Support @begin -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta content="application/xhtml+xml;charset=UTF-8" http-equiv="Content-Type">
+    <meta content="telephone=yes, address=yes" name="format-detection">
+    <!-- apple devices -->
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="white"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+    <!-- Mobile Devices Support @end -->
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="ESTT Team">
+    <link rel="stylesheet" href="../../assets/wap/css/iconfont.css"/>
+    <link rel="stylesheet" href="../../assets/wap/css/base.css"/>
+    <link rel="stylesheet" href="../../assets/wap/css/content.css"/>
+    <script src="../../assets/wap/js/sea.js"></script>
+    <script src="../../assets/wap/js/jquery/jquery.min.js"></script>
+    <script>
+        seajs.config({
+            base: '/assets/wap/js',
+            charset: 'utf-8',
+            timeout: 10000
+        });
+    </script>
+</head>
+<body>
+<section id="main" class="bgColor">
+    <div id="header">
+        <a class="backPage" href="javascript:;"><i class="iconfont icon-xiangzuo"></i><em></em></a>
+    </div>
+
+    <div class="companyTop mb_10">
+        <div class="bg" style="background:#f1f1f1 url('http://g.hiphotos.baidu.com/image/w%3D310/sign=772e37e5b4fd5266a72b3a159b199799/b8014a90f603738d5f92372cb11bb051f919ece0.jpg') no-repeat; background-size:cover; background-position:center center;"></div>
+        <span class="avatar"><img src="" /></span>
+        <div class="con">
+            <h1 class="title">灵动广告设计有限公司灵动广告设计有限公司</h1>
+            <p class="addr">深圳市-南山区-科技园</p>
+        </div>
+    </div>
+
+    <div class="mblock mb_10">
+        <dl class="mDL03">
+            <dt>简介</dt>
+            <dd class="pd_15">深圳市灵动广告设计有限公司是一家专注于企业形象视觉整合，由优秀策划人及设计精英组合而成。致力于为各企业、机构或政府相关部门提供品牌形象策划、品牌视觉设计、平面设计、网页网站设计、印刷等专业设计服务。</dd>
+        </dl>
+    </div>
+
+    <div class="mblock mb_10">
+        <dl class="mDL03">
+            <dt>我们的服务</dt>
+            <dd class="pd_15 keyBox">
+                <span class="mKey">品牌形象设计</span>
+                <span class="mKey">Web开发</span>
+                <span class="mKey">平面设计</span>
+                <span class="mKey">UI设计</span>
+                <span class="mKey">品牌形象设计</span>
+                <span class="mKey">Web开发</span>
+                <span class="mKey">平面设计</span>
+                <span class="mKey">UI设计</span>
+            </dd>
+        </dl>
+    </div>
+
+    <div class="mblock mb_10">
+        <dl class="mDL03">
+            <dt>联系方式</dt>
+            <dd class="contact">
+                <ul class="mList">
+                    <li><i class="iconfont icon-dianhua"></i>0755-8534586</li>
+                    <li><i class="iconfont icon-youjian"></i>lingdong@126.com</li>
+                    <li><i class="iconfont icon-weixin"></i>灵动设计</li>
+                    <li><i class="iconfont icon-jinlingyingcaiwangtubiao60"></i>灵动广告设计</li>
+                    <li><i class="iconfont icon-globevector"></i><a href="javascript:;">www.lingdong.com</a></li>
+                </ul>
+            </dd>
+        </dl>
+    </div>
+</section><!--#main end-->
+<script>
+    $('document').ready(function(){
+        //初始化main高度，兼容部分页面有底色的情况
+        $('#main').css({'min-height':$(window).height()});
+
+
+    });
+</script>
+</body>
+</html>

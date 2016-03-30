@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>个人中心首页</title>
+    <meta name="robots" content="all"/>
+    <!-- Mobile Devices Support @begin -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta content="application/xhtml+xml;charset=UTF-8" http-equiv="Content-Type">
+    <meta content="telephone=yes, address=yes" name="format-detection">
+    <!-- apple devices -->
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="white"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+    <!-- Mobile Devices Support @end -->
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="ESTT Team">
+    <link rel="stylesheet" href="../../../assets/wap/css/iconfont.css"/>
+    <link rel="stylesheet" href="../../../assets/wap/css/base.css"/>
+    <link rel="stylesheet" href="../../../assets/wap/css/content.css"/>
+    <script src="../../../assets/wap/js/sea.js"></script>
+    <script src="../../../assets/wap/js/jquery/jquery.min.js"></script>
+    <script>
+        seajs.config({
+            base: '/assets/wap/js',
+            charset: 'utf-8',
+            timeout: 10000
+        });
+    </script>
+</head>
+<body>
+
+<section id="main" class="bgColor">
+    <div id="header">
+        <span class="menuBtn iconfont icon-caidan"></span>
+    </div>
+
+    <div id="userPanel" class="mb_10">
+        <div class="top">
+            <span class="avatar"><img src="" /></span>
+            <div class="info">
+                <p class="name">毕莎</p>
+                <p>经验值3383</p>
+            </div>
+        </div>
+        <div class="bottom">
+            <div class="items"><a href="javascript:;">订办公位</a></div>
+            <div class="items"><a href="javascript:;">订会议室</a></div>
+            <div class="items"><a href="javascript:;">预约办公室</a></div>
+        </div>
+    </div>
+
+    <div class="mblock border_TB">
+        <menu class="mMenu02">
+            <div class="row items"><a href="javascript:;"><i class="iconfont icon-siyecao"></i>创业服务<span></span></a></div>
+            <div class="row items"><a href="javascript:;"><i class="iconfont icon-wenjianshenhe"></i>新的预订<span></span></a></div>
+            <div class="row items"><a href="javascript:;"><i class="iconfont icon-wenjian"></i>订单管理<span></span></a></div>
+            <div class="row items"><a href="javascript:;"><i class="iconfont icon-yinxingqia"></i>账户管理<span></span></a></div>
+            <div class="row items"><a href="javascript:;"><i class="iconfont icon-iconfontbox"></i>我的收藏<span></span></a></div>
+            <div class="row items"><a href="javascript:;"><i class="iconfont icon-iconxiazai"></i>应用下载<span></span></a></div>
+        </menu>
+    </div>
+</section><!--#main end-->
+
+<script>
+    $('document').ready(function(){
+        //初始化main高度，兼容部分页面有底色的情况
+        $('#main').css({'min-height':$(window).height()});
+
+
+    });
+</script>
+</body>
+</html>

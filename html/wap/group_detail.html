@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>圈子-列表页</title>
+    <meta name="robots" content="all"/>
+    <!-- Mobile Devices Support @begin -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta content="application/xhtml+xml;charset=UTF-8" http-equiv="Content-Type">
+    <meta content="telephone=yes, address=yes" name="format-detection">
+    <!-- apple devices -->
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="white"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+    <!-- Mobile Devices Support @end -->
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="ESTT Team">
+    <link rel="stylesheet" href="../../assets/wap/css/iconfont.css"/>
+    <link rel="stylesheet" href="../../assets/wap/css/base.css"/>
+    <link rel="stylesheet" href="../../assets/wap/css/content.css"/>
+    <script src="../../assets/wap/js/sea.js"></script>
+    <script src="../../assets/wap/js/jquery/jquery.min.js"></script>
+    <script>
+        seajs.config({
+            base: '/assets/wap/js',
+            charset: 'utf-8',
+            timeout: 10000
+        });
+    </script>
+</head>
+<body>
+<aside id="sidePanel">
+    <div class="bd">
+        免费的在线翻译服务可即时翻译文本和网页。
+    </div><i class="close iconfont icon-xiangzuo"></i>
+</aside><!--#sidePanel end-->
+<div id="maskLayer"></div>
+<section id="main" class="bgColor">
+    <header><a class="backBtn iconfont icon-xiangzuo" href="javascript:;"></a></header><div data-Placeholder="header"></div>
+
+    <div class="mblock mb_10 groupTop">
+        <div class="row">
+            <span class="avatar"><img src="" /></span>
+            <h1 class="title">H5技术交流H5技术交流H5技术交流</h1>
+            <a class="btn toJoin" href="javascript:;">加入</a>
+        </div>
+        <div class="row desc">HTML5可以更好的促进用户于网站间的互动情况，多媒体网站可利用HTMLHTML5可以更好的促进用户于网站间的互动情况，多媒体网站可利用HTML。</div>
+    </div>
+
+    <div class="mblock">
+        <dl class="mDL03">
+            <dt>圈子成员(123人)</dt>
+            <dd>
+                <ul class="mUser" data-type="joined">
+                    <li>
+                        <a href="javascript:;"><span class="avatar"><img src="" /></span>毕莎</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;"><span class="avatar"><img src="" /></span>毕莎</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;"><span class="avatar"><img src="" /></span>毕莎</a>
+                    </li>
+                </ul>
+            </dd>
+        </dl>
+    </div>
+
+</section><!--#main end-->
+<script type="text/javascript" src="../../assets/wap/js/jquery/iscroll.js"></script>
+<script>
+    $('document').ready(function(){
+        //初始化main高度，兼容部分页面有底色的情况
+        $('#main').css({'min-height':$(window).height()});
+
+
+    });
+</script>
+</body>
+</html>

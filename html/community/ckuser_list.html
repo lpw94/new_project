@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>创客列表</title>
+    <link rel="stylesheet" type="text/css" href="../../assets/home/css/base.css"/>
+    <link rel="stylesheet" type="text/css" href="../../assets/home/css/community.css"/>
+    <script src="../../assets/home/js/jquery/jquery-1.9.1.js" type="text/javascript"></script>
+    <script type="text/javascript" src="../../assets/home/js/seajs/sea.js"></script>
+    <script>
+        seajs.config({
+            base: '../../assets/home/js',
+            charset: 'utf-8',
+            timeout: 10000
+        });
+    </script>
+</head>
+<body>
+<div class="head">
+    <div class="header">
+        <div class="contain">
+            <div class="head-left">
+                <a href="javascript:;">创客港</a>
+            </div>
+            <div class="mSearch">
+                <input type="text" name="search" placeholder="搜索话题、需求、服务、活动、会员和公司"/>
+                <a class="search-btn" href="javascript:;"></a><!--标签可随意更换，只保留类名-->
+            </div>
+            <div class="head-right">
+                <ul class="nav">
+                    <li class="login"><a id="login" href="javascript:;">登录</a></li>
+                    <li class="register"><a href="javascript:;">注册</a></li>
+                </ul>
+            </div>
+        </div>
+    </div><!-- header end -->
+</div><!-- head end -->
+<dl id="loginBox">
+    <div class="close"></div>
+    <dt>账号登录</dt>
+    <dd class="mForm">
+        <div class="items">
+            <div class="bd">
+                <input class="mInput" type="text" name="account_name" value="" placeholder="请输入注册邮箱/手机号码" />
+            </div>
+            <div class="tips"><div class="con"></div></div>
+        </div>
+        <div class="items">
+            <div class="bd">
+                <input class="mInput" type="password" name="account_psw" value="" placeholder="请输入登陆密码" />
+            </div>
+            <div class="tips"><div class="con"></div></div>
+        </div>
+        <div class="items">
+            <div class="bd">
+                <a class="submitBtn" href="javascript:;">登陆</a>
+            </div>
+        </div>
+        <div class="items">
+            <div class="bd">
+                <a class="forgetBtn" href="javascript:;">忘记密码</a>
+                <a class="registerBtn" href="javascript:;">注册账号</a>
+            </div>
+        </div>
+    </dd>
+</dl>
+<div class="masklayer"></div>
+<!--loginBox end-->
+<div class="mDirectoryMenu">
+    <div class="contain">
+        <ul>
+            <li><a href="javascript:;">共创圈</a></li>
+            <li class="current"><a href="javascript:;">创客</a></li>
+            <li><a href="javascript:;">圈子</a></li>
+            <li><a href="javascript:;">公司</a></li>
+            <li><a href="javascript:;">服务</a></li>
+            <li><a href="javascript:;">需求</a></li>
+            <li><a href="javascript:;">活动</a></li>
+        </ul>
+    </div>
+</div><!--mDirectoryMenu end-->
+<div class="communityBg">
+<div class="contain columnsCommunity pt_80 pb_50">
+	<div id="gotop">
+	</div>
+    <div class="ck-load">
+        <p>共300个创客</p>
+    </div>
+    <div class="col_left">
+        <div class="mfilters mb_20">
+            <div class="texting">
+	            <h2>城市选择</h2>
+	        </div>
+            <div class="mMultiples  mulit-single">
+                <div class="choiceCon choiced">我的中心</div>
+                <ul class="choice-box">
+                    <li>我的中心</li>
+                    <li>我的城市</li>
+                    <li>任意地点</li>
+                </ul>
+            </div>
+        </div>
+        <div class="mfilters mb_20">
+            <div class="texting">
+	            <h2>服务中心</h2>
+	        </div>
+            <div class="mMultiples  mulit-single">
+                <div class="choiceCon choiced">我的中心</div>
+                <ul class="choice-box">
+                    <li>我的中心</li>
+                    <li>我的城市</li>
+                    <li>任意地点</li>
+                </ul>
+            </div>
+        </div>
+    </div><!--col_left end-->
+    <div class="col_main">
+        <ul class="ck-main-box">
+            <li><div class="ck-list ck-list-item">
+                <a href="javascript:;" class="ck-pic"><img src="../../assets/home/images/tmp/topic.png" alt=""></a>
+                <div class="ck-msg">
+                	<div class="ck-user-info">
+                		<p class="ck-name"><a href="javascript:;">张德喜</a></p>
+	                    <p class="ck-intro">工程师</p>
+	                    <p class="job">web开发、UI设计、PHP开发、H5</p>
+                	</div>
+                    <div class="ck-user-fans">
+                    	<p class="ck-favor"><em>围棋</em><em>钢琴</em><em>钢琴</em></p>
+                    	<a class="follow">关注</a>
+                    </div>
+                    
+                </div>
+            </div></li>
+            <li><div class="ck-list ck-list-item">
+                <a href="javascript:;" class="ck-pic"><img src="../../assets/home/images/tmp/topic.png" alt=""></a>
+                <div class="ck-msg">
+                	<div class="ck-user-info">
+                		<p class="ck-name"><a href="javascript:;">张德喜</a></p>
+	                    <p class="ck-intro">工程师</p>
+	                    <p class="job">web开发、UI设计、PHP开发、H5</p>
+                	</div>
+                    <div class="ck-user-fans">
+                    	<p class="ck-favor"><em>围棋</em><em>钢琴</em><em>钢琴</em></p>
+                    	<a class="follow">关注</a>
+                    </div>
+                    
+                </div>
+            </div></li>
+            <li><div class="ck-list ck-list-item">
+                <a href="javascript:;" class="ck-pic"><img src="../../assets/home/images/tmp/topic.png" alt=""></a>
+                <div class="ck-msg">
+                	<div class="ck-user-info">
+                		<p class="ck-name"><a href="javascript:;">张德喜</a></p>
+	                    <p class="ck-intro">工程师</p>
+	                    <p class="job">web开发、UI设计、PHP开发、H5</p>
+                	</div>
+                    <div class="ck-user-fans">
+                    	<p class="ck-favor"><em>围棋</em><em>钢琴</em><em>钢琴</em></p>
+                    	<a class="follow">关注</a>
+                    </div>
+                    
+                </div>
+            </div></li>
+            <li><div class="ck-list ck-list-item">
+                <a href="javascript:;" class="ck-pic"><img src="../../assets/home/images/tmp/topic.png" alt=""></a>
+                <div class="ck-msg">
+                	<div class="ck-user-info">
+                		<p class="ck-name"><a href="javascript:;">张德喜</a></p>
+	                    <p class="ck-intro">工程师</p>
+	                    <p class="job">web开发、UI设计、PHP开发、H5</p>
+                	</div>
+                    <div class="ck-user-fans">
+                    	<p class="ck-favor"><em>围棋</em><em>钢琴</em><em>钢琴</em></p>
+                    	<a class="follow">关注</a>
+                    </div>
+                    
+                </div>
+            </div></li>
+            <li><div class="ck-list ck-list-item">
+                <a href="javascript:;" class="ck-pic"><img src="../../assets/home/images/tmp/topic.png" alt=""></a>
+                <div class="ck-msg">
+                	<div class="ck-user-info">
+                		<p class="ck-name"><a href="javascript:;">张德喜</a></p>
+	                    <p class="ck-intro">工程师</p>
+	                    <p class="job">web开发、UI设计、PHP开发、H5</p>
+                	</div>
+                    <div class="ck-user-fans">
+                    	<p class="ck-favor"><em>围棋</em><em>钢琴</em><em>钢琴</em></p>
+                    	<a class="follow">关注</a>
+                    </div>
+                    
+                </div>
+            </div></li>
+            <li><div class="ck-list ck-list-item">
+                <a href="javascript:;" class="ck-pic"><img src="../../assets/home/images/tmp/topic.png" alt=""></a>
+                <div class="ck-msg">
+                	<div class="ck-user-info">
+                		<p class="ck-name"><a href="javascript:;">张德喜</a></p>
+	                    <p class="ck-intro">工程师</p>
+	                    <p class="job">web开发、UI设计、PHP开发、H5</p>
+                	</div>
+                    <div class="ck-user-fans">
+                    	<p class="ck-favor"><em>围棋</em><em>钢琴</em><em>钢琴</em></p>
+                    	<a class="follow">关注</a>
+                    </div>
+                    
+                </div>
+            </div></li>
+            <li><div class="ck-list ck-list-item">
+                <a href="javascript:;" class="ck-pic"><img src="../../assets/home/images/tmp/topic.png" alt=""></a>
+                <div class="ck-msg">
+                	<div class="ck-user-info">
+                		<p class="ck-name"><a href="javascript:;">张德喜</a></p>
+	                    <p class="ck-intro">工程师</p>
+	                    <p class="job">web开发、UI设计、PHP开发、H5</p>
+                	</div>
+                    <div class="ck-user-fans">
+                    	<p class="ck-favor"><em>围棋</em><em>钢琴</em><em>钢琴</em></p>
+                    	<a class="follow">关注</a>
+                    </div>
+                    
+                </div>
+            </div></li>
+            <li><div class="ck-list ck-list-item">
+                <a href="javascript:;" class="ck-pic"><img src="../../assets/home/images/tmp/topic.png" alt=""></a>
+                <div class="ck-msg">
+                	<div class="ck-user-info">
+                		<p class="ck-name"><a href="javascript:;">张德喜</a></p>
+	                    <p class="ck-intro">工程师</p>
+	                    <p class="job">web开发、UI设计、PHP开发、H5</p>
+                	</div>
+                    <div class="ck-user-fans">
+                    	<p class="ck-favor"><em>围棋</em><em>钢琴</em><em>钢琴</em></p>
+                    	<a class="follow">关注</a>
+                    </div>
+                    
+                </div>
+            </div></li>
+            <li><div class="ck-list ck-list-item">
+                <a href="javascript:;" class="ck-pic"><img src="../../assets/home/images/tmp/topic.png" alt=""></a>
+                <div class="ck-msg">
+                	<div class="ck-user-info">
+                		<p class="ck-name"><a href="javascript:;">张德喜</a></p>
+	                    <p class="ck-intro">工程师</p>
+	                    <p class="job">web开发、UI设计、PHP开发、H5</p>
+                	</div>
+                    <div class="ck-user-fans">
+                    	<p class="ck-favor"><em>围棋</em><em>钢琴</em><em>钢琴</em></p>
+                    	<a class="follow">关注</a>
+                    </div>
+                    
+                </div>
+            </div></li>
+            <li><div class="ck-list ck-list-item">
+                <a href="javascript:;" class="ck-pic"><img src="../../assets/home/images/tmp/topic.png" alt=""></a>
+                <div class="ck-msg">
+                	<div class="ck-user-info">
+                		<p class="ck-name"><a href="javascript:;">张德喜</a></p>
+	                    <p class="ck-intro">工程师</p>
+	                    <p class="job">web开发、UI设计、PHP开发、H5</p>
+                	</div>
+                    <div class="ck-user-fans">
+                    	<p class="ck-favor"><em>围棋</em><em>钢琴</em><em>钢琴</em></p>
+                    	<a class="follow">关注</a>
+                    </div>
+                    
+                </div>
+            </div></li>
+            <li><div class="ck-list ck-list-item">
+                <a href="javascript:;" class="ck-pic"><img src="../../assets/home/images/tmp/topic.png" alt=""></a>
+                <div class="ck-msg">
+                	<div class="ck-user-info">
+                		<p class="ck-name"><a href="javascript:;">张德喜</a></p>
+	                    <p class="ck-intro">工程师</p>
+	                    <p class="job">web开发、UI设计、PHP开发、H5</p>
+                	</div>
+                    <div class="ck-user-fans">
+                    	<p class="ck-favor"><em>围棋</em><em>钢琴</em><em>钢琴</em></p>
+                    	<a class="follow">关注</a>
+                    </div>
+                    
+                </div>
+            </div></li>
+        </ul>
+    </div>
+</div>
+</div>
+<div class="footer">
+    <div class="contain">
+        <div class="foot-logo">
+            <a href="javascript:;">创客港</a>
+        </div>
+        <div class="foot-left">
+            <ul>
+                <li><a href="javascript:;">关于我们</a></li>
+                <li><a href="javascript:;">商务合作</a></li>
+                <li><a href="javascript:;">加入我们</a></li>
+                <li><a href="javascript:;">隐私政策</a></li>
+                <li><a href="javascript:;">帮助中心</a></li>
+            </ul>
+            <div class="hr"></div>
+            <table class="foot-city">
+                <tr>
+                    <td><a href="javascript:;">北京</a></td>
+                    <td><a href="javascript:;">上海</a></td>
+                    <td><a href="javascript:;">广州</a></td>
+                    <td><a href="javascript:;">深圳</a></td>
+                </tr>
+                <tr>
+                    <td><a href="javascript:;">香港</a></td>
+                    <td><a href="javascript:;">成都</a></td>
+                    <td><a href="javascript:;">宁波</a></td>
+                    <td><a href="javascript:;">杭州</a></td>
+                </tr>
+            </table>
+            <div class="hr01"></div>
+            <p>深圳市创富港商务股份有限公司版权所有&nbsp;&nbsp;&nbsp;&nbsp;粤ICP备12345678号&nbsp;&nbsp;&nbsp;&nbsp;服务热线 400-6768-2138 </p>
+        </div>
+        <div class="foot-right">
+            <a href="javascript:;"><img src="../../assets/home/images/weixin.png" alt=""></a>
+            <a href="javascript:;"><img src="../../assets/home/images/weibo.png" alt=""></a>
+            <a href="javascript:;"><img src="../../assets/home/images/phone.png" alt=""></a>
+        </div>
+    </div>
+</div><!--footer end-->
+<script>
+    seajs.use('app/app.head',function(api){
+        api.head();
+    });
+    seajs.use('app/community/community',function(api){
+        api.model();
+    });
+    seajs.use('app/community/app.select',function(api){
+        api.select();
+    });
+</script>
+</body>
+</html>

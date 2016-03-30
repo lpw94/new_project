@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>webim</title>
+    <!--[if lt IE 9]>
+    <script src="../assets/home/js/jquery/html5shiv.js" type="text/javascript"></script>
+    <![endif]-->
+    <script src="../assets/home/js/jquery/jquery-1.9.1.js" type="text/javascript"></script>
+    <script src="../assets/home/js/jquery/cookies.min.js" type="text/javascript"></script>
+    <!--script src="../home/assets/js/tools/reconnecting-websocket.js" type="text/javascript"></script-->
+
+    <script type="text/javascript" src="../assets/home/js/seajs/sea.js"></script>
+    <script>
+        window.imTest = true;
+        seajs.config({
+            base: '../home/assets/js',
+            charset: 'utf-8',
+            timeout: 10000
+        });
+    </script>
+    <link rel="stylesheet" type="text/css" href="../assets/home/css/base.css"/>
+    <link rel="stylesheet" type="text/css" href="../assets/home/css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="../assets/home/css/webIM.css"/>
+</head>
+<body>
+
+
+<!--WebIM 主面板-->
+<div id="IM-Panel">
+    <div im-header>
+        <div im-userInfo><span im-avatar><img src="../assets/home/images/tmp/member1.jpg" /></span><span im-name>林钦杰</span><span im-switch="show"></span></div>
+        <div im-msgBox style="display:none">消息<span im-msgTips><i>20</i></span></div>
+    </div>
+    <div im-tab>
+        <ul im-tab-bar>
+            <li im-tab-id="rc" class="on"><span></span><i>15</i><em></em></li>
+            <li im-tab-id="friends" class=""><span></span><em></em></li>
+            <li im-tab-id="groups" class=""><span></span><em></em></li>
+        </ul>
+        <div im-tab-con>
+            <ul class="items" im-tab-id="rc">
+                <li class="unread">
+                    <span im-avatar><img src="../assets/home/images/tmp/member11.jpg" /></span>
+                    <div>
+                        <span im-time><i></i>5分钟前</span>
+                        <span im-name>李建才</span>
+                        <p im-msg>请你下班前一定帮我弄好数据备份,否则将会作为评分记录。</p>
+                    </div>
+                </li>
+                <li class="">
+                    <span im-avatar><img src="../assets/home/images/tmp/member11.jpg" /></span>
+                    <div>
+                        <span im-time><i></i>5分钟前</span>
+                        <span im-name>李建才</span>
+                        <p im-msg>请你下班前一定帮我弄好数据备份,否则将会作为评分记录。</p>
+                    </div>
+                </li>
+                <li class="">
+                    <span im-avatar><img src="../assets/home/images/tmp/member11.jpg" /></span>
+                    <div>
+                        <span im-time><i></i>昨天</span>
+                        <span im-name>李建才</span>
+                        <p im-msg>请你下班前一定帮我弄好数据备份,否则将会作为评分记录。</p>
+                    </div>
+                </li>
+                <li class="">
+                    <span im-avatar><img src="../assets/home/images/tmp/member11.jpg" /></span>
+                    <div>
+                        <span im-time><i></i>昨天</span>
+                        <span im-name>李建才</span>
+                        <p im-msg>请你下班前一定帮我弄好数据备份,否则将会作为评分记录。</p>
+                    </div>
+                </li>
+                <li class="">
+                    <span im-avatar><img src="../assets/home/images/tmp/member11.jpg" /></span>
+                    <div>
+                        <span im-time><i></i>昨天</span>
+                        <span im-name>李建才</span>
+                        <p im-msg>请你下班前一定帮我弄好数据备份,否则将会作为评分记录。</p>
+                    </div>
+                </li>
+            </ul><!--rc end-->
+            <div class="items on" im-tab-id="friends">
+                <div im-add-friend><i></i>新的朋友</div>
+                <dl im-org class="show">
+                    <dt>默认分组<span im-count>(0/10)</span></dt>
+                    <dd><span im-avatar><img src="../assets/home/images/tmp/member2.jpg" /></span><span im-name>叶良辰</span></dd>
+                    <dd><span im-avatar><img src="../assets/home/images/tmp/member2.jpg" /></span><span im-name>叶良辰</span></dd>
+                    <dd><span im-avatar><img src="../assets/home/images/tmp/member2.jpg" /></span><span im-name>叶良辰</span></dd>
+                </dl>
+                <dl im-org class="">
+                    <dt>技术部<span im-count>(0/10)</span></dt>
+                    <dd><span im-avatar><img src="../assets/home/images/tmp/member2.jpg" /></span><span im-name>叶良辰</span></dd>
+                    <dd><span im-avatar><img src="../assets/home/images/tmp/member2.jpg" /></span><span im-name>叶良辰</span></dd>
+                    <dd><span im-avatar><img src="../assets/home/images/tmp/member2.jpg" /></span><span im-name>叶良辰</span></dd>
+                </dl>
+            </div><!--friends end-->
+            <ul class="items" im-tab-id="groups">
+                <li><span im-avatar></span><span im-name>市场部</span></li>
+                <li><span im-avatar></span><span im-name>市场部</span></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--WebIM 主面板end -->
+<!--WebIM 会话-->
+<div id="IM-Chat" class="multi">
+    <ul imchat-list>
+        <li class="on"><span im-avatar></span><span im-name>叶良辰叶良辰</span><i imchat-close></i></li>
+        <li data-chat-type="groups"><span im-avatar></span><span im-name>叶良辰</span><i imchat-close></i></li>
+    </ul>
+    <div imchat-type="" imchat-box>
+        <div imchat-header>
+            <div imchat-cmAction>
+                <span ac-type="more"></span><span ac-type="min"></span><span ac-type="close"></span>
+            </div>
+            <div imchat-info data-chat-type="groups">
+                <span im-avatar><img src="../assets/images/tmp/member2.jpg" /></span><span im-name>市场部</span>
+            </div>
+        </div>
+
+        <div imchat-main>
+            <section imchat-area></section>
+            <span imchat-scrollintoview=""></span>
+            <div imchat-editwrap></div>
+        </div>
+    </div>
+</div>
+
+<div im-pop im-pop-type="addGroupChat">
+    <span im-pop-close></span>
+    <div im-pop-header>创建群组</div>
+    <div im-pop-con>
+        <div im-searchLeft>
+            <div im-search><input type="text" value="" placeholder="输入关键字搜索联系人" /><i></i></div>
+            <div im-list>
+                <dl class="show" im-org="">
+                    <dt>默认分组<span im-addAll></span></dt>
+                    <dd><span im-avatar=""><img src="../assets/home/images/tmp/member2.jpg"></span><span im-name="">叶良辰</span></dd>
+                    <dd><span im-avatar=""><img src="../assets/home/images/tmp/member2.jpg"></span><span im-name="">叶良辰</span></dd>
+                    <dd><span im-avatar=""><img src="../assets/home/images/tmp/member2.jpg"></span><span im-name="">叶良辰</span></dd>
+                </dl>
+                <dl class="show" im-org="">
+                    <dt>默认分组<span im-addAll></span></dt>
+                    <dd><span im-avatar=""><img src="../assets/home/images/tmp/member2.jpg"></span><span im-name="">叶良辰</span></dd>
+                    <dd><span im-avatar=""><img src="../assets/home/images/tmp/member2.jpg"></span><span im-name="">叶良辰</span></dd>
+                    <dd><span im-avatar=""><img src="../assets/home/images/tmp/member2.jpg"></span><span im-name="">叶良辰</span></dd>
+                </dl>
+                <dl class="show" im-org="">
+                    <dt>默认分组<span im-addAll></span></dt>
+                    <dd><span im-avatar=""><img src="../assets/home/images/tmp/member2.jpg"></span><span im-name="">叶良辰</span></dd>
+                    <dd><span im-avatar=""><img src="../assets/home/images/tmp/member2.jpg"></span><span im-name="">叶良辰</span></dd>
+                    <dd><span im-avatar=""><img src="../assets/home/images/tmp/member2.jpg"></span><span im-name="">叶良辰</span></dd>
+                </dl>
+            </div>
+        </div><!--im-searchLeft end-->
+        <div im-searchRight>
+            <div im-searchResultCount>已选联系人：<span>0</span>/50</div>
+            <div im-list>
+                <dl class="show" im-org="">
+                </dl>
+            </div>
+        </div><!--im-searchRight end-->
+        <span im-addGroup-icon></span>
+        <div im-pop-action>
+            <span im-ok>确定</span><span in-cancel>取消</span>
+        </div>
+    </div>
+</div>
+<div id="IM-Masklayer"></div>
+<div im-pop im-pop-type="tips">
+    <span im-pop-close></span>
+    <div im-pop-header>确认邀请整组</div>
+    <div im-pop-con>
+        <div im-pop-tips im-pop-tips0>
+            <i></i>
+            <p>确定邀请"<span im-gName>默认分组</span>"(<span im-count>10</span>人)?</p>
+        </div>
+    </div>
+    <style>
+
+    </style>
+    <div im-pop-action>
+        <span im-ok>确定</span><span in-cancel>取消</span>
+    </div>
+</div>
+<div id="IM-Masklayer2"></div>
+<style>
+
+
+
+
+</style>
+<!--WebIM 会话end -->
+
+<script>
+    /*
+    seajs.use('app/app.head',function(api){
+        api.head();
+    });
+    */
+</script>
+</body>
+</html>
